@@ -1,0 +1,42 @@
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+.env
+.env.*
+
+# Conda / local env files
+.python-version
+
+# Build / packaging
+build/
+dist/
+*.egg-info/
+
+# Model / notebook / cache noise
+.cache/
+.ipynb_checkpoints/
+
+# Local Hugging Face and model cache overrides if created inside repo
+hf_cache/
+models/
+checkpoints/
+
+# Generated corpus artifacts
+corpus_build/*.jsonl
+corpus_build/*.json
+!corpus_build/.gitkeep
+
