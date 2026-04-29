@@ -119,10 +119,35 @@ python genenrate_prompts.py
 python prepare_multilingual_translation.py
 ```
 
+### Prepare exactly 100 instructions for translation
+
+This creates a smaller translation-ready corpus and matching manifest/summary files.
+
+```bash
+python prepare_multilingual_translation.py \
+  --limit 100 \
+  --output corpus_build/corpus_translation_ready_100.jsonl \
+  --manifest-output corpus_build/translation_manifest_100.jsonl \
+  --summary-output corpus_build/translation_summary_100.json
+```
+
 ### Run a small translation test
 
 ```bash
 python run_llm_translation.py --max-batches 1 --batch-size 8 --skip-verification
+```
+
+### Translate the 100-instruction batch
+
+```bash
+python run_llm_translation.py \
+  --input corpus_build/corpus_translation_ready_100.jsonl \
+  --output corpus_build/corpus_translation_ready_100.jsonl \
+  --manifest-output corpus_build/translation_manifest_100.jsonl \
+  --summary-output corpus_build/translation_summary_100.json \
+  --state-output corpus_build/translation_indictrans2_run_state_100.json \
+  --batch-size 16 \
+  --skip-verification
 ```
 
 ### Run the complete dataset translation without verification
@@ -156,6 +181,14 @@ python run_llm_translation.py --batch-size 32
 
 ```bash
 python finalize_multilingual_corpus.py
+```
+
+### Export translations and metadata to Excel
+
+```bash
+python export_translation_excel.py \
+  --input corpus_build/corpus_translation_ready_100.jsonl \
+  --output corpus_build/translations_100.xlsx
 ```
 
 ## Key Output Files

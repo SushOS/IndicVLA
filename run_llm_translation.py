@@ -1,6 +1,8 @@
 import argparse
+import inspect
 import importlib.util
 import sys
+import types
 from pathlib import Path
 from dataclasses import dataclass
 from typing import Any
@@ -269,9 +271,37 @@ def resolve_runtime_imports() -> tuple[Any, Any, Any, Any]:
 
     import torch
     from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
+    from transformers.tokenization_utils import PreTrainedTokenizer
     IndicProcessor = load_indic_processor_class()
 
+    patch_tokenizer_special_token_setattr(PreTrainedTokenizer)
+
     return torch, AutoModelForSeq2SeqLM, AutoTokenizer, IndicProcessor
+
+
+def patch_tokenizer_special_token_setattr(PreTrainedTokenizer: Any) -> None:
+    if getattr(PreTrainedTokenizer, "_indictrans_lazy_special_tokens_patch", False):
+        return
+
+    original_setattr = PreTrainedTokenizer.__setattr__
+
+    def patched_setattr(self: Any, key: str, value: Any) -> None:
+        special_token_attrs = (
+            "bos_token",
+            "eos_token",
+            "unk_token",
+            "sep_token",
+            "pad_token",
+            "cls_token",
+            "mask_token",
+            "additional_special_tokens",
+        )
+        if key in special_token_attrs and "_special_tokens_map" not in self.__dict__:
+            object.__setattr__(self, "_special_tokens_map", {})
+        original_setattr(self, key, value)
+
+    PreTrainedTokenizer.__setattr__ = patched_setattr
+    PreTrainedTokenizer._indictrans_lazy_special_tokens_patch = True
 
 
 def is_access_error(exc: Exception) -> bool:
@@ -285,6 +315,126 @@ def is_access_error(exc: Exception) -> bool:
         "please log in",
     )
     return any(needle in text for needle in needles)
+
+
+def is_network_error(exc: Exception) -> bool:
+    text = str(exc).lower()
+    needles = (
+        "nodename nor servname provided",
+        "temporary failure in name resolution",
+        "name or service not known",
+        "failed to establish a new connection",
+        "connection error",
+        "cannot send a request, as the client has been closed",
+        "offline mode",
+    )
+    return any(needle in text for needle in needles)
+
+
+def resolve_local_model_source(model_name: str) -> str:
+    if Path(model_name).exists():
+        return model_name
+
+    hub_root = Path.home() / ".cache" / "huggingface" / "hub"
+    repo_dir = hub_root / f"models--{model_name.replace('/', '--')}"
+    snapshots_dir = repo_dir / "snapshots"
+    if not snapshots_dir.exists():
+        return model_name
+
+    snapshots = [path for path in snapshots_dir.iterdir() if path.is_dir()]
+    if not snapshots:
+        return model_name
+
+    snapshots.sort(key=lambda path: path.stat().st_mtime, reverse=True)
+    return str(snapshots[0])
+
+
+def load_local_indictrans_classes(model_source: str) -> tuple[Any, Any]:
+    source_path = Path(model_source)
+    if not source_path.exists() or not source_path.is_dir():
+        raise FileNotFoundError(f"Local model source not found: {model_source}")
+
+    ensure_transformers_onnx_shim()
+
+    package_name = "_indictrans_local_bundle"
+    package = sys.modules.get(package_name)
+    if package is None:
+        package = types.ModuleType(package_name)
+        package.__path__ = [str(source_path)]
+        sys.modules[package_name] = package
+
+    def load_submodule(module_stem: str) -> Any:
+        module_name = f"{package_name}.{module_stem}"
+        if module_name in sys.modules:
+            return sys.modules[module_name]
+
+        module_path = source_path / f"{module_stem}.py"
+        spec = importlib.util.spec_from_file_location(module_name, module_path)
+        if spec is None or spec.loader is None:
+            raise ImportError(f"Could not load module spec for {module_path}")
+        module = importlib.util.module_from_spec(spec)
+        sys.modules[module_name] = module
+        spec.loader.exec_module(module)
+        return module
+
+    tokenization_module = load_submodule("tokenization_indictrans")
+    configuration_module = load_submodule("configuration_indictrans")
+    modeling_module = load_submodule("modeling_indictrans")
+    patch_indictrans_model_class(getattr(modeling_module, "IndicTransForConditionalGeneration"))
+    return (
+        getattr(tokenization_module, "IndicTransTokenizer"),
+        getattr(modeling_module, "IndicTransForConditionalGeneration"),
+    )
+
+
+def ensure_transformers_onnx_shim() -> None:
+    if "transformers.onnx" in sys.modules and "transformers.onnx.utils" in sys.modules:
+        return
+
+    try:
+        import transformers.onnx  # type: ignore  # noqa: F401
+        import transformers.onnx.utils  # type: ignore  # noqa: F401
+        return
+    except ModuleNotFoundError:
+        pass
+
+    onnx_module = types.ModuleType("transformers.onnx")
+    utils_module = types.ModuleType("transformers.onnx.utils")
+
+    class _OnnxConfig:
+        pass
+
+    class _OnnxSeq2SeqConfigWithPast(_OnnxConfig):
+        pass
+
+    def compute_effective_axis_dimension(*args: Any, **kwargs: Any) -> int:
+        if args:
+            for value in reversed(args):
+                if isinstance(value, int):
+                    return value
+        return 0
+
+    onnx_module.OnnxConfig = _OnnxConfig
+    onnx_module.OnnxSeq2SeqConfigWithPast = _OnnxSeq2SeqConfigWithPast
+    utils_module.compute_effective_axis_dimension = compute_effective_axis_dimension
+
+    sys.modules["transformers.onnx"] = onnx_module
+    sys.modules["transformers.onnx.utils"] = utils_module
+
+
+def patch_indictrans_model_class(model_class: Any) -> None:
+    if getattr(model_class, "_indictrans_transformers_compat_patch", False):
+        return
+
+    tie_weights = getattr(model_class, "tie_weights", None)
+    if tie_weights is not None:
+        signature = inspect.signature(tie_weights)
+        if "recompute_mapping" not in signature.parameters:
+            def patched_tie_weights(self: Any, *args: Any, **kwargs: Any) -> Any:
+                return tie_weights(self)
+            model_class.tie_weights = patched_tie_weights
+
+    model_class._indictrans_transformers_compat_patch = True
 
 
 def resolve_device(torch: Any, requested: str) -> str:
@@ -329,22 +479,49 @@ def load_indictrans_model(
     device: str,
     dtype: Any,
 ) -> ModelBundle:
-    tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
+    model_source = resolve_local_model_source(model_name)
+    using_local_bundle = Path(model_source).exists()
+    if using_local_bundle:
+        tokenizer_class, model_class = load_local_indictrans_classes(model_source)
+        tokenizer = tokenizer_class.from_pretrained(model_source)
+    else:
+        try:
+            tokenizer = AutoTokenizer.from_pretrained(model_source, trust_remote_code=True)
+        except Exception as exc:
+            if is_network_error(exc):
+                tokenizer = AutoTokenizer.from_pretrained(
+                    model_source,
+                    trust_remote_code=True,
+                    local_files_only=True,
+                )
+            else:
+                raise
 
     model_kwargs = {
-        "trust_remote_code": True,
         "torch_dtype": dtype,
     }
+    if not using_local_bundle:
+        model_kwargs["trust_remote_code"] = True
     if device == "cuda":
         model_kwargs["attn_implementation"] = "flash_attention_2"
 
+    def build_model(load_kwargs: dict[str, Any]) -> Any:
+        if using_local_bundle:
+            return model_class.from_pretrained(model_source, **load_kwargs).to(device)
+        return AutoModelForSeq2SeqLM.from_pretrained(model_source, **load_kwargs).to(device)
+
     try:
-        model = AutoModelForSeq2SeqLM.from_pretrained(model_name, **model_kwargs).to(device)
+        model = build_model(model_kwargs)
     except Exception as exc:
         if device == "cuda" and "flash_attention_2" in str(exc):
             fallback_kwargs = dict(model_kwargs)
             fallback_kwargs.pop("attn_implementation", None)
-            model = AutoModelForSeq2SeqLM.from_pretrained(model_name, **fallback_kwargs).to(device)
+            model = build_model(fallback_kwargs)
+        elif is_network_error(exc):
+            offline_kwargs = dict(model_kwargs)
+            offline_kwargs["local_files_only"] = True
+            offline_kwargs.pop("attn_implementation", None)
+            model = build_model(offline_kwargs)
         else:
             raise
 
@@ -387,7 +564,7 @@ def run_translation(
     with bundle.torch.no_grad():
         generated_tokens = bundle.model.generate(
             **inputs,
-            use_cache=True,
+            use_cache=False,
             min_length=0,
             max_length=max_length,
             num_beams=num_beams,
@@ -396,13 +573,28 @@ def run_translation(
 
     decoded = bundle.tokenizer.batch_decode(
         generated_tokens,
-        skip_special_tokens=True,
+        skip_special_tokens=False,
         clean_up_tokenization_spaces=True,
     )
     return [
         normalize_space(text)
-        for text in bundle.processor.postprocess_batch(decoded, lang=tgt_lang)
+        for text in bundle.processor.postprocess_batch(
+            [sanitize_decoded_text(text, tgt_lang=tgt_lang) for text in decoded],
+            lang=tgt_lang,
+        )
     ]
+
+
+def sanitize_decoded_text(text: str, *, tgt_lang: str) -> str:
+    cleaned = text
+    for token in ("<s>", "</s>", "<pad>", "<unk>"):
+        cleaned = cleaned.replace(token, " ")
+
+    for lang_code in LANGUAGE_CODES.values():
+        cleaned = cleaned.replace(lang_code, " ")
+    cleaned = cleaned.replace(tgt_lang.replace("_", " "), " ")
+
+    return normalize_space(cleaned)
 
 
 def normalize_english_for_match(text: str) -> str:
@@ -542,7 +734,7 @@ def build_state_payload(
     pending = 0
     for entry in corpus:
         for code in LANGUAGES:
-            if entry[f"translation_{code}"]["status"] == "model_translated":
+            if language_block_is_complete(entry[f"translation_{code}"]):
                 translated += 1
             else:
                 pending += 1
@@ -597,6 +789,14 @@ def save_progress(
     )
 
 
+def language_block_is_complete(block: dict[str, Any]) -> bool:
+    return (
+        block.get("status") == "model_translated"
+        and bool((block.get("literal") or "").strip())
+        and bool((block.get("robot_natural") or "").strip())
+    )
+
+
 def main() -> None:
     args = parse_args()
     if args.dry_run:
@@ -623,7 +823,7 @@ def main() -> None:
     corpus = load_jsonl(args.input)
     pending_entries = [
         entry for entry in corpus
-        if any(entry[f"translation_{code}"]["status"] != "model_translated" for code in LANGUAGES)
+        if any(not language_block_is_complete(entry[f"translation_{code}"]) for code in LANGUAGES)
     ]
     batches = chunked(pending_entries, args.batch_size)
     if args.max_batches is not None:

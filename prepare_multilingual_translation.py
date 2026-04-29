@@ -42,12 +42,20 @@ def parse_args() -> argparse.Namespace:
         default="validated_assumed",
         help="Validation label to stamp onto the frozen English corpus.",
     )
+    parser.add_argument(
+        "--limit",
+        type=int,
+        default=None,
+        help="Optional number of English prompts to prepare from the source corpus.",
+    )
     return parser.parse_args()
 
 
 def main() -> None:
     args = parse_args()
     source_records = load_jsonl(args.input)
+    if args.limit is not None:
+        source_records = source_records[:args.limit]
     ready_records = [
         make_translation_ready_entry(
             entry,
