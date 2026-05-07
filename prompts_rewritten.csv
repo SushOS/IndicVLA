@@ -1,0 +1,201 @@
+prompt_id,motion_family,primitive_tag,duration_s,imperative_en,kimodo_input
+kimodo_000000,basic_locomotion,unclassified_motion,3,Spin back.,A person spins around 180 degrees.
+kimodo_000001,posture_transition,rise,3,Rise.,A person stands up from a crouched pose.
+kimodo_000002,basic_locomotion,crouch,3,Duck.,A person ducks down low.
+kimodo_000003,basic_locomotion,unclassified_motion,3,Raise your left arm.,A person raises their left arm.
+kimodo_000004,basic_locomotion,turn_left,3,Rotate left and stay ready.,A person rotates to the left and stays in a ready stance.
+kimodo_000005,basic_locomotion,unclassified_motion,3,Close stance.,A person stands with feet together.
+kimodo_000006,basic_locomotion,unclassified_motion,3,Spin around on the spot.,A person spins around 360 degrees in place.
+kimodo_000007,basic_locomotion,unclassified_motion,3,Look up and stay ready.,A person looks up and stays in a ready stance.
+kimodo_000008,basic_locomotion,move_backward,3,Back up.,A person steps backward.
+kimodo_000009,basic_locomotion,unclassified_motion,3,Spread legs on the spot.,A person stands with their legs spread apart in place.
+kimodo_000010,basic_locomotion,stop,3,Freeze before anything else.,A person freezes in place.
+kimodo_000011,basic_locomotion,turn_left,3,Face left in a neutral manner.,A person turns to face left.
+kimodo_000012,basic_locomotion,stop,3,Stop.,A person stops walking and stands still.
+kimodo_000013,basic_locomotion,turn_around,3,Pivot around.,A person pivots around 180 degrees.
+kimodo_000014,basic_locomotion,rise,3,Straighten up.,A person straightens up to a standing pose.
+kimodo_000015,posture_transition,stop,3,Stop where you stand.,A person stops walking and stands still in place.
+kimodo_000016,basic_locomotion,unclassified_motion,3,Steady yourself.,A person stands stably.
+kimodo_000017,basic_locomotion,unclassified_motion,3,Open your hands.,A person opens their hands.
+kimodo_000018,posture_transition,turn_left,3,Pivot left where you stand.,A person pivots to the left in place.
+kimodo_000019,basic_locomotion,unclassified_motion,3,Bend down without moving away.,A person bends down in place.
+kimodo_000020,safety_intervention,unclassified_motion,3,Shift your weight.,A person shifts their weight from one leg to the other.
+kimodo_000021,basic_locomotion,stop,3,Pause.,A person pauses and stands still.
+kimodo_000022,basic_locomotion,unclassified_motion,3,Center your balance without moving away.,A person centers their balance in place.
+kimodo_000023,safety_intervention,unclassified_motion,3,Lift your right hand in a steady way.,A person lifts their right hand steadily.
+kimodo_000024,basic_locomotion,unclassified_motion,3,Spin right.,A person spins to the right.
+kimodo_000025,posture_transition,sidestep,3,Step right where you stand.,A person takes a step to the right in place.
+kimodo_000026,basic_locomotion,rise,3,Raise your body.,A person stands up tall.
+kimodo_000027,basic_locomotion,unclassified_motion,3,Close your hands.,A person closes their hands.
+kimodo_000028,basic_locomotion,unclassified_motion,3,Relax.,A person relaxes into a neutral pose.
+kimodo_000029,basic_locomotion,unclassified_motion,3,Hold still before anything else.,A person holds still.
+kimodo_000030,basic_locomotion,unclassified_motion,3,Look left with care.,A person looks to the left carefully.
+kimodo_000031,basic_locomotion,unclassified_motion,3,Square your shoulders.,A person squares their shoulders.
+kimodo_000032,basic_locomotion,unclassified_motion,3,Look down.,A person looks down.
+kimodo_000033,basic_locomotion,turn_right,3,Rotate right with care.,A person rotates to the right carefully.
+kimodo_000034,basic_locomotion,unclassified_motion,3,Move and hold.,A person walks forward and holds the pose.
+kimodo_000035,basic_locomotion,turn_left,3,Rotate left.,A person rotates to the left.
+kimodo_000036,basic_locomotion,unclassified_motion,3,Look down.,A person looks down.
+kimodo_000037,basic_locomotion,crouch,3,Duck as instructed.,A person ducks down low.
+kimodo_000038,basic_locomotion,unclassified_motion,3,Close your hands with care.,A person closes their hands carefully.
+kimodo_000039,posture_transition,rise,3,Stand up.,A person stands up from a seated pose.
+kimodo_000040,basic_locomotion,unclassified_motion,3,Lower your right arm.,A person lowers their right arm.
+kimodo_000041,basic_locomotion,unclassified_motion,3,Hold still.,A person holds still.
+kimodo_000042,posture_transition,crouch,3,Crouch.,A person crouches down low.
+kimodo_000043,basic_locomotion,unclassified_motion,3,Raise your right arm.,A person raises their right arm.
+kimodo_000044,basic_locomotion,unclassified_motion,3,Hold still.,A person holds still.
+kimodo_000045,basic_locomotion,unclassified_motion,3,Center your balance and hold.,A person centers their balance and holds the pose.
+kimodo_000046,posture_transition,rise,3,Rise on the spot.,A person stands up from a crouched pose in place.
+kimodo_000047,basic_locomotion,yield,3,Step aside.,A person steps aside.
+kimodo_000048,basic_locomotion,move_backward,3,Step back.,A person takes a step backward.
+kimodo_000049,social_gesture,clap,3,Clap.,A person claps their hands.
+kimodo_000050,basic_locomotion,unclassified_motion,3,Move.,A person walks forward.
+kimodo_000051,basic_locomotion,unclassified_motion,3,Turn around.,A person turns around 180 degrees.
+kimodo_000052,basic_locomotion,sidestep,3,Step left and stay ready.,A person takes a step to the left and stays in a ready stance.
+kimodo_000053,posture_transition,unclassified_motion,3,Spin back where you stand.,A person spins around 180 degrees in place.
+kimodo_000054,basic_locomotion,unclassified_motion,3,Raise arms on the spot.,A person raises both arms in place.
+kimodo_000055,basic_locomotion,turn_right,3,Face right.,A person turns to face right.
+kimodo_000056,basic_locomotion,sidestep,3,Sidestep right.,A person sidesteps to the right.
+kimodo_000057,basic_locomotion,unclassified_motion,3,Steady yourself.,A person stands stably.
+kimodo_000058,safety_intervention,unclassified_motion,3,Lift your left hand.,A person lifts their left hand.
+kimodo_000059,social_gesture,clap,3,Clap.,A person claps their hands.
+kimodo_000060,basic_locomotion,unclassified_motion,3,Face forward with care.,A person turns to face forward carefully.
+kimodo_000061,posture_transition,bow,3,Lean forward as instructed.,A person leans forward.
+kimodo_000062,basic_locomotion,unclassified_motion,3,Spin right.,A person spins to the right.
+kimodo_000063,basic_locomotion,yield,3,Step aside.,A person steps aside.
+kimodo_000064,basic_locomotion,unclassified_motion,3,Spin left in a neutral manner.,A person spins to the left.
+kimodo_000065,basic_locomotion,turn_left,3,Pivot left.,A person pivots to the left.
+kimodo_000066,social_gesture,salute,3,Salute.,A person salutes.
+kimodo_000067,basic_locomotion,unclassified_motion,3,Raise arms.,A person raises both arms.
+kimodo_000068,posture_transition,turn_left,3,Rotate left where you stand.,A person rotates to the left in place.
+kimodo_000069,basic_locomotion,unclassified_motion,3,Cross your arms.,A person crosses their arms.
+kimodo_000070,social_gesture,clap,3,Clap and hold.,A person claps their hands and holds the pose.
+kimodo_000071,basic_locomotion,unclassified_motion,3,Turn around.,A person turns around 180 degrees.
+kimodo_000072,basic_locomotion,turn_right,3,Turn right.,A person turns to the right.
+kimodo_000073,posture_transition,rise,3,Rise.,A person stands up from a crouched pose.
+kimodo_000074,basic_locomotion,turn_around,3,Rotate around in a neutral manner.,A person rotates around 180 degrees.
+kimodo_000075,basic_locomotion,sidestep,3,Sidestep left.,A person sidesteps to the left.
+kimodo_000076,basic_locomotion,unclassified_motion,3,Face backward.,A person turns to face backward.
+kimodo_000077,basic_locomotion,unclassified_motion,3,Plant your feet.,A person plants their feet firmly.
+kimodo_000078,basic_locomotion,unclassified_motion,3,Rotate back.,A person rotates back to face the opposite direction.
+kimodo_000079,basic_locomotion,unclassified_motion,3,Spin right in your current position.,A person spins to the right in place.
+kimodo_000080,basic_locomotion,unclassified_motion,3,Move in your current position.,A person walks forward in place.
+kimodo_000081,basic_locomotion,move_forward,3,Step forward.,A person takes a step forward.
+kimodo_000082,basic_locomotion,turn_right,3,Pivot right.,A person pivots to the right.
+kimodo_000083,posture_transition,unclassified_motion,3,Squat as instructed.,A person squats down.
+kimodo_000084,social_gesture,unclassified_motion,3,Give a thumbs up and hold.,A person gives a thumbs up and holds the pose.
+kimodo_000085,basic_locomotion,unclassified_motion,3,Lower arms.,A person lowers both arms.
+kimodo_000086,social_gesture,unclassified_motion,3,Shrug on the spot.,A person shrugs their shoulders in place.
+kimodo_000087,social_gesture,salute,3,Salute.,A person salutes.
+kimodo_000088,posture_transition,unclassified_motion,3,Relax where you stand.,A person relaxes into a neutral pose in place.
+kimodo_000089,basic_locomotion,unclassified_motion,3,Bend down.,A person bends down.
+kimodo_000090,basic_locomotion,unclassified_motion,3,Close stance and hold.,A person stands with feet together and holds the pose.
+kimodo_000091,basic_locomotion,unclassified_motion,3,Relax on the spot.,A person relaxes into a neutral pose in place.
+kimodo_000092,posture_transition,bow,3,Bow.,A person bows forward.
+kimodo_000093,social_gesture,unclassified_motion,3,Give a thumbs up without moving away.,A person gives a thumbs up in place.
+kimodo_000094,safety_intervention,unclassified_motion,3,Lift your chin.,A person lifts their chin.
+kimodo_000095,basic_locomotion,sidestep,3,Sidestep right.,A person sidesteps to the right.
+kimodo_000096,basic_locomotion,unclassified_motion,3,Look left in a neutral manner.,A person looks to the left.
+kimodo_000097,basic_locomotion,unclassified_motion,3,Pivot back in a neutral manner.,A person pivots back to face the opposite direction.
+kimodo_000098,basic_locomotion,stop,3,Freeze.,A person freezes in place.
+kimodo_000099,posture_transition,bow,3,Lean forward and hold.,A person leans forward and holds the pose.
+kimodo_000100,basic_locomotion,unclassified_motion,3,Close your hands and hold.,A person closes their hands and holds the pose.
+kimodo_000101,basic_locomotion,unclassified_motion,3,Move.,A person walks forward.
+kimodo_000102,basic_locomotion,unclassified_motion,3,Raise arms.,A person raises both arms.
+kimodo_000103,basic_locomotion,turn_right,3,Face right.,A person turns to face right.
+kimodo_000104,basic_locomotion,unclassified_motion,3,Rotate back.,A person rotates back to face the opposite direction.
+kimodo_000105,safety_intervention,unclassified_motion,3,Lift your chin.,A person lifts their chin.
+kimodo_000106,basic_locomotion,turn_right,3,Face right.,A person turns to face right.
+kimodo_000107,basic_locomotion,unclassified_motion,3,Open your hands without moving away.,A person opens their hands in place.
+kimodo_000108,basic_locomotion,unclassified_motion,3,Step.,A person takes a step forward.
+kimodo_000109,posture_transition,crouch,3,Crouch.,A person crouches down low.
+kimodo_000110,basic_locomotion,stop,3,Stop.,A person stops walking and stands still.
+kimodo_000111,basic_locomotion,unclassified_motion,3,Pivot back.,A person pivots back to face the opposite direction.
+kimodo_000112,posture_transition,bow,3,Lean forward.,A person leans forward.
+kimodo_000113,basic_locomotion,unclassified_motion,3,Extend your left arm.,A person extends their left arm.
+kimodo_000114,basic_locomotion,unclassified_motion,3,Lower your left arm without moving away.,A person lowers their left arm in place.
+kimodo_000115,basic_locomotion,unclassified_motion,3,Raise your left arm.,A person raises their left arm.
+kimodo_000116,basic_locomotion,unclassified_motion,3,Extend your left arm.,A person extends their left arm.
+kimodo_000117,basic_locomotion,turn_right,3,Face right as instructed.,A person turns to face right.
+kimodo_000118,posture_transition,unclassified_motion,3,Squat.,A person squats down.
+kimodo_000119,basic_locomotion,unclassified_motion,3,Reset.,A person stands in a neutral pose.
+kimodo_000120,basic_locomotion,unclassified_motion,3,Lower your right arm.,A person lowers their right arm.
+kimodo_000121,basic_locomotion,unclassified_motion,3,Move with care.,A person walks forward carefully.
+kimodo_000122,basic_locomotion,unclassified_motion,3,Square your shoulders.,A person squares their shoulders.
+kimodo_000123,basic_locomotion,stop,3,Freeze with care.,A person freezes in place carefully.
+kimodo_000124,basic_locomotion,unclassified_motion,3,Extend your left arm and stay ready.,A person extends their left arm and stays in a ready stance.
+kimodo_000125,basic_locomotion,turn_around,3,Rotate around.,A person rotates around 180 degrees.
+kimodo_000126,basic_locomotion,turn_left,3,Turn left.,A person turns to the left.
+kimodo_000127,basic_locomotion,unclassified_motion,3,Sit down.,A person sits down on the ground.
+kimodo_000128,basic_locomotion,move_backward,3,Step back in your current position.,A person takes a step backward in place.
+kimodo_000129,basic_locomotion,sidestep,3,Sidestep left.,A person sidesteps to the left.
+kimodo_000130,basic_locomotion,unclassified_motion,3,Look down.,A person looks down.
+kimodo_000131,basic_locomotion,turn_left,3,Rotate left with care.,A person rotates to the left carefully.
+kimodo_000132,social_gesture,nod,3,Nod.,A person nods their head.
+kimodo_000133,safety_intervention,unclassified_motion,3,Shift your weight.,A person shifts their weight from one leg to the other.
+kimodo_000134,posture_transition,rise,3,Rise and hold.,A person stands up from a crouched pose and holds the pose.
+kimodo_000135,basic_locomotion,unclassified_motion,3,Move.,A person walks forward.
+kimodo_000136,social_gesture,unclassified_motion,3,Point forward without moving away.,A person points forward in place.
+kimodo_000137,basic_locomotion,crouch,3,Duck and stay ready.,A person ducks down low and stays in a ready stance.
+kimodo_000138,basic_locomotion,turn_right,3,Face right.,A person turns to face right.
+kimodo_000139,posture_transition,unclassified_motion,3,Move where you stand.,A person walks forward in place.
+kimodo_000140,basic_locomotion,unclassified_motion,3,Raise your left arm and hold.,A person raises their left arm and holds the pose.
+kimodo_000141,basic_locomotion,unclassified_motion,3,Extend arms.,A person extends both arms.
+kimodo_000142,basic_locomotion,unclassified_motion,3,Raise arms.,A person raises both arms.
+kimodo_000143,basic_locomotion,unclassified_motion,3,Step in your current position.,A person takes a step forward in place.
+kimodo_000144,basic_locomotion,unclassified_motion,3,Move in your current position.,A person walks forward in place.
+kimodo_000145,basic_locomotion,unclassified_motion,3,Look down.,A person looks down.
+kimodo_000146,basic_locomotion,sidestep,3,Sidestep right.,A person sidesteps to the right.
+kimodo_000147,social_gesture,unclassified_motion,3,Give a thumbs up.,A person gives a thumbs up.
+kimodo_000148,basic_locomotion,unclassified_motion,3,Move.,A person walks forward.
+kimodo_000149,basic_locomotion,unclassified_motion,3,Move.,A person walks forward.
+kimodo_000150,basic_locomotion,unclassified_motion,3,Spread legs.,A person stands with their legs spread apart.
+kimodo_000151,social_gesture,nod,3,Nod.,A person nods their head.
+kimodo_000152,basic_locomotion,rise,3,Raise your body without moving away.,A person stands up tall in place.
+kimodo_000153,basic_locomotion,unclassified_motion,3,Lower your right arm on the spot.,A person lowers their right arm in place.
+kimodo_000154,social_gesture,unclassified_motion,3,Shrug without moving away.,A person shrugs their shoulders in place.
+kimodo_000155,basic_locomotion,unclassified_motion,3,Face forward in a steady way.,A person turns to face forward steadily.
+kimodo_000156,basic_locomotion,turn_left,3,Pivot left.,A person pivots to the left.
+kimodo_000157,basic_locomotion,unclassified_motion,3,Square your shoulders.,A person squares their shoulders.
+kimodo_000158,basic_locomotion,turn_left,3,Turn left.,A person turns to the left.
+kimodo_000159,basic_locomotion,unclassified_motion,3,Hold still on the spot.,A person holds still in place.
+kimodo_000160,basic_locomotion,unclassified_motion,3,Pivot back.,A person pivots back to face the opposite direction.
+kimodo_000161,basic_locomotion,unclassified_motion,3,Turn around.,A person turns around 180 degrees.
+kimodo_000162,posture_transition,rise,3,Rise in your current position.,A person stands up from a crouched pose in place.
+kimodo_000163,basic_locomotion,turn_left,3,Face left and stay ready.,A person turns to face left and stays in a ready stance.
+kimodo_000164,basic_locomotion,stop,3,Halt as instructed.,A person stops walking and stands still.
+kimodo_000165,basic_locomotion,stop,3,Hold position.,A person holds their position.
+kimodo_000166,posture_transition,stop,3,Stand still and hold.,A person stands still and holds the pose.
+kimodo_000167,posture_transition,unclassified_motion,3,Lean back.,A person leans backward.
+kimodo_000168,basic_locomotion,unclassified_motion,3,Step and stay ready.,A person takes a step forward and stays in a ready stance.
+kimodo_000169,basic_locomotion,unclassified_motion,3,Raise your left arm.,A person raises their left arm.
+kimodo_000170,basic_locomotion,turn_left,3,Face left on the spot.,A person turns to face left in place.
+kimodo_000171,basic_locomotion,sidestep,3,Sidestep right in a steady way.,A person sidesteps to the right steadily.
+kimodo_000172,basic_locomotion,unclassified_motion,3,Raise your left arm before anything else.,A person raises their left arm.
+kimodo_000173,basic_locomotion,unclassified_motion,3,Step in a steady way.,A person takes a step forward steadily.
+kimodo_000174,basic_locomotion,unclassified_motion,3,Move.,A person walks forward.
+kimodo_000175,posture_transition,bow,3,Lean forward and stay ready.,A person leans forward and stays in a ready stance.
+kimodo_000176,basic_locomotion,turn_right,3,Face right.,A person turns to face right.
+kimodo_000177,basic_locomotion,unclassified_motion,3,Face forward.,A person turns to face forward.
+kimodo_000178,basic_locomotion,unclassified_motion,3,Spin left with care.,A person spins to the left carefully.
+kimodo_000179,basic_locomotion,turn_right,3,Pivot right in a steady way.,A person pivots to the right steadily.
+kimodo_000180,basic_locomotion,unclassified_motion,3,Move.,A person walks forward.
+kimodo_000181,basic_locomotion,turn_right,3,Pivot right before anything else.,A person pivots to the right.
+kimodo_000182,basic_locomotion,unclassified_motion,3,Face forward without moving away.,A person turns to face forward in place.
+kimodo_000183,basic_locomotion,unclassified_motion,3,Raise your left arm.,A person raises their left arm.
+kimodo_000184,posture_transition,crouch,3,Crouch.,A person crouches down low.
+kimodo_000185,basic_locomotion,turn_right,3,Pivot right without moving away.,A person pivots to the right in place.
+kimodo_000186,basic_locomotion,unclassified_motion,3,Bend down.,A person bends down.
+kimodo_000187,basic_locomotion,rise,3,Raise your body with care.,A person stands up tall carefully.
+kimodo_000188,social_gesture,salute,3,Salute.,A person salutes.
+kimodo_000189,basic_locomotion,unclassified_motion,3,Move as instructed.,A person walks forward.
+kimodo_000190,basic_locomotion,unclassified_motion,3,Extend your right arm and stay ready.,A person extends their right arm and stays in a ready stance.
+kimodo_000191,basic_locomotion,turn_around,3,Rotate around without moving away.,A person rotates around 180 degrees in place.
+kimodo_000192,basic_locomotion,move_forward,3,Step forward.,A person takes a step forward.
+kimodo_000193,basic_locomotion,unclassified_motion,3,Bend down.,A person bends down.
+kimodo_000194,basic_locomotion,unclassified_motion,3,Move.,A person walks forward.
+kimodo_000195,basic_locomotion,turn_right,3,Turn right in a steady way.,A person turns to the right steadily.
+kimodo_000196,basic_locomotion,stop,3,Stop.,A person stops walking and stands still.
+kimodo_000197,basic_locomotion,unclassified_motion,3,Look up.,A person looks up.
+kimodo_000198,basic_locomotion,unclassified_motion,3,Spread legs before anything else.,A person stands with their legs spread apart.
+kimodo_000199,basic_locomotion,unclassified_motion,3,Relax in your current position.,A person relaxes into a neutral pose in place.
