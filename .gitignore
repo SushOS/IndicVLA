@@ -1,0 +1,12 @@
+*.npz
+*.pt
+*.xlsx
+*.log
+amass_data/
+retargeted_g1/
+proto-g1/
+corpus_build/
+g1_chunk_*.csv
+__pycache__/
+*.pyc
+.env
