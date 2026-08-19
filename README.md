@@ -2,6 +2,22 @@
 
 This project builds a multilingual motion-instruction dataset for a robot/VLA pipeline.
 
+## MAILA: Direct Hindi-to-Motion
+
+The `feature-MAILA` branch also contains the focused MAILA experiment for
+direct Hindi-conditioned Unitree G1 motion generation. The implementation is
+under [`OMG/`](OMG/) and keeps MuRIL and OMG-100M frozen while training only a
+small 50-token, 768-dimensional residual conditioning adapter. English T5 is
+used only as an optional training-time motion-response teacher; Hindi
+inference does not call a translator or English encoder.
+
+- [Core experiment plan](docs/MAILA_CORE_EXPERIMENT_PLAN.md)
+- [Executable training runbook](OMG/docs/hindi_adapter_training.md)
+- [Locked experiment configuration](OMG/configs/generation/exp/100m_hindi_adapter.yaml)
+
+Large datasets, Hugging Face model snapshots, OMG checkpoints, generated
+manifests, and training outputs are intentionally excluded from Git.
+
 The current workflow is:
 
 1. Generate English motion instructions across 7 tiers.

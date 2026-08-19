@@ -1,0 +1,49 @@
+# @package _global_
+defaults:
+  - override /data: bones_seed_hindi_lerobot
+  - override /model: hindi_adapter_motion_generator
+  - override /denoiser: transformer_100m
+  - override /diffusion: guided_x0
+  - override /loss: diffusion_only
+  - override /trainer: 1gpu
+
+exp_name: 100m_hindi_adapter
+init_weights_strict: true
+init_weights_ignore_prefixes:
+  - text_encoder.
+init_weights_legacy_attention_contract: self-and-cross
+
+model:
+  diffusion_target: future
+  history_pos_encoding: sinusoidal
+  use_audio: true
+  use_human_motion: true
+  frame_cond_injection: per_layer_film
+  text_mask_prob: 0.3
+  optimizer:
+    lr: 1.0e-4
+    weight_decay: 0.01
+  scheduler:
+    type: linear_warmup_cosine
+    warmup_steps: 1000
+    warmup_start_factor: 1.0e-4
+    t_max: 25000
+    eta_min: 1.0e-6
+
+trainer:
+  max_steps: 25000
+  val_check_interval: 1000
+  accumulate_grad_batches: 4
+  limit_val_batches: 200
+
+callbacks:
+  checkpoint:
+    every_n_train_steps: 2000
+  divergence_guard:
+    loss_monitor: diffusion_loss
+  early_stopping:
+    _target_: pytorch_lightning.callbacks.EarlyStopping
+    monitor: val/loss
+    mode: min
+    patience: 5
+    min_delta: 0.0

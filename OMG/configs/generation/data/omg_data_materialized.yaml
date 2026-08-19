@@ -1,0 +1,41 @@
+_target_: omg.data.datamodule.GenerationDataModule
+limit_each_trainset: null
+train_subset_ratio: null
+rotation_representation: ${representation.rotation_representation}
+
+dataset_opts:
+  train:
+    omg_data_materialized_train:
+      _target_: omg.data.episode_cache.EpisodeCachedG1MotionDataset
+      root: ${paths.materialized_root}/omg_episode_cache_v2_rot6d_seq60_hist10_k1
+      source_repo_id: &source_repo_id THU-MARS/OMG-Data
+      source_revision: &source_revision 6e0dfbc1c5298bff14d4e2b1459ad678af0a38e7
+      split: train
+  val:
+    omg_data_materialized_val:
+      _target_: omg.data.episode_cache.EpisodeCachedG1MotionDataset
+      root: ${paths.materialized_root}/omg_episode_cache_v2_rot6d_seq60_hist10_k1
+      source_repo_id: *source_repo_id
+      source_revision: *source_revision
+      split: val
+  test:
+    omg_data_materialized_test:
+      _target_: omg.data.episode_cache.EpisodeCachedG1MotionDataset
+      root: ${paths.materialized_root}/omg_episode_cache_v2_rot6d_seq60_hist10_k1
+      source_repo_id: *source_repo_id
+      source_revision: *source_revision
+      split: test
+
+loader_opts:
+  train:
+    batch_size: 96
+    num_workers: 0
+    prefetch_factor: null
+  val:
+    batch_size: 16
+    num_workers: 2
+    prefetch_factor: 1
+  test:
+    batch_size: 16
+    num_workers: 2
+    prefetch_factor: 1

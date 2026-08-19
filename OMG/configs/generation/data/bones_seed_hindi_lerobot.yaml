@@ -1,0 +1,55 @@
+_target_: omg.data.datamodule.GenerationDataModule
+limit_each_trainset: null
+train_subset_ratio: null
+rotation_representation: ${representation.rotation_representation}
+
+dataset_opts:
+  train:
+    bones_seed_hindi_train: &dataset_defaults
+      _target_: omg.data.hindi_caption_sidecar.BonesSeedHindiLeRobotDataset
+      dataset_root: ${paths.data_root}
+      repo_id: THU-MARS/OMG-Data
+      revision: 6e0dfbc1c5298bff14d4e2b1459ad678af0a38e7
+      manifest_sha256: be443885018180dda0f88ed874efc15cb3776a91148148baf49001d56a5ec855
+      caption_manifest: ${oc.env:BONES_HINDI_CAPTION_MANIFEST,${paths.data_root}/hindi/bones_seed_hi_v1.jsonl}
+      source_dataset_prefix: bones_seed
+      strict_caption_coverage: true
+      caption_selection_seed: ${seed}
+      sequence_duration: 2.0
+      num_prev_states: ${representation.num_prev_states}
+      canonical_frame_idx: ${representation.canonical_frame_idx}
+      rotation_representation: ${representation.rotation_representation}
+      fps: 30.0
+      use_text: true
+      use_audio: false
+      audio_dim: 35
+      use_human_motion: false
+      human_motion_dim: 66
+      train_window_policy: random
+      split: train
+  val:
+    bones_seed_hindi_val:
+      <<: *dataset_defaults
+      eval_window_policy: uniform
+      eval_num_windows: 1
+      split: val
+  test:
+    bones_seed_hindi_test:
+      <<: *dataset_defaults
+      eval_window_policy: uniform
+      eval_num_windows: 1
+      split: test
+
+loader_opts:
+  train:
+    batch_size: 64
+    num_workers: 4
+    prefetch_factor: 2
+  val:
+    batch_size: 16
+    num_workers: 2
+    prefetch_factor: 1
+  test:
+    batch_size: 16
+    num_workers: 2
+    prefetch_factor: 1

@@ -1,0 +1,52 @@
+_target_: omg.generation.models.hindi_adapter_motion_generator.HindiAdapterMotionGenerator
+_recursive_: false
+representation: ${representation}
+denoiser: ${denoiser}
+diffusion: ${diffusion}
+loss: ${loss}
+text_encoder:
+  _target_: omg.generation.conditions.muril.MuRILAdapterTextEncoder
+  model_name: ${paths.models_root}/muril-base-cased
+  model_revision: ${oc.env:MURIL_REVISION,null}
+  max_length: 50
+  output_dim: 768
+  adapter_hidden_dim: 3072
+  dropout: 0.1
+  residual_scale_init: 0.1
+  local_files_only: true
+teacher_text_encoder:
+  _target_: omg.generation.conditions.t5.FrozenT5TextEncoder
+  model_name: ${paths.models_root}/t5-base-local
+  max_length: 50
+  output_dim: 768
+teacher_caption_key: teacher_caption
+response_loss_probability: 0.5
+response_loss_initial_weight: 0.5
+response_loss_final_weight: 0.1
+response_loss_hold_steps: 5000
+response_loss_decay_steps: 20000
+adapter_only: true
+diffusion_target: future
+condition_dim: ${denoiser.hidden_dim}
+text_mask_prob: 0.3
+history_mask_prob: 0.1
+history_pos_encoding: sinusoidal
+# Keep the checkpoint architecture intact. BONES samples carry false masks for
+# these two modalities, and every associated parameter remains frozen.
+use_audio: true
+audio_dim: 35
+audio_mask_prob: 0.1
+use_human_motion: true
+human_motion_dim: 66
+human_motion_mask_prob: 0.5
+frame_cond_injection: per_layer_film
+log_loss_term_grad_norms: false
+optimizer:
+  lr: 1.0e-4
+  weight_decay: 0.01
+scheduler:
+  type: linear_warmup_cosine
+  warmup_steps: 1000
+  warmup_start_factor: 1.0e-4
+  t_max: 25000
+  eta_min: 1.0e-6
