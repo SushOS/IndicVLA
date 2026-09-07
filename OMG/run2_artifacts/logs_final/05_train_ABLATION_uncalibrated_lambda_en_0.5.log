@@ -1,0 +1,61 @@
+  train: 17,904 windows | langs=['hi'] | L=10 H=60 | window-language pairs with >=2 captions: 17,892
+  val: 1,370 windows | langs=['hi'] | L=10 H=60 | window-language pairs with >=2 captions: 1,368
+You are using the default legacy behaviour of the <class 'transformers.models.t5.tokenization_t5.T5Tokenizer'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thoroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565
+The tokenizer you are loading from '/workspace/models/muril-base-cased' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+  loaded 100m step=170000 self_qk=True cross_qk=True text_mask_prob=0.0
+  encoder keys not in ckpt (expected, new module): 210
+  trainable: 9 tensors, 4,725,505 params (adapter only)
+
+  [GATE] L_null (cached t5 empty-string context, 1024 val windows) = 0.03042
+         Run 1 reference on BONES-SEED: L_correct 0.04815 / L_wrong 0.05900
+         If L_null ~ L_wrong the native loss is a strong anchor; if it sits near L_correct, add --lambda-en and consider the repulsion term.
+
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from WANDB_API_KEY.
+wandb: Currently logged in as: aayush21003 (aayush21003-indraprastha-institute-of-information-techno) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.29.0
+wandb: Run data is saved locally in /workspace/wandb/run-20260905_202415-mbk0dtxv
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run maila-mp-hi-v2-20260905-202404
+wandb: ⭐️ View project at https://wandb.ai/aayush21003-indraprastha-institute-of-information-techno/maila-run2-motionpivot
+wandb: 🚀 View run at https://wandb.ai/aayush21003-indraprastha-institute-of-information-techno/maila-run2-motionpivot/runs/mbk0dtxv
+       1 loss=0.17078 nat=0.14079 xling=0.00264 en=0.05736 a=+0.1000 gn=0.22 1.06s/step | para=1.00
+      25 loss=0.12269 nat=0.10154 xling=0.00182 en=0.04047 a=+0.1000 gn=0.15 1.10s/step | para=1.00
+      50 loss=0.12870 nat=0.10630 xling=0.00336 en=0.04145 a=+0.1002 gn=0.26 1.11s/step | para=1.00
+      75 loss=0.08652 nat=0.07194 xling=0.00178 en=0.02738 a=+0.1004 gn=0.24 1.11s/step | para=0.99 degen=0.01
+     100 loss=0.08381 nat=0.07097 xling=0.00131 en=0.02436 a=+0.1007 gn=0.24 1.11s/step | para=1.00
+     125 loss=0.07313 nat=0.06357 xling=0.00133 en=0.01780 a=+0.1012 gn=0.29 1.11s/step | para=1.00
+     150 loss=0.06942 nat=0.06143 xling=0.00118 en=0.01480 a=+0.1016 gn=0.25 1.11s/step | para=1.00 degen=0.00
+     175 loss=0.05474 nat=0.04891 xling=0.00082 en=0.01084 a=+0.1020 gn=0.15 1.10s/step | para=1.00
+     200 loss=0.04462 nat=0.03993 xling=0.00076 en=0.00862 a=+0.1024 gn=0.12 1.10s/step | para=1.00
+     225 loss=0.05537 nat=0.04920 xling=0.00068 en=0.01167 a=+0.1027 gn=0.11 1.09s/step | para=1.00 degen=0.00
+     250 loss=0.04802 nat=0.04501 xling=0.00050 en=0.00553 a=+0.1030 gn=0.08 1.09s/step | para=1.00
+     275 loss=0.04409 nat=0.03970 xling=0.00044 en=0.00834 a=+0.1034 gn=0.13 1.09s/step | para=1.00
+     300 loss=0.02782 nat=0.02600 xling=0.00038 en=0.00326 a=+0.1037 gn=0.05 1.09s/step | para=1.00
+     325 loss=0.05076 nat=0.04830 xling=0.00031 en=0.00463 a=+0.1039 gn=0.04 1.09s/step | para=1.00
+     350 loss=0.05731 nat=0.05349 xling=0.00032 en=0.00732 a=+0.1042 gn=0.07 1.09s/step | para=1.00
+     375 loss=0.04068 nat=0.03824 xling=0.00035 en=0.00453 a=+0.1045 gn=0.07 1.09s/step | para=0.99 degen=0.01
+     400 loss=0.03683 nat=0.03431 xling=0.00019 en=0.00485 a=+0.1047 gn=0.01 1.09s/step | para=1.00
+     425 loss=0.04490 nat=0.04194 xling=0.00038 en=0.00554 a=+0.1049 gn=0.07 1.08s/step | para=1.00
+     450 loss=0.03168 nat=0.02992 xling=0.00029 en=0.00323 a=+0.1050 gn=0.01 1.08s/step | para=1.00
+     475 loss=0.05072 nat=0.04766 xling=0.00022 en=0.00589 a=+0.1051 gn=0.02 1.07s/step | para=1.00
+     500 loss=0.03619 nat=0.03429 xling=0.00020 en=0.00360 a=+0.1052 gn=0.01 1.06s/step | para=1.00
+  [val] step 500: hi: native=0.03773 rel=-0.11% tiv=2.51e-04
+  !! WARNING caption-swap sensitivity below the step-2000 level of Run 1 (+2.0%). The adapter may be ignoring the caption.
+     525 loss=0.03234 nat=0.03007 xling=0.00021 en=0.00434 a=+0.1053 gn=0.05 1.06s/step | para=1.00
+     550 loss=0.05569 nat=0.05273 xling=0.00036 en=0.00555 a=+0.1054 gn=0.02 1.06s/step | para=1.00
+     575 loss=0.03727 nat=0.03557 xling=0.00020 en=0.00320 a=+0.1055 gn=0.02 1.06s/step | para=1.00
+     600 loss=0.03102 nat=0.02928 xling=0.00021 en=0.00327 a=+0.1056 gn=0.02 1.05s/step | para=1.00
+     625 loss=0.03865 nat=0.03690 xling=0.00017 en=0.00334 a=+0.1057 gn=0.02 1.05s/step | para=1.00 degen=0.00
+     650 loss=0.04895 nat=0.04601 xling=0.00030 en=0.00560 a=+0.1059 gn=0.05 1.05s/step | para=1.00
+     675 loss=0.03525 nat=0.03248 xling=0.00029 en=0.00525 a=+0.1060 gn=0.05 1.04s/step | para=1.00
+     700 loss=0.03568 nat=0.03349 xling=0.00032 en=0.00406 a=+0.1060 gn=0.01 1.04s/step | para=1.00
+     725 loss=0.03009 nat=0.02801 xling=0.00017 en=0.00398 a=+0.1062 gn=0.01 1.04s/step | para=1.00
+     750 loss=0.03375 nat=0.03107 xling=0.00017 en=0.00519 a=+0.1063 gn=0.01 1.04s/step | para=1.00
+     775 loss=0.04159 nat=0.03787 xling=0.00036 en=0.00707 a=+0.1065 gn=0.02 1.04s/step | para=1.00
+     800 loss=0.03709 nat=0.03517 xling=0.00026 en=0.00359 a=+0.1068 gn=0.02 1.04s/step | para=1.00
+     825 loss=0.05536 nat=0.05253 xling=0.00018 en=0.00548 a=+0.1068 gn=0.03 1.04s/step | para=1.00
+     850 loss=0.05659 nat=0.05404 xling=0.00028 en=0.00482 a=+0.1067 gn=0.04 1.03s/step | para=1.00
+     875 loss=0.03552 nat=0.03221 xling=0.00020 en=0.00642 a=+0.1066 gn=0.13 1.03s/step | para=1.00
+     900 loss=0.03974 nat=0.03770 xling=0.00027 en=0.00380 a=+0.1065 gn=0.01 1.03s/step | para=1.00
+     925 loss=0.03165 nat=0.02956 xling=0.00016 en=0.00402 a=+0.1066 gn=0.01 1.03s/step | para=1.00 degen=0.00
+     950 loss=0.04344 nat=0.04095 xling=0.00033 en=0.00467 a=+0.1066 gn=0.03 1.03s/step | para=1.00

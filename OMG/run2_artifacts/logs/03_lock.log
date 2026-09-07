@@ -1,0 +1,9 @@
+wrote /workspace/runs/RUN_LOCK.json  (32,762 bytes)
+  git      :   dirty=False
+  gpu      : NVIDIA GeForce RTX 4090 / NVIDIA GeForce RTX 4090, 580.173.02, 24564 MiB
+  torch    : 2.6.0+cu124  transformers 4.57.6
+  data[train  ]: 17904 windows, 5 shards, hi/caption=2.1019
+  data[val    ]: 1370 windows, 1 shards, hi/caption=1.9544
+  data[test   ]: 1394 windows, 1 shards, hi/caption=1.9661
+  leakage  : PASS
+  pushed -> PragyaVLA/maila-run2-motionpivot/maila-mp-hi-20260905-174910/RUN_LOCK.json

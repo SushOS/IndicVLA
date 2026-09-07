@@ -1,0 +1,130 @@
+[
+  {
+    "file": "panel_00_clip98.mp4",
+    "clip": 98,
+    "arms": [
+      "gt",
+      "maila_en",
+      "maila_hi"
+    ],
+    "caption_en": "the Robot walks forward, then walks to their right and steps up and down as if stepping over or on obstacles.",
+    "caption_hi": "रोबोट आगे बढ़ता है, फिर उनके दाहिनी ओर चलता है और ऊपर-नीचे कदम रखता है जैसे कि बाधाओं पर या बाधाओं पर कदम रख रहा हो।",
+    "xy_disp_m": {
+      "gt": 0.1965,
+      "maila_en": 2.323,
+      "maila_hi": 2.3931
+    }
+  },
+  {
+    "file": "panel_01_clip283.mp4",
+    "clip": 283,
+    "arms": [
+      "gt",
+      "maila_en",
+      "maila_hi"
+    ],
+    "caption_en": "Robot appears to be stretching Robot turn their upper body in a counter clockwise direction and then leans upper body from side to side",
+    "caption_hi": "ऐसा प्रतीत होता है कि रोबोट स्ट्रेचिंग कर रहा है, रोबोट अपने ऊपरी शरीर को घड़ी की विपरीत दिशा में घुमाता है और फिर ऊपरी शरीर को एक तरफ से दूसरी तरफ झुकाता है",
+    "xy_disp_m": {
+      "gt": 0.0044,
+      "maila_en": 0.0751,
+      "maila_hi": 0.185
+    }
+  },
+  {
+    "file": "panel_02_clip986.mp4",
+    "clip": 986,
+    "arms": [
+      "gt",
+      "maila_en",
+      "maila_hi"
+    ],
+    "caption_en": "a Robot is waving both arms.",
+    "caption_hi": "एक रोबोट दोनों हाथ लहरा रहा है।",
+    "xy_disp_m": {
+      "gt": 0.0094,
+      "maila_en": 0.0059,
+      "maila_hi": 0.0198
+    }
+  },
+  {
+    "file": "panel_03_clip427.mp4",
+    "clip": 427,
+    "arms": [
+      "gt",
+      "maila_en",
+      "maila_hi"
+    ],
+    "caption_en": "the Robot is stretching his arms",
+    "caption_hi": "रोबोट अपनी भुजाएँ फैला रहा है",
+    "xy_disp_m": {
+      "gt": 0.0026,
+      "maila_en": 0.0081,
+      "maila_hi": 0.0088
+    }
+  },
+  {
+    "file": "panel_04_clip880.mp4",
+    "clip": 880,
+    "arms": [
+      "gt",
+      "maila_en",
+      "maila_hi"
+    ],
+    "caption_en": "a Robot slowly walked forward in right direction and after in left direction",
+    "caption_hi": "एक रोबोट धीरे-धीरे दायीं दिशा में आगे बढ़ा और उसके बाद बायीं दिशा में चला गया",
+    "xy_disp_m": {
+      "gt": 0.1192,
+      "maila_en": 1.5154,
+      "maila_hi": 1.9684
+    }
+  },
+  {
+    "file": "panel_05_clip1284.mp4",
+    "clip": 1284,
+    "arms": [
+      "gt",
+      "maila_en",
+      "maila_hi"
+    ],
+    "caption_en": "kick left leg step back",
+    "caption_hi": "बाएँ पैर को लात मारकर पीछे हटें",
+    "xy_disp_m": {
+      "gt": 0.0179,
+      "maila_en": 0.5568,
+      "maila_hi": 0.6228
+    }
+  },
+  {
+    "file": "panel_06_clip12.mp4",
+    "clip": 12,
+    "arms": [
+      "gt",
+      "maila_en",
+      "maila_hi"
+    ],
+    "caption_en": "a Robot wobbles as Robot walk forward.",
+    "caption_hi": "जैसे ही रोबोट आगे बढ़ता है, रोबोट डगमगाने लगता है।",
+    "xy_disp_m": {
+      "gt": 0.2119,
+      "maila_en": 1.2363,
+      "maila_hi": 1.274
+    }
+  },
+  {
+    "file": "panel_07_clip513.mp4",
+    "clip": 513,
+    "arms": [
+      "gt",
+      "maila_en",
+      "maila_hi"
+    ],
+    "caption_en": "the hands are met at the middle of the waist shaking and go back down to the side of the body.",
+    "caption_hi": "हाथ कमर के बीच में मिलते हैं और हिलते हुए वापस शरीर के किनारे तक जाते हैं।",
+    "xy_disp_m": {
+      "gt": 0.0008,
+      "maila_en": 0.0739,
+      "maila_hi": 0.1129
+    }
+  }
+]

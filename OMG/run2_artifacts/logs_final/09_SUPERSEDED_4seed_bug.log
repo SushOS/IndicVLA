@@ -1,0 +1,46 @@
+  val: 1,370 windows | langs=['hi'] | L=10 H=60 | window-language pairs with >=2 captions: 1,368
+  test: 1,394 windows | langs=['hi'] | L=10 H=60 | window-language pairs with >=2 captions: 1,392
+You are using the default legacy behaviour of the <class 'transformers.models.t5.tokenization_t5.T5Tokenizer'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thoroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565
+The tokenizer you are loading from '/workspace/models/muril-base-cased' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+  loaded 100m step=170000 self_qk=True cross_qk=True text_mask_prob=0.0
+  encoder keys not in ckpt (expected, new module): 212
+  trainable: 9 tensors, 4,725,505 params (adapter only)
+  maila-mp-hi-v4C-corpus-len0.1-20260905-210619 adapter_step002000.pt val rel=+0.42%
+  maila-mp-hi-v4C-corpus-len0.1-20260905-210619 adapter_step004000.pt val rel=+1.38%
+  maila-mp-hi-v4C-corpus-len0.1-20260905-210619 adapter_step006000.pt val rel=+1.03%
+  maila-mp-hi-v4C-corpus-len0.1-20260905-210619 adapter_step008000.pt val rel=+2.16%
+  maila-mp-hi-v4C-corpus-len0.1-20260905-210619 adapter_step010000.pt val rel=+1.81%
+  maila-mp-hi-v4C-corpus-len0.1-20260905-210619 adapter_step012000.pt val rel=+1.81%
+  maila-mp-hi-v4C-corpus-len0.1-20260905-210619 adapter_step014000.pt val rel=+2.70%
+  maila-mp-hi-v4C-corpus-len0.1-20260905-210619 adapter_step016000.pt val rel=+2.74%
+  maila-mp-hi-v4C-corpus-len0.1-20260905-210619 adapter_step018000.pt val rel=+2.56%
+  maila-mp-hi-v4C-corpus-len0.1-20260905-210619 adapter_step020000.pt val rel=+2.48%
+  maila-mp-hi-v4C-corpus-len0.1-20260905-210619 adapter_step022000.pt val rel=+2.51%
+  maila-mp-hi-v4C-corpus-len0.1-20260905-210619 adapter_step024000.pt val rel=+2.57%
+  maila-mp-hi-v4C-corpus-len0.1-20260905-210619 adapter_step025000.pt val rel=+2.59%
+  -> maila-mp-hi-v4C-corpus-len0.1-20260905-210619 selected adapter_step016000.pt (val rel +2.74%)
+  maila-mp-hi-v4D-corpus-len0.5-20260905-210619 adapter_step002000.pt val rel=+0.73%
+  maila-mp-hi-v4D-corpus-len0.5-20260905-210619 adapter_step004000.pt val rel=+1.89%
+  maila-mp-hi-v4D-corpus-len0.5-20260905-210619 adapter_step006000.pt val rel=+1.77%
+  maila-mp-hi-v4D-corpus-len0.5-20260905-210619 adapter_step008000.pt val rel=+2.58%
+  maila-mp-hi-v4D-corpus-len0.5-20260905-210619 adapter_step010000.pt val rel=+2.20%
+  maila-mp-hi-v4D-corpus-len0.5-20260905-210619 adapter_step012000.pt val rel=+2.18%
+  maila-mp-hi-v4D-corpus-len0.5-20260905-210619 adapter_step014000.pt val rel=+2.69%
+  maila-mp-hi-v4D-corpus-len0.5-20260905-210619 adapter_step016000.pt val rel=+2.90%
+  maila-mp-hi-v4D-corpus-len0.5-20260905-210619 adapter_step018000.pt val rel=+2.80%
+  maila-mp-hi-v4D-corpus-len0.5-20260905-210619 adapter_step020000.pt val rel=+2.67%
+  maila-mp-hi-v4D-corpus-len0.5-20260905-210619 adapter_step022000.pt val rel=+2.68%
+  maila-mp-hi-v4D-corpus-len0.5-20260905-210619 adapter_step024000.pt val rel=+2.69%
+  maila-mp-hi-v4D-corpus-len0.5-20260905-210619 adapter_step025000.pt val rel=+2.70%
+  -> maila-mp-hi-v4D-corpus-len0.5-20260905-210619 selected adapter_step016000.pt (val rel +2.90%)
+  maila-mp-hi-v4C-corpus-len0.1-20260905-210619 cfg=2.0 mpjpe=36.1mm
+  maila-mp-hi-v4C-corpus-len0.1-20260905-210619 cfg=2.5 mpjpe=40.0mm
+  maila-mp-hi-v4C-corpus-len0.1-20260905-210619 cfg=3.0 mpjpe=44.3mm
+  maila-mp-hi-v4D-corpus-len0.5-20260905-210619 cfg=2.0 mpjpe=35.7mm
+  maila-mp-hi-v4D-corpus-len0.5-20260905-210619 cfg=2.5 mpjpe=39.2mm
+  maila-mp-hi-v4D-corpus-len0.5-20260905-210619 cfg=3.0 mpjpe=43.1mm
+
+wrote /workspace/runs/eval_report.json  (0 stage errors)
+[chain] eval exit=0
+[sync] 04:24:52 tracked=68 pushed=5 failed=0 already=63
+[chain] DONE

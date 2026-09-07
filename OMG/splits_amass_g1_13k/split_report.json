@@ -1,0 +1,85 @@
+{
+  "train": {
+    "clips": 10439,
+    "super_groups": 4067,
+    "distinct_caption_1": 9733,
+    "clips_per_caption": 1.0725,
+    "english_caption_pairs": 31196,
+    "indic_caption_pairs": 124784,
+    "subsets": 16,
+    "hours": 21.5
+  },
+  "val": {
+    "clips": 821,
+    "super_groups": 447,
+    "distinct_caption_1": 812,
+    "clips_per_caption": 1.0111,
+    "english_caption_pairs": 2457,
+    "indic_caption_pairs": 9828,
+    "subsets": 16,
+    "hours": 1.83
+  },
+  "test": {
+    "clips": 841,
+    "super_groups": 455,
+    "distinct_caption_1": 831,
+    "clips_per_caption": 1.012,
+    "english_caption_pairs": 2508,
+    "indic_caption_pairs": 10032,
+    "subsets": 16,
+    "hours": 1.82
+  },
+  "reserve": {
+    "clips": 850,
+    "super_groups": 452,
+    "distinct_caption_1": 840,
+    "clips_per_caption": 1.0119,
+    "english_caption_pairs": 2545,
+    "indic_caption_pairs": 10180,
+    "subsets": 16,
+    "hours": 1.87
+  },
+  "_meta": {
+    "source_csv": "D:\\HumanML3d\\g1_dataset_robot_v2.csv",
+    "seed": 0,
+    "min_duration_s": 2.3333333333333335,
+    "source_clips": 13282,
+    "usable_clips": 12951,
+    "total_super_groups": 5421,
+    "grouping": "clips merged transitively by shared source_amass OR shared caption_1",
+    "allocation": "per-AMASS-subset greedy fill, largest-group-first, seed-shuffled",
+    "languages": [
+      "hi",
+      "bn",
+      "ta",
+      "te"
+    ],
+    "caption_columns": [
+      "caption_1",
+      "caption_2",
+      "caption_3",
+      "caption_4",
+      "caption_1_hi",
+      "caption_1_bn",
+      "caption_1_ta",
+      "caption_2_hi",
+      "caption_2_bn",
+      "caption_2_ta",
+      "caption_3_hi",
+      "caption_3_bn",
+      "caption_3_ta",
+      "caption_4_hi",
+      "caption_4_bn",
+      "caption_4_ta",
+      "caption_1_te",
+      "caption_2_te",
+      "caption_3_te",
+      "caption_4_te"
+    ],
+    "leakage_verified": [
+      "source_amass",
+      "caption_1",
+      "super_group"
+    ]
+  }
+}

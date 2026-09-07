@@ -1,0 +1,13 @@
+[chain] waiting for trainers to exit...
+[chain] training complete at 04:17:00; GPU free, starting evaluation
+  val: 1,370 windows | langs=['hi'] | L=10 H=60 | window-language pairs with >=2 captions: 1,368
+  test: 1,394 windows | langs=['hi'] | L=10 H=60 | window-language pairs with >=2 captions: 1,392
+You are using the default legacy behaviour of the <class 'transformers.models.t5.tokenization_t5.T5Tokenizer'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thoroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565
+The tokenizer you are loading from '/workspace/models/muril-base-cased' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+  loaded 100m step=170000 self_qk=True cross_qk=True text_mask_prob=0.0
+  encoder keys not in ckpt (expected, new module): 212
+  trainable: 9 tensors, 4,725,505 params (adapter only)
+could not locate the motion representation on the model
+[chain] eval exit=1
+[sync] 04:17:11 tracked=64 pushed=5 failed=0 already=59
+[chain] DONE

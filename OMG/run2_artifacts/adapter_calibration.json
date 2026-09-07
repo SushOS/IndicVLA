@@ -1,0 +1,16 @@
+{
+  "n_target_tokens": 34258,
+  "n_source_tokens": 39416,
+  "n_captions": 2048,
+  "langs": [
+    "hi"
+  ],
+  "seed": 0,
+  "t5": "/workspace/models/t5-base-local",
+  "muril": "/workspace/models/muril-base-cased",
+  "source": "train split only",
+  "sha256": "ca74f04c77fd43754a947dbf7256939c9371551258237b901db6b8ac212dd95f",
+  "target_token_norm": 6.9773030281066895,
+  "source_common_norm": 26.872772216796875,
+  "layernorm_default_norm": 27.712812921102035
+}

@@ -1,0 +1,22 @@
+=== VALIDATION ===
+  V1 codec round-trip on clip 11817: {'root_pos': 2.682209014892578e-07, 'root_quat': 2.384185791015625e-07, 'joints': 0.0}
+  V2 decode identity: normalize->decode vs codec inverse  max|d| = 1.192e-07
+     unnormalised decode (the old bug) differs by         7.487e-01
+  V3 GT motion, clip 11817 (247 frames): root 1.520 m | foot swing vs pelvis 0.569 m | joint range 0.82 rad
+  V4 closed loop: asked 237 frames, got 237, chunk=60 -> 4 rollout steps
+  V5 label order fixed to ['gt', 'omg_en', 'omg_hi', 'maila_en', 'maila_hi'] (header and frames share one list)
+=== VALIDATION PASSED ===
+    clip 11817: source 247 frames, generating 237 (trunc 0.00)
+  [1/6] full_clip11817.mp4  237 frames (7.9s)  omg_en mpjpe=164mm  omg_hi mpjpe=176mm  maila_en mpjpe=160mm  maila_hi mpjpe=153mm
+    clip 201: source 240 frames, generating 230 (trunc 0.20)
+  [2/6] full_clip201.mp4  230 frames (7.7s)  omg_en mpjpe=131mm  omg_hi mpjpe=145mm  maila_en mpjpe=119mm  maila_hi mpjpe=133mm
+    clip 2243: source 300 frames, generating 290 (trunc 0.00)
+  [3/6] full_clip2243.mp4  290 frames (9.7s)  omg_en mpjpe=130mm  omg_hi mpjpe=117mm  maila_en mpjpe=128mm  maila_hi mpjpe=143mm
+    clip 9231: source 300 frames, generating 290 (trunc 0.00)
+  [4/6] full_clip9231.mp4  290 frames (9.7s)  omg_en mpjpe=87mm  omg_hi mpjpe=109mm  maila_en mpjpe=94mm  maila_hi mpjpe=106mm
+    clip 1502: source 282 frames, generating 272 (trunc 0.00)
+  [5/6] full_clip1502.mp4  272 frames (9.1s)  omg_en mpjpe=164mm  omg_hi mpjpe=149mm  maila_en mpjpe=106mm  maila_hi mpjpe=135mm
+    clip 2491: source 194 frames, generating 184 (trunc 0.00)
+    SKIP clip 2491 (omg_en failed) RuntimeError: The expanded size of the tensor (4) must match the existing size (0) at non-singleton dimension 1.  Target sizes: [1, 4,
+    clip 2643: source 270 frames, generating 260 (trunc 0.07)
+  [6/6] full_clip2643.mp4  260 frames (8.7s)  omg_en mpjpe=184mm  omg_hi mpjpe=213mm  maila_en mpjpe=172mm  maila_hi mpjpe=165mm

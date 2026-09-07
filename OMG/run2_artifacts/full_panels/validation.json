@@ -1,0 +1,29 @@
+{
+  "V1_codec_roundtrip": {
+    "root_pos": 2.682209014892578e-07,
+    "root_quat": 2.384185791015625e-07,
+    "joints": 0.0
+  },
+  "V2_decode_identity": {
+    "correct_max_abs": 1.1920928955078125e-07,
+    "buggy_path_max_abs": 0.7487056255340576
+  },
+  "V3_gt_motion": {
+    "root_disp_m": 1.5202558040618896,
+    "foot_swing_m": 0.5694186091423035,
+    "joint_range_rad": 0.8157640695571899,
+    "frames": 247
+  },
+  "V4_closed_loop": {
+    "asked": 237,
+    "got": 237,
+    "chunk": 60
+  },
+  "V5_label_order": [
+    "gt",
+    "omg_en",
+    "omg_hi",
+    "maila_en",
+    "maila_hi"
+  ]
+}

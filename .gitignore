@@ -40,3 +40,12 @@ corpus_build/*.jsonl
 corpus_build/*.json
 !corpus_build/.gitkeep
 
+
+# Run 2/3 large binaries -- these live on HuggingFace (CodeSushh/maila-run2-motionpivot),
+# verified by SHA-256 in run2_artifacts/TEARDOWN_MANIFEST.json before the box was destroyed.
+OMG/run2_artifacts/**/*.pt
+OMG/run2_artifacts/**/*.mp4
+OMG/run2_artifacts/**/*.npz
+OMG/run2_artifacts/**/*.tgz
+OMG/side_by_side.zip
+OMG/side_by_side/

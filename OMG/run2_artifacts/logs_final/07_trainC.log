@@ -1,0 +1,1164 @@
+  train: 17,904 windows | langs=['hi'] | L=10 H=60 | window-language pairs with >=2 captions: 17,892
+  val: 1,370 windows | langs=['hi'] | L=10 H=60 | window-language pairs with >=2 captions: 1,368
+You are using the default legacy behaviour of the <class 'transformers.models.t5.tokenization_t5.T5Tokenizer'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thoroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565
+The tokenizer you are loading from '/workspace/models/muril-base-cased' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+  loaded 100m step=170000 self_qk=True cross_qk=True text_mask_prob=0.0
+  encoder keys not in ckpt (expected, new module): 212
+  trainable: 9 tensors, 4,725,505 params (adapter only)
+  [geometry gate] n=128  token_norm=7.050 (t5 6.758)  cos(i,j)=0.6245 (t5 0.6563)  btwn/mu=0.7721 (t5 0.7201)
+
+  [GATE] L_null (cached t5 empty-string context, 1024 val windows) = 0.03042
+         Run 1 reference on BONES-SEED: L_correct 0.04815 / L_wrong 0.05900
+         If L_null ~ L_wrong the native loss is a strong anchor; if it sits near L_correct, add --lambda-en and consider the repulsion term.
+
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from WANDB_API_KEY.
+wandb: Currently logged in as: aayush21003 (aayush21003-indraprastha-institute-of-information-techno) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.29.0
+wandb: Run data is saved locally in /workspace/wandb/run-20260905_210630-lm14mxca
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run maila-mp-hi-v4C-corpus-len0.1-20260905-210619
+wandb: ⭐️ View project at https://wandb.ai/aayush21003-indraprastha-institute-of-information-techno/maila-run2-motionpivot
+wandb: 🚀 View run at https://wandb.ai/aayush21003-indraprastha-institute-of-information-techno/maila-run2-motionpivot/runs/lm14mxca
+       1 loss=0.07610 nat=0.07469 xling=0.00137 en=0.00723 a=+0.1000 gn=0.05 1.22s/step | para=1.00
+      25 loss=0.05684 nat=0.05574 xling=0.00143 en=0.00389 a=+0.1000 gn=0.04 1.03s/step | para=1.00
+      50 loss=0.05313 nat=0.05229 xling=0.00100 en=0.00340 a=+0.1001 gn=0.03 1.03s/step | para=1.00
+      75 loss=0.03868 nat=0.03802 xling=0.00073 en=0.00293 a=+0.1002 gn=0.02 1.02s/step | para=0.99 degen=0.01
+     100 loss=0.04176 nat=0.04098 xling=0.00089 en=0.00328 a=+0.1004 gn=0.04 1.02s/step | para=1.00
+     125 loss=0.04769 nat=0.04702 xling=0.00073 en=0.00304 a=+0.1006 gn=0.02 1.02s/step | para=1.00
+     150 loss=0.05270 nat=0.05192 xling=0.00082 en=0.00369 a=+0.1008 gn=0.03 1.02s/step | para=1.00 degen=0.00
+     175 loss=0.03874 nat=0.03798 xling=0.00071 en=0.00398 a=+0.1008 gn=0.02 1.02s/step | para=1.00
+     200 loss=0.03440 nat=0.03369 xling=0.00078 en=0.00320 a=+0.1010 gn=0.01 1.02s/step | para=1.00
+     225 loss=0.03943 nat=0.03767 xling=0.00083 en=0.01343 a=+0.1013 gn=0.02 1.02s/step | para=1.00 degen=0.00
+     250 loss=0.03989 nat=0.03938 xling=0.00044 en=0.00297 a=+0.1016 gn=0.01 1.02s/step | para=1.00
+     275 loss=0.03680 nat=0.03572 xling=0.00079 en=0.00690 a=+0.1019 gn=0.04 1.02s/step | para=1.00
+     300 loss=0.02413 nat=0.02362 xling=0.00052 en=0.00250 a=+0.1023 gn=0.01 1.03s/step | para=1.00
+     325 loss=0.04800 nat=0.04734 xling=0.00051 en=0.00406 a=+0.1028 gn=0.01 1.02s/step | para=1.00
+     350 loss=0.05007 nat=0.04927 xling=0.00055 en=0.00520 a=+0.1031 gn=0.03 1.02s/step | para=1.00
+     375 loss=0.03682 nat=0.03602 xling=0.00066 en=0.00471 a=+0.1035 gn=0.02 1.02s/step | para=0.99 degen=0.01
+     400 loss=0.03338 nat=0.03268 xling=0.00036 en=0.00518 a=+0.1036 gn=0.01 1.02s/step | para=1.00
+     425 loss=0.03777 nat=0.03706 xling=0.00050 en=0.00458 a=+0.1040 gn=0.07 1.02s/step | para=1.00
+     450 loss=0.02916 nat=0.02861 xling=0.00049 en=0.00304 a=+0.1041 gn=0.01 1.02s/step | para=1.00
+     475 loss=0.04684 nat=0.04608 xling=0.00040 en=0.00560 a=+0.1042 gn=0.02 1.02s/step | para=1.00
+     500 loss=0.03409 nat=0.03356 xling=0.00031 en=0.00373 a=+0.1043 gn=0.01 1.02s/step | para=1.00
+  [val] step 500: hi: native=0.03778 rel=-1.10% tiv=8.49e-04
+  !! WARNING caption-swap sensitivity below the step-2000 level of Run 1 (+2.0%). The adapter may be ignoring the caption.
+     525 loss=0.02965 nat=0.02914 xling=0.00028 en=0.00369 a=+0.1044 gn=0.01 1.03s/step | para=1.00
+     550 loss=0.05246 nat=0.05154 xling=0.00057 en=0.00631 a=+0.1046 gn=0.02 1.03s/step | para=1.00
+     575 loss=0.03572 nat=0.03522 xling=0.00030 en=0.00355 a=+0.1047 gn=0.01 1.03s/step | para=1.00
+     600 loss=0.02890 nat=0.02842 xling=0.00031 en=0.00332 a=+0.1053 gn=0.01 1.03s/step | para=1.00
+     625 loss=0.03640 nat=0.03588 xling=0.00032 en=0.00358 a=+0.1053 gn=0.02 1.03s/step | para=1.00 degen=0.00
+     650 loss=0.04630 nat=0.04546 xling=0.00042 en=0.00628 a=+0.1057 gn=0.02 1.04s/step | para=1.00
+     675 loss=0.03151 nat=0.03086 xling=0.00029 en=0.00502 a=+0.1059 gn=0.03 1.04s/step | para=1.00
+     700 loss=0.03360 nat=0.03295 xling=0.00034 en=0.00472 a=+0.1065 gn=0.02 1.04s/step | para=1.00
+     725 loss=0.02842 nat=0.02776 xling=0.00034 en=0.00496 a=+0.1068 gn=0.01 1.03s/step | para=1.00
+     750 loss=0.03121 nat=0.03032 xling=0.00031 en=0.00736 a=+0.1069 gn=0.01 1.04s/step | para=1.00
+     775 loss=0.03816 nat=0.03716 xling=0.00042 en=0.00783 a=+0.1072 gn=0.02 1.04s/step | para=1.00
+     800 loss=0.03442 nat=0.03385 xling=0.00030 en=0.00417 a=+0.1072 gn=0.02 1.04s/step | para=1.00
+     825 loss=0.05117 nat=0.05042 xling=0.00028 en=0.00600 a=+0.1071 gn=0.03 1.04s/step | para=1.00
+     850 loss=0.05248 nat=0.05185 xling=0.00040 en=0.00431 a=+0.1067 gn=0.07 1.04s/step | para=1.00
+     875 loss=0.03164 nat=0.03100 xling=0.00025 en=0.00520 a=+0.1065 gn=0.03 1.04s/step | para=1.00
+     900 loss=0.03790 nat=0.03725 xling=0.00043 en=0.00439 a=+0.1062 gn=0.01 1.04s/step | para=1.00
+     925 loss=0.02898 nat=0.02842 xling=0.00020 en=0.00457 a=+0.1056 gn=0.01 1.04s/step | para=1.00 degen=0.00
+     950 loss=0.04063 nat=0.03963 xling=0.00083 en=0.00588 a=+0.1057 gn=0.03 1.04s/step | para=1.00
+     975 loss=0.04290 nat=0.04239 xling=0.00032 en=0.00351 a=+0.1056 gn=0.04 1.03s/step | para=1.00
+    1000 loss=0.02877 nat=0.02830 xling=0.00020 en=0.00367 a=+0.1052 gn=0.01 1.03s/step | para=1.00 degen=0.00
+  [val] step 1000: hi: native=0.03731 rel=-0.18% tiv=2.98e-04
+  !! WARNING caption-swap sensitivity below the step-2000 level of Run 1 (+2.0%). The adapter may be ignoring the caption.
+    1025 loss=0.03060 nat=0.03007 xling=0.00031 en=0.00383 a=+0.1054 gn=0.01 1.04s/step | para=1.00
+    1050 loss=0.04327 nat=0.04253 xling=0.00035 en=0.00567 a=+0.1052 gn=0.03 1.04s/step | para=1.00
+    1075 loss=0.04502 nat=0.04461 xling=0.00027 en=0.00274 a=+0.1050 gn=0.02 1.04s/step | para=1.00 degen=0.00
+    1100 loss=0.05240 nat=0.05163 xling=0.00057 en=0.00491 a=+0.1047 gn=0.01 1.04s/step | para=1.00
+    1125 loss=0.03268 nat=0.03200 xling=0.00041 en=0.00474 a=+0.1047 gn=0.01 1.04s/step | para=1.00 degen=0.00
+    1150 loss=0.04829 nat=0.04737 xling=0.00062 en=0.00606 a=+0.1048 gn=0.05 1.04s/step | para=1.00
+    1175 loss=0.03112 nat=0.03071 xling=0.00023 en=0.00294 a=+0.1045 gn=0.02 1.04s/step | para=0.99 degen=0.01
+    1200 loss=0.03202 nat=0.03166 xling=0.00021 en=0.00259 a=+0.1043 gn=0.01 1.04s/step | para=1.00
+    1225 loss=0.06997 nat=0.06832 xling=0.00044 en=0.01423 a=+0.1046 gn=0.23 1.04s/step | para=1.00
+    1250 loss=0.05932 nat=0.05884 xling=0.00022 en=0.00375 a=+0.1039 gn=0.02 1.04s/step | para=1.00
+    1275 loss=0.03208 nat=0.03154 xling=0.00026 en=0.00413 a=+0.1040 gn=0.01 1.04s/step | para=1.00
+    1300 loss=0.03876 nat=0.03794 xling=0.00049 en=0.00578 a=+0.1038 gn=0.04 1.04s/step | para=1.00
+    1325 loss=0.03792 nat=0.03712 xling=0.00026 en=0.00680 a=+0.1040 gn=0.03 1.04s/step | para=1.00 degen=0.00
+    1350 loss=0.03974 nat=0.03928 xling=0.00027 en=0.00326 a=+0.1041 gn=0.07 1.03s/step | para=1.00
+    1375 loss=0.03742 nat=0.03661 xling=0.00046 en=0.00579 a=+0.1044 gn=0.05 1.03s/step | para=1.00
+    1400 loss=0.04322 nat=0.04271 xling=0.00045 en=0.00285 a=+0.1045 gn=0.07 1.03s/step | para=1.00 degen=0.00
+    1425 loss=0.04880 nat=0.04790 xling=0.00038 en=0.00711 a=+0.1044 gn=0.02 1.03s/step | para=1.00
+    1450 loss=0.06015 nat=0.05880 xling=0.00065 en=0.01024 a=+0.1044 gn=0.07 1.03s/step | para=1.00
+    1475 loss=0.03341 nat=0.03290 xling=0.00035 en=0.00331 a=+0.1034 gn=0.02 1.03s/step | para=1.00
+    1500 loss=0.03709 nat=0.03648 xling=0.00036 en=0.00429 a=+0.1035 gn=0.01 1.03s/step | para=1.00 degen=0.00
+  [val] step 1500: hi: native=0.03685 rel=+0.31% tiv=2.92e-04
+  !! WARNING caption-swap sensitivity below the step-2000 level of Run 1 (+2.0%). The adapter may be ignoring the caption.
+    1525 loss=0.02712 nat=0.02656 xling=0.00028 en=0.00419 a=+0.1038 gn=0.01 1.04s/step | para=1.00
+    1550 loss=0.03524 nat=0.03394 xling=0.00030 en=0.01153 a=+0.1039 gn=0.01 1.04s/step | para=1.00
+    1575 loss=0.03758 nat=0.03676 xling=0.00025 en=0.00696 a=+0.1037 gn=0.02 1.04s/step | para=1.00
+    1600 loss=0.02086 nat=0.02059 xling=0.00014 en=0.00200 a=+0.1039 gn=0.01 1.04s/step | para=1.00
+    1625 loss=0.02675 nat=0.02628 xling=0.00023 en=0.00356 a=+0.1044 gn=0.02 1.04s/step | para=1.00
+    1650 loss=0.05148 nat=0.05054 xling=0.00062 en=0.00633 a=+0.1049 gn=0.05 1.03s/step | para=1.00
+    1675 loss=0.02558 nat=0.02507 xling=0.00018 en=0.00422 a=+0.1049 gn=0.01 1.03s/step | para=1.00
+    1700 loss=0.03372 nat=0.03324 xling=0.00027 en=0.00345 a=+0.1049 gn=0.02 1.03s/step | para=1.00 degen=0.00
+    1725 loss=0.03519 nat=0.03459 xling=0.00030 en=0.00449 a=+0.1048 gn=0.02 1.03s/step | para=1.00 degen=0.00
+    1750 loss=0.03011 nat=0.02958 xling=0.00026 en=0.00409 a=+0.1048 gn=0.02 1.03s/step | para=1.00
+    1775 loss=0.04260 nat=0.04126 xling=0.00026 en=0.01211 a=+0.1053 gn=0.03 1.03s/step | para=1.00
+    1800 loss=0.03325 nat=0.03284 xling=0.00019 en=0.00310 a=+0.1051 gn=0.03 1.03s/step | para=1.00
+    1825 loss=0.03728 nat=0.03636 xling=0.00034 en=0.00748 a=+0.1052 gn=0.04 1.03s/step | para=1.00
+    1850 loss=0.03495 nat=0.03401 xling=0.00024 en=0.00827 a=+0.1054 gn=0.05 1.03s/step | para=1.00
+    1875 loss=0.04788 nat=0.04687 xling=0.00067 en=0.00676 a=+0.1053 gn=0.08 1.03s/step | para=1.00
+    1900 loss=0.03407 nat=0.03352 xling=0.00030 en=0.00406 a=+0.1050 gn=0.02 1.03s/step | para=1.00
+    1925 loss=0.04582 nat=0.04516 xling=0.00040 en=0.00464 a=+0.1053 gn=0.02 1.03s/step | para=1.00
+    1950 loss=0.05469 nat=0.05386 xling=0.00043 en=0.00621 a=+0.1055 gn=0.06 1.03s/step | para=1.00
+    1975 loss=0.03575 nat=0.03533 xling=0.00014 en=0.00352 a=+0.1051 gn=0.01 1.03s/step | para=1.00
+    2000 loss=0.04039 nat=0.03978 xling=0.00037 en=0.00426 a=+0.1052 gn=0.05 1.03s/step | para=1.00
+  [val] step 2000: hi: native=0.03658 rel=+1.01% tiv=3.35e-04
+  !! WARNING caption-swap sensitivity below the step-2000 level of Run 1 (+2.0%). The adapter may be ignoring the caption.
+  !! HF push failed: (Request ID: Root=1-6a9c8c6f-19a79e5d69763ebd095a1e72;21367e57-bbc2-4294-a165-50ca9bf87b72)
+
+403 Forbidden: Private repository storage limit reached, please upg
+    2025 loss=0.03930 nat=0.03844 xling=0.00053 en=0.00603 a=+0.1052 gn=0.07 1.04s/step | para=1.00
+    2050 loss=0.04554 nat=0.04485 xling=0.00049 en=0.00446 a=+0.1052 gn=0.03 1.04s/step | para=1.00
+    2075 loss=0.05056 nat=0.04994 xling=0.00045 en=0.00393 a=+0.1054 gn=0.04 1.04s/step | para=1.00
+    2100 loss=0.04471 nat=0.04221 xling=0.00224 en=0.01383 a=+0.1056 gn=0.20 1.04s/step | para=1.00
+    2125 loss=0.03820 nat=0.03777 xling=0.00021 en=0.00334 a=+0.1052 gn=0.02 1.04s/step | para=1.00
+    2150 loss=0.03366 nat=0.03308 xling=0.00040 en=0.00378 a=+0.1054 gn=0.03 1.04s/step | para=0.99 degen=0.01
+    2175 loss=0.04768 nat=0.04683 xling=0.00083 en=0.00438 a=+0.1054 gn=0.02 1.04s/step | para=1.00
+    2200 loss=0.03866 nat=0.03787 xling=0.00045 en=0.00563 a=+0.1056 gn=0.01 1.04s/step | para=1.00
+    2225 loss=0.05873 nat=0.05789 xling=0.00064 en=0.00521 a=+0.1059 gn=0.04 1.03s/step | para=1.00
+    2250 loss=0.03218 nat=0.03177 xling=0.00023 en=0.00298 a=+0.1055 gn=0.02 1.04s/step | para=1.00 degen=0.00
+    2275 loss=0.02587 nat=0.02546 xling=0.00029 en=0.00267 a=+0.1056 gn=0.01 1.03s/step | para=1.00
+    2300 loss=0.04399 nat=0.04273 xling=0.00046 en=0.01033 a=+0.1057 gn=0.04 1.03s/step | para=1.00
+    2325 loss=0.03546 nat=0.03469 xling=0.00037 en=0.00585 a=+0.1059 gn=0.05 1.03s/step | para=1.00
+    2350 loss=0.04368 nat=0.04244 xling=0.00042 en=0.01020 a=+0.1063 gn=0.01 1.03s/step | para=1.00
+    2375 loss=0.04259 nat=0.04162 xling=0.00030 en=0.00822 a=+0.1070 gn=0.13 1.03s/step | para=1.00
+    2400 loss=0.02624 nat=0.02587 xling=0.00027 en=0.00237 a=+0.1065 gn=0.01 1.03s/step | para=1.00 degen=0.00
+    2425 loss=0.03912 nat=0.03852 xling=0.00023 en=0.00477 a=+0.1064 gn=0.01 1.03s/step | para=1.00
+    2450 loss=0.03252 nat=0.03204 xling=0.00024 en=0.00355 a=+0.1064 gn=0.01 1.03s/step | para=1.00
+    2475 loss=0.03095 nat=0.03032 xling=0.00042 en=0.00414 a=+0.1062 gn=0.02 1.03s/step | para=1.00
+    2500 loss=0.03753 nat=0.03681 xling=0.00069 en=0.00367 a=+0.1066 gn=0.02 1.03s/step | para=1.00
+  [val] step 2500: hi: native=0.03666 rel=-0.49% tiv=7.75e-04
+  !! WARNING caption-swap sensitivity below the step-2000 level of Run 1 (+2.0%). The adapter may be ignoring the caption.
+    2525 loss=0.03280 nat=0.03216 xling=0.00030 en=0.00490 a=+0.1068 gn=0.02 1.04s/step | para=1.00
+    2550 loss=0.04447 nat=0.04307 xling=0.00052 en=0.01130 a=+0.1065 gn=0.07 1.04s/step | para=1.00 degen=0.00
+    2575 loss=0.04831 nat=0.04774 xling=0.00033 en=0.00403 a=+0.1064 gn=0.01 1.04s/step | para=1.00
+    2600 loss=0.03108 nat=0.03061 xling=0.00020 en=0.00374 a=+0.1069 gn=0.04 1.04s/step | para=1.00
+    2625 loss=0.03406 nat=0.03349 xling=0.00027 en=0.00435 a=+0.1072 gn=0.01 1.04s/step | para=0.99 degen=0.01
+    2650 loss=0.06825 nat=0.06688 xling=0.00133 en=0.00706 a=+0.1070 gn=0.07 1.04s/step | para=1.00
+    2675 loss=0.04254 nat=0.04044 xling=0.00036 en=0.01928 a=+0.1074 gn=0.05 1.04s/step | para=1.00
+    2700 loss=0.04201 nat=0.04141 xling=0.00037 en=0.00409 a=+0.1065 gn=0.03 1.04s/step | para=1.00
+    2725 loss=0.03640 nat=0.03573 xling=0.00046 en=0.00441 a=+0.1069 gn=0.02 1.03s/step | para=1.00 degen=0.00
+    2750 loss=0.03040 nat=0.02960 xling=0.00032 en=0.00637 a=+0.1073 gn=0.01 1.03s/step | para=1.00
+    2775 loss=0.06430 nat=0.06360 xling=0.00034 en=0.00532 a=+0.1074 gn=0.12 1.03s/step | para=1.00
+    2800 loss=0.03853 nat=0.03793 xling=0.00043 en=0.00391 a=+0.1078 gn=0.06 1.03s/step | para=1.00
+    2825 loss=0.05057 nat=0.04849 xling=0.00292 en=0.00628 a=+0.1081 gn=0.15 1.03s/step | para=1.00
+    2850 loss=0.02472 nat=0.02435 xling=0.00024 en=0.00241 a=+0.1076 gn=0.03 1.03s/step | para=1.00
+    2875 loss=0.03756 nat=0.03649 xling=0.00098 en=0.00584 a=+0.1078 gn=0.07 1.03s/step | para=1.00 degen=0.00
+    2900 loss=0.03427 nat=0.03356 xling=0.00041 en=0.00509 a=+0.1074 gn=0.01 1.03s/step | para=1.00
+    2925 loss=0.04557 nat=0.04482 xling=0.00058 en=0.00462 a=+0.1079 gn=0.01 1.03s/step | para=1.00 degen=0.00
+    2950 loss=0.03482 nat=0.03417 xling=0.00047 en=0.00420 a=+0.1080 gn=0.01 1.03s/step | para=1.00 degen=0.00
+    2975 loss=0.03243 nat=0.03194 xling=0.00028 en=0.00342 a=+0.1081 gn=0.01 1.03s/step | para=1.00
+    3000 loss=0.04202 nat=0.04106 xling=0.00091 en=0.00502 a=+0.1077 gn=0.02 1.03s/step | para=1.00
+  [val] step 3000: hi: native=0.03629 rel=-0.58% tiv=1.14e-03
+  !! WARNING caption-swap sensitivity below the step-2000 level of Run 1 (+2.0%). The adapter may be ignoring the caption.
+    3025 loss=0.02801 nat=0.02732 xling=0.00045 en=0.00460 a=+0.1082 gn=0.02 1.03s/step | para=1.00
+    3050 loss=0.04655 nat=0.04552 xling=0.00068 en=0.00690 a=+0.1083 gn=0.06 1.03s/step | para=1.00
+    3075 loss=0.03609 nat=0.03543 xling=0.00044 en=0.00439 a=+0.1087 gn=0.01 1.03s/step | para=1.00
+    3100 loss=0.03256 nat=0.03205 xling=0.00030 en=0.00362 a=+0.1089 gn=0.03 1.03s/step | para=1.00
+    3125 loss=0.03145 nat=0.03081 xling=0.00039 en=0.00439 a=+0.1090 gn=0.02 1.03s/step | para=1.00
+    3150 loss=0.04351 nat=0.04252 xling=0.00073 en=0.00630 a=+0.1093 gn=0.04 1.03s/step | para=1.00 degen=0.00
+    3175 loss=0.02583 nat=0.02539 xling=0.00022 en=0.00333 a=+0.1092 gn=0.01 1.03s/step | para=1.00
+    3200 loss=0.04210 nat=0.04152 xling=0.00057 en=0.00295 a=+0.1092 gn=0.02 1.03s/step | para=1.00
+    3225 loss=0.05434 nat=0.05307 xling=0.00101 en=0.00765 a=+0.1093 gn=0.10 1.03s/step | para=1.00
+    3250 loss=0.02402 nat=0.02369 xling=0.00018 en=0.00235 a=+0.1092 gn=0.02 1.03s/step | para=1.00 degen=0.00
+    3275 loss=0.02720 nat=0.02672 xling=0.00039 en=0.00288 a=+0.1090 gn=0.02 1.03s/step | para=1.00
+    3300 loss=0.05451 nat=0.05400 xling=0.00027 en=0.00380 a=+0.1094 gn=0.04 1.03s/step | para=1.00
+    3325 loss=0.04467 nat=0.04362 xling=0.00064 en=0.00724 a=+0.1099 gn=0.05 1.03s/step | para=1.00
+    3350 loss=0.02774 nat=0.02710 xling=0.00054 en=0.00377 a=+0.1100 gn=0.02 1.03s/step | para=1.00
+    3375 loss=0.04386 nat=0.04280 xling=0.00081 en=0.00658 a=+0.1100 gn=0.02 1.03s/step | para=1.00
+    3400 loss=0.04396 nat=0.04300 xling=0.00058 en=0.00664 a=+0.1096 gn=0.04 1.03s/step | para=1.00
+    3425 loss=0.04092 nat=0.03976 xling=0.00080 en=0.00759 a=+0.1097 gn=0.04 1.03s/step | para=1.00
+    3450 loss=0.04860 nat=0.04741 xling=0.00063 en=0.00875 a=+0.1103 gn=0.10 1.03s/step | para=1.00 degen=0.00
+    3475 loss=0.05785 nat=0.05661 xling=0.00090 en=0.00793 a=+0.1106 gn=0.04 1.03s/step | para=1.00
+    3500 loss=0.04786 nat=0.04697 xling=0.00082 en=0.00471 a=+0.1105 gn=0.02 1.03s/step | para=1.00
+  [val] step 3500: hi: native=0.03701 rel=-1.43% tiv=1.46e-03
+  !! WARNING caption-swap sensitivity below the step-2000 level of Run 1 (+2.0%). The adapter may be ignoring the caption.
+    3525 loss=0.02776 nat=0.02726 xling=0.00030 en=0.00346 a=+0.1100 gn=0.01 1.03s/step | para=1.00 degen=0.00
+    3550 loss=0.03053 nat=0.02959 xling=0.00097 en=0.00453 a=+0.1097 gn=0.02 1.03s/step | para=1.00
+    3575 loss=0.03760 nat=0.03686 xling=0.00039 en=0.00551 a=+0.1095 gn=0.02 1.03s/step | para=1.00 degen=0.00
+    3600 loss=0.06053 nat=0.06013 xling=0.00032 en=0.00244 a=+0.1095 gn=0.08 1.03s/step | para=1.00
+    3625 loss=0.03393 nat=0.03293 xling=0.00031 en=0.00845 a=+0.1100 gn=0.01 1.03s/step | para=1.00 degen=0.00
+    3650 loss=0.05874 nat=0.05759 xling=0.00085 en=0.00732 a=+0.1101 gn=0.08 1.03s/step | para=1.00
+    3675 loss=0.03059 nat=0.02989 xling=0.00062 en=0.00390 a=+0.1106 gn=0.02 1.03s/step | para=1.00
+    3700 loss=0.03460 nat=0.03324 xling=0.00099 en=0.00868 a=+0.1104 gn=0.01 1.03s/step | para=1.00
+    3725 loss=0.03774 nat=0.03685 xling=0.00033 en=0.00731 a=+0.1105 gn=0.01 1.03s/step | para=1.00
+    3750 loss=0.05231 nat=0.05133 xling=0.00080 en=0.00584 a=+0.1103 gn=0.02 1.03s/step | para=1.00
+    3775 loss=0.03722 nat=0.03466 xling=0.00356 en=0.00779 a=+0.1108 gn=0.04 1.03s/step | para=1.00
+    3800 loss=0.04073 nat=0.04023 xling=0.00032 en=0.00333 a=+0.1109 gn=0.03 1.03s/step | para=1.00
+    3825 loss=0.04699 nat=0.04548 xling=0.00169 en=0.00667 a=+0.1111 gn=0.02 1.03s/step | para=1.00
+    3850 loss=0.03896 nat=0.03800 xling=0.00029 en=0.00816 a=+0.1110 gn=0.09 1.03s/step | para=1.00
+    3875 loss=0.03623 nat=0.03561 xling=0.00033 en=0.00450 a=+0.1109 gn=0.01 1.03s/step | para=1.00
+    3900 loss=0.03793 nat=0.03703 xling=0.00052 en=0.00645 a=+0.1109 gn=0.03 1.03s/step | para=1.00
+    3925 loss=0.04068 nat=0.03988 xling=0.00066 en=0.00476 a=+0.1108 gn=0.02 1.03s/step | para=1.00
+    3950 loss=0.07438 nat=0.07181 xling=0.00214 en=0.01502 a=+0.1110 gn=0.11 1.03s/step | para=1.00 degen=0.00
+    3975 loss=0.03024 nat=0.02865 xling=0.00218 en=0.00499 a=+0.1111 gn=0.02 1.03s/step | para=1.00
+    4000 loss=0.02905 nat=0.02832 xling=0.00055 en=0.00453 a=+0.1114 gn=0.01 1.03s/step | para=1.00 degen=0.00
+  [val] step 4000: hi: native=0.03657 rel=-0.09% tiv=1.03e-03
+  !! WARNING caption-swap sensitivity below the step-2000 level of Run 1 (+2.0%). The adapter may be ignoring the caption.
+  !! HF push failed: (Request ID: Root=1-6a9c9482-5dc875701413fac82bae0183;82edd741-2c7a-4777-a330-80623a503263)
+
+403 Forbidden: Private repository storage limit reached, please upg
+    4025 loss=0.02673 nat=0.02596 xling=0.00076 en=0.00389 a=+0.1115 gn=0.02 1.03s/step | para=1.00
+    4050 loss=0.04612 nat=0.04538 xling=0.00042 en=0.00529 a=+0.1114 gn=0.05 1.03s/step | para=1.00
+    4075 loss=0.02872 nat=0.02816 xling=0.00037 en=0.00385 a=+0.1117 gn=0.01 1.03s/step | para=1.00
+    4100 loss=0.03055 nat=0.02951 xling=0.00114 en=0.00476 a=+0.1115 gn=0.01 1.03s/step | para=1.00
+    4125 loss=0.03609 nat=0.03518 xling=0.00087 en=0.00475 a=+0.1118 gn=0.02 1.03s/step | para=1.00
+    4150 loss=0.03264 nat=0.03207 xling=0.00048 en=0.00340 a=+0.1120 gn=0.01 1.03s/step | para=1.00 degen=0.00
+    4175 loss=0.04087 nat=0.03987 xling=0.00067 en=0.00666 a=+0.1124 gn=0.01 1.03s/step | para=1.00
+    4200 loss=0.03983 nat=0.03895 xling=0.00058 en=0.00585 a=+0.1123 gn=0.05 1.03s/step | para=1.00
+    4225 loss=0.04727 nat=0.04582 xling=0.00168 en=0.00612 a=+0.1126 gn=0.04 1.03s/step | para=1.00
+    4250 loss=0.03258 nat=0.03209 xling=0.00033 en=0.00333 a=+0.1126 gn=0.01 1.03s/step | para=1.00
+    4275 loss=0.02673 nat=0.02627 xling=0.00034 en=0.00289 a=+0.1126 gn=0.00 1.03s/step | para=1.00 degen=0.00
+    4300 loss=0.04710 nat=0.04628 xling=0.00050 en=0.00566 a=+0.1127 gn=0.05 1.03s/step | para=1.00
+    4325 loss=0.06393 nat=0.06292 xling=0.00074 en=0.00646 a=+0.1128 gn=0.07 1.03s/step | para=1.00
+    4350 loss=0.05769 nat=0.05607 xling=0.00162 en=0.00811 a=+0.1127 gn=0.05 1.03s/step | para=1.00
+    4375 loss=0.04600 nat=0.04532 xling=0.00056 en=0.00396 a=+0.1129 gn=0.02 1.03s/step | para=1.00
+    4400 loss=0.03645 nat=0.03581 xling=0.00057 en=0.00356 a=+0.1133 gn=0.02 1.03s/step | para=1.00
+    4425 loss=0.04251 nat=0.04156 xling=0.00081 en=0.00545 a=+0.1132 gn=0.03 1.03s/step | para=1.00
+    4450 loss=0.03964 nat=0.03902 xling=0.00033 en=0.00457 a=+0.1129 gn=0.02 1.03s/step | para=1.00
+    4475 loss=0.05168 nat=0.05090 xling=0.00057 en=0.00489 a=+0.1125 gn=0.05 1.03s/step | para=1.00
+    4500 loss=0.03616 nat=0.03568 xling=0.00030 en=0.00331 a=+0.1125 gn=0.06 1.03s/step | para=1.00
+  [val] step 4500: hi: native=0.03605 rel=-0.48% tiv=1.23e-03
+  !! WARNING caption-swap sensitivity below the step-2000 level of Run 1 (+2.0%). The adapter may be ignoring the caption.
+    4525 loss=0.03427 nat=0.03364 xling=0.00052 en=0.00375 a=+0.1126 gn=0.01 1.03s/step | para=1.00
+    4550 loss=0.03983 nat=0.03915 xling=0.00039 en=0.00486 a=+0.1126 gn=0.02 1.03s/step | para=1.00 degen=0.00
+    4575 loss=0.06189 nat=0.06099 xling=0.00055 en=0.00623 a=+0.1130 gn=0.06 1.03s/step | para=1.00
+    4600 loss=0.01983 nat=0.01945 xling=0.00028 en=0.00249 a=+0.1132 gn=0.01 1.03s/step | para=1.00
+    4625 loss=0.03005 nat=0.02928 xling=0.00047 en=0.00535 a=+0.1130 gn=0.01 1.03s/step | para=1.00
+    4650 loss=0.05194 nat=0.05009 xling=0.00112 en=0.01291 a=+0.1128 gn=0.03 1.03s/step | para=1.00 degen=0.00
+    4675 loss=0.02759 nat=0.02701 xling=0.00047 en=0.00349 a=+0.1132 gn=0.03 1.03s/step | para=1.00 degen=0.00
+    4700 loss=0.03519 nat=0.03435 xling=0.00030 en=0.00683 a=+0.1131 gn=0.04 1.03s/step | para=1.00
+    4725 loss=0.03485 nat=0.03424 xling=0.00041 en=0.00401 a=+0.1133 gn=0.01 1.03s/step | para=1.00 degen=0.00
+    4750 loss=0.03830 nat=0.03771 xling=0.00033 en=0.00428 a=+0.1129 gn=0.03 1.03s/step | para=1.00
+    4775 loss=0.03480 nat=0.03425 xling=0.00033 en=0.00390 a=+0.1130 gn=0.02 1.03s/step | para=1.00
+    4800 loss=0.04056 nat=0.03993 xling=0.00037 en=0.00449 a=+0.1134 gn=0.04 1.03s/step | para=1.00
+    4825 loss=0.04016 nat=0.03945 xling=0.00069 en=0.00370 a=+0.1131 gn=0.03 1.03s/step | para=1.00
+    4850 loss=0.02846 nat=0.02783 xling=0.00052 en=0.00368 a=+0.1132 gn=0.01 1.03s/step | para=1.00
+    4875 loss=0.04278 nat=0.04201 xling=0.00057 en=0.00484 a=+0.1137 gn=0.10 1.03s/step | para=1.00 degen=0.00
+    4900 loss=0.03586 nat=0.03518 xling=0.00052 en=0.00417 a=+0.1139 gn=0.01 1.03s/step | para=1.00
+    4925 loss=0.05805 nat=0.05741 xling=0.00046 en=0.00411 a=+0.1141 gn=0.03 1.03s/step | para=1.00
+    4950 loss=0.03874 nat=0.03769 xling=0.00067 en=0.00716 a=+0.1142 gn=0.03 1.03s/step | para=1.00
+    4975 loss=0.03688 nat=0.03623 xling=0.00055 en=0.00375 a=+0.1142 gn=0.03 1.03s/step | para=1.00
+    5000 loss=0.03528 nat=0.03407 xling=0.00064 en=0.00895 a=+0.1144 gn=0.02 1.03s/step | para=1.00
+  [val] step 5000: hi: native=0.03598 rel=+0.46% tiv=7.24e-04
+  !! WARNING caption-swap sensitivity below the step-2000 level of Run 1 (+2.0%). The adapter may be ignoring the caption.
+    5025 loss=0.02472 nat=0.02420 xling=0.00019 en=0.00425 a=+0.1145 gn=0.02 1.03s/step | para=1.00
+    5050 loss=0.05991 nat=0.05862 xling=0.00164 en=0.00471 a=+0.1144 gn=0.06 1.03s/step | para=1.00
+    5075 loss=0.03126 nat=0.03036 xling=0.00046 en=0.00673 a=+0.1145 gn=0.01 1.03s/step | para=1.00 degen=0.00
+    5100 loss=0.03001 nat=0.02953 xling=0.00030 en=0.00326 a=+0.1141 gn=0.01 1.03s/step | para=1.00
+    5125 loss=0.05421 nat=0.05372 xling=0.00034 en=0.00316 a=+0.1143 gn=0.02 1.03s/step | para=1.00
+    5150 loss=0.03345 nat=0.03246 xling=0.00079 en=0.00596 a=+0.1140 gn=0.05 1.03s/step | para=1.00
+    5175 loss=0.02699 nat=0.02648 xling=0.00039 en=0.00315 a=+0.1138 gn=0.01 1.03s/step | para=0.99 degen=0.01
+    5200 loss=0.05640 nat=0.05462 xling=0.00075 en=0.01405 a=+0.1136 gn=0.06 1.03s/step | para=1.00
+    5225 loss=0.03374 nat=0.03315 xling=0.00033 en=0.00427 a=+0.1138 gn=0.01 1.03s/step | para=1.00
+    5250 loss=0.02937 nat=0.02877 xling=0.00050 en=0.00347 a=+0.1137 gn=0.01 1.03s/step | para=1.00
+    5275 loss=0.03476 nat=0.03396 xling=0.00053 en=0.00529 a=+0.1146 gn=0.05 1.03s/step | para=1.00
+    5300 loss=0.04719 nat=0.04603 xling=0.00156 en=0.00379 a=+0.1143 gn=0.02 1.03s/step | para=1.00
+    5325 loss=0.04399 nat=0.04223 xling=0.00210 en=0.00725 a=+0.1145 gn=0.03 1.03s/step | para=1.00
+    5350 loss=0.02317 nat=0.02236 xling=0.00073 en=0.00445 a=+0.1148 gn=0.02 1.03s/step | para=1.00
+    5375 loss=0.04808 nat=0.04702 xling=0.00080 en=0.00663 a=+0.1150 gn=0.06 1.03s/step | para=1.00
+    5400 loss=0.04463 nat=0.04253 xling=0.00090 en=0.01660 a=+0.1151 gn=0.06 1.03s/step | para=1.00
+    5425 loss=0.03970 nat=0.03865 xling=0.00100 en=0.00550 a=+0.1152 gn=0.02 1.03s/step | para=0.99 degen=0.01
+    5450 loss=0.04053 nat=0.03981 xling=0.00051 en=0.00469 a=+0.1147 gn=0.02 1.03s/step | para=1.00 degen=0.00
+    5475 loss=0.02988 nat=0.02920 xling=0.00047 en=0.00446 a=+0.1148 gn=0.02 1.03s/step | para=1.00
+    5500 loss=0.03081 nat=0.03028 xling=0.00040 en=0.00325 a=+0.1151 gn=0.02 1.03s/step | para=1.00
+  [val] step 5500: hi: native=0.03559 rel=-0.02% tiv=1.47e-03
+  !! WARNING caption-swap sensitivity below the step-2000 level of Run 1 (+2.0%). The adapter may be ignoring the caption.
+    5525 loss=0.03129 nat=0.03080 xling=0.00033 en=0.00334 a=+0.1153 gn=0.02 1.03s/step | para=1.00
+    5550 loss=0.04347 nat=0.04240 xling=0.00105 en=0.00558 a=+0.1153 gn=0.09 1.03s/step | para=1.00
+    5575 loss=0.02906 nat=0.02847 xling=0.00056 en=0.00308 a=+0.1157 gn=0.02 1.03s/step | para=1.00
+    5600 loss=0.04160 nat=0.04089 xling=0.00026 en=0.00585 a=+0.1158 gn=0.05 1.03s/step | para=1.00
+    5625 loss=0.03617 nat=0.03536 xling=0.00061 en=0.00510 a=+0.1159 gn=0.01 1.03s/step | para=1.00
+    5650 loss=0.03669 nat=0.03575 xling=0.00091 en=0.00499 a=+0.1163 gn=0.02 1.03s/step | para=1.00
+    5675 loss=0.03131 nat=0.03032 xling=0.00097 en=0.00517 a=+0.1162 gn=0.07 1.03s/step | para=1.00
+    5700 loss=0.03067 nat=0.03009 xling=0.00041 en=0.00382 a=+0.1159 gn=0.01 1.03s/step | para=1.00
+    5725 loss=0.03094 nat=0.02976 xling=0.00133 en=0.00526 a=+0.1163 gn=0.02 1.03s/step | para=1.00
+    5750 loss=0.03065 nat=0.02992 xling=0.00034 en=0.00567 a=+0.1163 gn=0.01 1.03s/step | para=1.00
+    5775 loss=0.03376 nat=0.03316 xling=0.00041 en=0.00399 a=+0.1163 gn=0.02 1.03s/step | para=1.00
+    5800 loss=0.02850 nat=0.02794 xling=0.00043 en=0.00349 a=+0.1163 gn=0.02 1.03s/step | para=1.00
+    5825 loss=0.03809 nat=0.03716 xling=0.00083 en=0.00521 a=+0.1164 gn=0.02 1.03s/step | para=1.00
+    5850 loss=0.03736 nat=0.03510 xling=0.00261 en=0.00991 a=+0.1161 gn=0.05 1.03s/step | para=1.00
+    5875 loss=0.03313 nat=0.03133 xling=0.00176 en=0.00945 a=+0.1163 gn=0.05 1.03s/step | para=1.00 degen=0.00
+    5900 loss=0.04520 nat=0.04447 xling=0.00048 en=0.00496 a=+0.1161 gn=0.03 1.03s/step | para=1.00 degen=0.00
+    5925 loss=0.04119 nat=0.04049 xling=0.00046 en=0.00478 a=+0.1157 gn=0.02 1.03s/step | para=1.00
+    5950 loss=0.04318 nat=0.04172 xling=0.00101 en=0.00963 a=+0.1162 gn=0.03 1.03s/step | para=1.00
+    5975 loss=0.04874 nat=0.04805 xling=0.00037 en=0.00502 a=+0.1165 gn=0.05 1.03s/step | para=1.00
+    6000 loss=0.03724 nat=0.03619 xling=0.00060 en=0.00762 a=+0.1166 gn=0.02 1.03s/step | para=1.00
+  [val] step 6000: hi: native=0.03573 rel=+0.43% tiv=1.42e-03
+  !! WARNING caption-swap sensitivity below the step-2000 level of Run 1 (+2.0%). The adapter may be ignoring the caption.
+  !! HF push failed: (Request ID: Root=1-6a9c9c95-0fdbde006922dcea62d1f473;638e9647-bc80-45fd-a300-34cde41c3d01)
+
+403 Forbidden: Private repository storage limit reached, please upg
+    6025 loss=0.03281 nat=0.03216 xling=0.00048 en=0.00413 a=+0.1166 gn=0.02 1.03s/step | para=1.00
+    6050 loss=0.04596 nat=0.04503 xling=0.00075 en=0.00562 a=+0.1173 gn=0.03 1.03s/step | para=1.00
+    6075 loss=0.03399 nat=0.03308 xling=0.00065 en=0.00594 a=+0.1174 gn=0.02 1.03s/step | para=1.00 degen=0.00
+    6100 loss=0.03234 nat=0.03173 xling=0.00045 en=0.00400 a=+0.1174 gn=0.03 1.03s/step | para=1.00
+    6125 loss=0.04300 nat=0.04122 xling=0.00267 en=0.00492 a=+0.1171 gn=0.05 1.03s/step | para=1.00
+    6150 loss=0.03765 nat=0.03672 xling=0.00060 en=0.00640 a=+0.1173 gn=0.02 1.03s/step | para=1.00
+    6175 loss=0.05282 nat=0.05164 xling=0.00104 en=0.00678 a=+0.1177 gn=0.09 1.03s/step | para=1.00
+    6200 loss=0.03052 nat=0.02986 xling=0.00040 en=0.00462 a=+0.1174 gn=0.01 1.03s/step | para=1.00
+    6225 loss=0.03179 nat=0.03098 xling=0.00069 en=0.00473 a=+0.1172 gn=0.02 1.03s/step | para=1.00
+    6250 loss=0.03994 nat=0.03942 xling=0.00036 en=0.00350 a=+0.1181 gn=0.01 1.03s/step | para=1.00
+    6275 loss=0.02693 nat=0.02640 xling=0.00035 en=0.00357 a=+0.1178 gn=0.01 1.03s/step | para=1.00
+    6300 loss=0.03796 nat=0.03679 xling=0.00076 en=0.00807 a=+0.1178 gn=0.01 1.03s/step | para=1.00
+    6325 loss=0.03482 nat=0.03375 xling=0.00106 en=0.00561 a=+0.1179 gn=0.03 1.03s/step | para=1.00
+    6350 loss=0.03277 nat=0.03174 xling=0.00078 en=0.00654 a=+0.1179 gn=0.02 1.03s/step | para=1.00
+    6375 loss=0.02821 nat=0.02728 xling=0.00066 en=0.00608 a=+0.1182 gn=0.04 1.03s/step | para=1.00
+    6400 loss=0.02557 nat=0.02518 xling=0.00032 en=0.00228 a=+0.1179 gn=0.01 1.03s/step | para=1.00
+    6425 loss=0.05213 nat=0.05072 xling=0.00134 en=0.00764 a=+0.1179 gn=0.06 1.03s/step | para=1.00
+    6450 loss=0.03629 nat=0.03560 xling=0.00055 en=0.00428 a=+0.1177 gn=0.04 1.03s/step | para=1.00
+    6475 loss=0.02648 nat=0.02581 xling=0.00048 en=0.00444 a=+0.1184 gn=0.02 1.03s/step | para=1.00
+    6500 loss=0.04783 nat=0.04714 xling=0.00055 en=0.00431 a=+0.1185 gn=0.02 1.03s/step | para=1.00
+  [val] step 6500: hi: native=0.03545 rel=-0.60% tiv=1.54e-03
+  !! WARNING caption-swap sensitivity below the step-2000 level of Run 1 (+2.0%). The adapter may be ignoring the caption.
+    6525 loss=0.02507 nat=0.02446 xling=0.00049 en=0.00380 a=+0.1186 gn=0.02 1.03s/step | para=1.00
+    6550 loss=0.03593 nat=0.03491 xling=0.00092 en=0.00581 a=+0.1185 gn=0.05 1.03s/step | para=0.99 degen=0.01
+    6575 loss=0.03269 nat=0.03205 xling=0.00050 en=0.00403 a=+0.1190 gn=0.01 1.03s/step | para=1.00
+    6600 loss=0.02424 nat=0.02383 xling=0.00028 en=0.00276 a=+0.1188 gn=0.01 1.03s/step | para=1.00 degen=0.00
+    6625 loss=0.05543 nat=0.05445 xling=0.00055 en=0.00724 a=+0.1192 gn=0.03 1.03s/step | para=1.00
+    6650 loss=0.05098 nat=0.04985 xling=0.00090 en=0.00699 a=+0.1195 gn=0.02 1.03s/step | para=1.00
+    6675 loss=0.02468 nat=0.02425 xling=0.00029 en=0.00286 a=+0.1196 gn=0.01 1.03s/step | para=1.00
+    6700 loss=0.02848 nat=0.02791 xling=0.00057 en=0.00301 a=+0.1193 gn=0.01 1.03s/step | para=1.00
+    6725 loss=0.03357 nat=0.03298 xling=0.00038 en=0.00410 a=+0.1194 gn=0.03 1.03s/step | para=1.00
+    6750 loss=0.02838 nat=0.02777 xling=0.00050 en=0.00374 a=+0.1197 gn=0.01 1.03s/step | para=1.00 degen=0.00
+    6775 loss=0.03961 nat=0.03901 xling=0.00039 en=0.00413 a=+0.1196 gn=0.04 1.03s/step | para=1.00
+    6800 loss=0.03350 nat=0.03256 xling=0.00081 en=0.00554 a=+0.1200 gn=0.02 1.03s/step | para=1.00
+    6825 loss=0.04542 nat=0.04365 xling=0.00179 en=0.00916 a=+0.1201 gn=0.05 1.03s/step | para=1.00 degen=0.00
+    6850 loss=0.04881 nat=0.04785 xling=0.00049 en=0.00728 a=+0.1201 gn=0.03 1.03s/step | para=1.00
+    6875 loss=0.03579 nat=0.03466 xling=0.00106 en=0.00634 a=+0.1202 gn=0.03 1.03s/step | para=1.00 degen=0.00
+    6900 loss=0.03347 nat=0.03236 xling=0.00159 en=0.00354 a=+0.1203 gn=0.02 1.03s/step | para=1.00
+    6925 loss=0.03960 nat=0.03864 xling=0.00093 en=0.00532 a=+0.1204 gn=0.04 1.03s/step | para=1.00
+    6950 loss=0.04437 nat=0.04331 xling=0.00101 en=0.00580 a=+0.1207 gn=0.05 1.03s/step | para=1.00
+    6975 loss=0.03021 nat=0.02815 xling=0.00313 en=0.00581 a=+0.1205 gn=0.02 1.03s/step | para=1.00
+    7000 loss=0.02876 nat=0.02830 xling=0.00037 en=0.00292 a=+0.1203 gn=0.02 1.03s/step | para=1.00 degen=0.00
+  [val] step 7000: hi: native=0.03552 rel=+0.87% tiv=1.51e-03
+  !! WARNING caption-swap sensitivity below the step-2000 level of Run 1 (+2.0%). The adapter may be ignoring the caption.
+    7025 loss=0.02850 nat=0.02773 xling=0.00051 en=0.00527 a=+0.1204 gn=0.01 1.03s/step | para=1.00
+    7050 loss=0.03742 nat=0.03679 xling=0.00049 en=0.00398 a=+0.1203 gn=0.01 1.03s/step | para=1.00 degen=0.00
+    7075 loss=0.03633 nat=0.03570 xling=0.00035 en=0.00463 a=+0.1203 gn=0.03 1.03s/step | para=1.00
+    7100 loss=0.03125 nat=0.03077 xling=0.00033 en=0.00328 a=+0.1204 gn=0.01 1.03s/step | para=1.00
+    7125 loss=0.03098 nat=0.03039 xling=0.00046 en=0.00376 a=+0.1202 gn=0.01 1.03s/step | para=1.00
+    7150 loss=0.04309 nat=0.04163 xling=0.00124 en=0.00886 a=+0.1204 gn=0.05 1.03s/step | para=1.00
+    7175 loss=0.03278 nat=0.03205 xling=0.00073 en=0.00387 a=+0.1202 gn=0.02 1.03s/step | para=1.00
+    7200 loss=0.02405 nat=0.02351 xling=0.00039 en=0.00358 a=+0.1204 gn=0.01 1.03s/step | para=1.00 degen=0.00
+    7225 loss=0.05450 nat=0.05313 xling=0.00081 en=0.00992 a=+0.1204 gn=0.02 1.03s/step | para=1.00
+    7250 loss=0.02720 nat=0.02670 xling=0.00039 en=0.00316 a=+0.1203 gn=0.01 1.03s/step | para=1.00 degen=0.00
+    7275 loss=0.03496 nat=0.03422 xling=0.00073 en=0.00404 a=+0.1205 gn=0.04 1.03s/step | para=1.00
+    7300 loss=0.03471 nat=0.03390 xling=0.00081 en=0.00438 a=+0.1206 gn=0.03 1.03s/step | para=1.00
+    7325 loss=0.04262 nat=0.04084 xling=0.00281 en=0.00476 a=+0.1205 gn=0.06 1.03s/step | para=0.99 degen=0.01
+    7350 loss=0.02468 nat=0.02424 xling=0.00032 en=0.00293 a=+0.1208 gn=0.01 1.03s/step | para=1.00
+    7375 loss=0.04701 nat=0.04548 xling=0.00161 en=0.00777 a=+0.1207 gn=0.04 1.03s/step | para=1.00
+    7400 loss=0.04561 nat=0.04479 xling=0.00047 en=0.00600 a=+0.1211 gn=0.07 1.03s/step | para=1.00
+    7425 loss=0.03459 nat=0.03367 xling=0.00090 en=0.00497 a=+0.1209 gn=0.01 1.03s/step | para=1.00
+    7450 loss=0.04165 nat=0.03991 xling=0.00203 en=0.00789 a=+0.1212 gn=0.04 1.03s/step | para=1.00
+    7475 loss=0.04715 nat=0.04654 xling=0.00053 en=0.00368 a=+0.1214 gn=0.02 1.03s/step | para=1.00
+    7500 loss=0.04613 nat=0.04425 xling=0.00295 en=0.00515 a=+0.1212 gn=0.03 1.03s/step | para=1.00
+  [val] step 7500: hi: native=0.03593 rel=+0.42% tiv=1.30e-03
+  !! WARNING caption-swap sensitivity below the step-2000 level of Run 1 (+2.0%). The adapter may be ignoring the caption.
+    7525 loss=0.02720 nat=0.02658 xling=0.00050 en=0.00391 a=+0.1212 gn=0.02 1.03s/step | para=1.00
+    7550 loss=0.03228 nat=0.03158 xling=0.00064 en=0.00407 a=+0.1213 gn=0.01 1.03s/step | para=1.00
+    7575 loss=0.03979 nat=0.03900 xling=0.00078 en=0.00428 a=+0.1214 gn=0.04 1.03s/step | para=1.00
+    7600 loss=0.02556 nat=0.02448 xling=0.00109 en=0.00579 a=+0.1214 gn=0.01 1.03s/step | para=1.00
+    7625 loss=0.02596 nat=0.02528 xling=0.00068 en=0.00361 a=+0.1217 gn=0.02 1.03s/step | para=1.00
+    7650 loss=0.04935 nat=0.04811 xling=0.00105 en=0.00755 a=+0.1214 gn=0.05 1.03s/step | para=1.00 degen=0.00
+    7675 loss=0.03007 nat=0.02937 xling=0.00062 en=0.00414 a=+0.1215 gn=0.01 1.03s/step | para=1.00
+    7700 loss=0.06239 nat=0.06150 xling=0.00106 en=0.00405 a=+0.1212 gn=0.04 1.03s/step | para=1.00
+    7725 loss=0.05989 nat=0.05841 xling=0.00166 en=0.00717 a=+0.1216 gn=0.04 1.03s/step | para=1.00
+    7750 loss=0.03248 nat=0.03164 xling=0.00097 en=0.00399 a=+0.1215 gn=0.03 1.03s/step | para=1.00
+    7775 loss=0.02908 nat=0.02811 xling=0.00078 en=0.00609 a=+0.1213 gn=0.03 1.03s/step | para=1.00
+    7800 loss=0.03198 nat=0.03137 xling=0.00045 en=0.00395 a=+0.1215 gn=0.04 1.03s/step | para=1.00
+    7825 loss=0.03885 nat=0.03799 xling=0.00043 en=0.00658 a=+0.1215 gn=0.03 1.03s/step | para=1.00
+    7850 loss=0.02805 nat=0.02746 xling=0.00042 en=0.00402 a=+0.1215 gn=0.03 1.03s/step | para=1.00 degen=0.00
+    7875 loss=0.03635 nat=0.03521 xling=0.00081 en=0.00776 a=+0.1214 gn=0.04 1.03s/step | para=1.00
+    7900 loss=0.03503 nat=0.03418 xling=0.00057 en=0.00590 a=+0.1214 gn=0.02 1.03s/step | para=1.00
+    7925 loss=0.04110 nat=0.03918 xling=0.00286 en=0.00619 a=+0.1219 gn=0.04 1.03s/step | para=1.00
+    7950 loss=0.07493 nat=0.07397 xling=0.00097 en=0.00522 a=+0.1219 gn=0.03 1.03s/step | para=1.00
+    7975 loss=0.02958 nat=0.02884 xling=0.00047 en=0.00534 a=+0.1222 gn=0.02 1.03s/step | para=1.00
+    8000 loss=0.04402 nat=0.04206 xling=0.00276 en=0.00700 a=+0.1228 gn=0.07 1.03s/step | para=1.00
+  [val] step 8000: hi: native=0.03560 rel=+0.48% tiv=1.82e-03
+  !! WARNING caption-swap sensitivity below the step-2000 level of Run 1 (+2.0%). The adapter may be ignoring the caption.
+  !! HF push failed: (Request ID: Root=1-6a9ca4a3-16aad3a90c10f2855b05130f;6fb60d41-73f7-4431-b315-f49f64140ee7)
+
+403 Forbidden: Private repository storage limit reached, please upg
+    8025 loss=0.03859 nat=0.03755 xling=0.00110 en=0.00541 a=+0.1226 gn=0.03 1.03s/step | para=1.00
+    8050 loss=0.04461 nat=0.04323 xling=0.00148 en=0.00705 a=+0.1228 gn=0.04 1.03s/step | para=1.00
+    8075 loss=0.03239 nat=0.03177 xling=0.00036 en=0.00456 a=+0.1225 gn=0.01 1.03s/step | para=1.00 degen=0.00
+    8100 loss=0.03169 nat=0.03071 xling=0.00093 en=0.00555 a=+0.1228 gn=0.01 1.03s/step | para=1.00
+    8125 loss=0.03757 nat=0.03674 xling=0.00082 en=0.00459 a=+0.1228 gn=0.02 1.03s/step | para=1.00
+    8150 loss=0.02807 nat=0.02731 xling=0.00070 en=0.00450 a=+0.1229 gn=0.03 1.03s/step | para=1.00
+    8175 loss=0.03146 nat=0.03096 xling=0.00040 en=0.00318 a=+0.1229 gn=0.01 1.03s/step | para=1.00
+    8200 loss=0.03718 nat=0.03633 xling=0.00088 en=0.00451 a=+0.1231 gn=0.02 1.03s/step | para=1.00
+    8225 loss=0.03016 nat=0.02965 xling=0.00036 en=0.00341 a=+0.1234 gn=0.03 1.03s/step | para=1.00 degen=0.00
+    8250 loss=0.02775 nat=0.02710 xling=0.00052 en=0.00421 a=+0.1233 gn=0.01 1.03s/step | para=1.00
+    8275 loss=0.02921 nat=0.02842 xling=0.00076 en=0.00448 a=+0.1236 gn=0.02 1.03s/step | para=1.00
+    8300 loss=0.04127 nat=0.04056 xling=0.00058 en=0.00456 a=+0.1235 gn=0.02 1.03s/step | para=1.00
+    8325 loss=0.02928 nat=0.02878 xling=0.00041 en=0.00317 a=+0.1232 gn=0.01 1.03s/step | para=1.00
+    8350 loss=0.04432 nat=0.04330 xling=0.00102 en=0.00560 a=+0.1233 gn=0.06 1.03s/step | para=1.00
+    8375 loss=0.03147 nat=0.03038 xling=0.00128 en=0.00511 a=+0.1236 gn=0.01 1.03s/step | para=1.00
+    8400 loss=0.02516 nat=0.02419 xling=0.00120 en=0.00425 a=+0.1240 gn=0.01 1.03s/step | para=1.00
+    8425 loss=0.04281 nat=0.04189 xling=0.00087 en=0.00530 a=+0.1239 gn=0.07 1.03s/step | para=1.00
+    8450 loss=0.02800 nat=0.02736 xling=0.00050 en=0.00417 a=+0.1241 gn=0.01 1.03s/step | para=1.00
+    8475 loss=0.03495 nat=0.03417 xling=0.00096 en=0.00349 a=+0.1237 gn=0.02 1.03s/step | para=1.00
+    8500 loss=0.02335 nat=0.02282 xling=0.00046 en=0.00328 a=+0.1242 gn=0.02 1.03s/step | para=1.00
+  [val] step 8500: hi: native=0.03511 rel=+1.44% tiv=1.82e-03
+  !! WARNING caption-swap sensitivity below the step-2000 level of Run 1 (+2.0%). The adapter may be ignoring the caption.
+    8525 loss=0.03135 nat=0.03059 xling=0.00047 en=0.00546 a=+0.1239 gn=0.02 1.03s/step | para=1.00
+    8550 loss=0.03749 nat=0.03652 xling=0.00110 en=0.00482 a=+0.1238 gn=0.04 1.03s/step | para=1.00
+    8575 loss=0.03844 nat=0.03754 xling=0.00100 en=0.00451 a=+0.1240 gn=0.04 1.03s/step | para=1.00
+    8600 loss=0.02108 nat=0.02078 xling=0.00022 en=0.00202 a=+0.1241 gn=0.00 1.03s/step | para=1.00
+    8625 loss=0.05060 nat=0.04988 xling=0.00061 en=0.00444 a=+0.1246 gn=0.03 1.03s/step | para=1.00
+    8650 loss=0.03850 nat=0.03763 xling=0.00051 en=0.00636 a=+0.1250 gn=0.03 1.03s/step | para=1.00 degen=0.00
+    8675 loss=0.03249 nat=0.03123 xling=0.00162 en=0.00543 a=+0.1251 gn=0.02 1.03s/step | para=1.00
+    8700 loss=0.03835 nat=0.03773 xling=0.00049 en=0.00401 a=+0.1245 gn=0.02 1.03s/step | para=1.00 degen=0.00
+    8725 loss=0.04177 nat=0.04058 xling=0.00122 en=0.00648 a=+0.1250 gn=0.02 1.03s/step | para=1.00
+    8750 loss=0.03822 nat=0.03736 xling=0.00096 en=0.00433 a=+0.1249 gn=0.04 1.03s/step | para=1.00
+    8775 loss=0.03268 nat=0.03182 xling=0.00079 en=0.00504 a=+0.1253 gn=0.05 1.03s/step | para=1.00
+    8800 loss=0.04470 nat=0.04353 xling=0.00101 en=0.00721 a=+0.1251 gn=0.03 1.03s/step | para=1.00
+    8825 loss=0.03412 nat=0.03287 xling=0.00155 en=0.00572 a=+0.1251 gn=0.03 1.03s/step | para=1.00
+    8850 loss=0.03423 nat=0.03352 xling=0.00063 en=0.00429 a=+0.1254 gn=0.01 1.03s/step | para=1.00
+    8875 loss=0.05460 nat=0.05370 xling=0.00079 en=0.00551 a=+0.1259 gn=0.03 1.03s/step | para=1.00
+    8900 loss=0.02617 nat=0.02541 xling=0.00048 en=0.00549 a=+0.1257 gn=0.02 1.03s/step | para=1.00
+    8925 loss=0.03836 nat=0.03715 xling=0.00133 en=0.00629 a=+0.1258 gn=0.02 1.03s/step | para=1.00
+    8950 loss=0.04852 nat=0.04758 xling=0.00081 en=0.00583 a=+0.1258 gn=0.03 1.03s/step | para=1.00
+    8975 loss=0.02473 nat=0.02406 xling=0.00075 en=0.00335 a=+0.1255 gn=0.02 1.03s/step | para=1.00
+    9000 loss=0.03337 nat=0.03255 xling=0.00052 en=0.00595 a=+0.1257 gn=0.01 1.03s/step | para=1.00 degen=0.00
+  [val] step 9000: hi: native=0.03510 rel=+2.88% tiv=1.55e-03
+    9025 loss=0.03452 nat=0.03394 xling=0.00043 en=0.00384 a=+0.1259 gn=0.02 1.03s/step | para=1.00
+    9050 loss=0.04798 nat=0.04686 xling=0.00116 en=0.00609 a=+0.1259 gn=0.04 1.03s/step | para=1.00
+    9075 loss=0.03206 nat=0.03111 xling=0.00044 en=0.00757 a=+0.1257 gn=0.02 1.03s/step | para=1.00
+    9100 loss=0.03332 nat=0.03272 xling=0.00058 en=0.00345 a=+0.1256 gn=0.03 1.03s/step | para=1.00
+    9125 loss=0.02644 nat=0.02593 xling=0.00037 en=0.00349 a=+0.1258 gn=0.03 1.03s/step | para=1.00
+    9150 loss=0.05032 nat=0.04929 xling=0.00099 en=0.00599 a=+0.1260 gn=0.04 1.03s/step | para=1.00
+    9175 loss=0.03032 nat=0.02952 xling=0.00100 en=0.00365 a=+0.1261 gn=0.02 1.03s/step | para=1.00
+    9200 loss=0.03207 nat=0.03134 xling=0.00058 en=0.00472 a=+0.1263 gn=0.01 1.03s/step | para=1.00
+    9225 loss=0.04114 nat=0.03954 xling=0.00221 en=0.00644 a=+0.1262 gn=0.08 1.03s/step | para=1.00
+    9250 loss=0.03511 nat=0.03418 xling=0.00068 en=0.00631 a=+0.1267 gn=0.02 1.03s/step | para=1.00
+    9275 loss=0.03331 nat=0.03263 xling=0.00056 en=0.00433 a=+0.1264 gn=0.01 1.03s/step | para=1.00
+    9300 loss=0.05160 nat=0.05072 xling=0.00047 en=0.00674 a=+0.1264 gn=0.04 1.03s/step | para=1.00
+    9325 loss=0.04143 nat=0.04042 xling=0.00081 en=0.00658 a=+0.1267 gn=0.06 1.03s/step | para=1.00
+    9350 loss=0.02625 nat=0.02567 xling=0.00063 en=0.00302 a=+0.1268 gn=0.01 1.03s/step | para=1.00
+    9375 loss=0.04150 nat=0.04037 xling=0.00118 en=0.00623 a=+0.1268 gn=0.05 1.03s/step | para=1.00
+    9400 loss=0.03001 nat=0.02915 xling=0.00103 en=0.00411 a=+0.1268 gn=0.02 1.03s/step | para=1.00
+    9425 loss=0.02816 nat=0.02739 xling=0.00047 en=0.00562 a=+0.1269 gn=0.03 1.03s/step | para=1.00 degen=0.00
+    9450 loss=0.04390 nat=0.04282 xling=0.00121 en=0.00557 a=+0.1266 gn=0.03 1.03s/step | para=1.00
+    9475 loss=0.02637 nat=0.02567 xling=0.00080 en=0.00348 a=+0.1268 gn=0.02 1.03s/step | para=1.00
+    9500 loss=0.03753 nat=0.03654 xling=0.00121 en=0.00469 a=+0.1268 gn=0.03 1.03s/step | para=1.00
+  [val] step 9500: hi: native=0.03496 rel=+1.73% tiv=1.24e-03
+  !! WARNING caption-swap sensitivity below the step-2000 level of Run 1 (+2.0%). The adapter may be ignoring the caption.
+    9525 loss=0.03273 nat=0.03202 xling=0.00087 en=0.00337 a=+0.1273 gn=0.02 1.03s/step | para=1.00
+    9550 loss=0.03218 nat=0.03108 xling=0.00095 en=0.00691 a=+0.1271 gn=0.02 1.03s/step | para=1.00
+    9575 loss=0.03733 nat=0.03621 xling=0.00118 en=0.00603 a=+0.1274 gn=0.06 1.03s/step | para=1.00
+    9600 loss=0.02510 nat=0.02455 xling=0.00047 en=0.00349 a=+0.1278 gn=0.02 1.03s/step | para=1.00
+    9625 loss=0.02618 nat=0.02534 xling=0.00061 en=0.00573 a=+0.1278 gn=0.03 1.03s/step | para=1.00
+    9650 loss=0.04973 nat=0.04647 xling=0.00548 en=0.00905 a=+0.1273 gn=0.09 1.03s/step | para=1.00
+    9675 loss=0.02972 nat=0.02812 xling=0.00184 en=0.00815 a=+0.1273 gn=0.03 1.03s/step | para=1.00
+    9700 loss=0.03597 nat=0.03536 xling=0.00042 en=0.00436 a=+0.1269 gn=0.06 1.03s/step | para=1.00 degen=0.00
+    9725 loss=0.04969 nat=0.04863 xling=0.00073 en=0.00746 a=+0.1273 gn=0.03 1.03s/step | para=1.00
+    9750 loss=0.02858 nat=0.02792 xling=0.00043 en=0.00482 a=+0.1273 gn=0.02 1.03s/step | para=1.00 degen=0.00
+    9775 loss=0.03669 nat=0.03568 xling=0.00088 en=0.00633 a=+0.1275 gn=0.04 1.03s/step | para=1.00
+    9800 loss=0.02925 nat=0.02849 xling=0.00072 en=0.00450 a=+0.1278 gn=0.01 1.03s/step | para=1.00
+    9825 loss=0.03658 nat=0.03588 xling=0.00075 en=0.00372 a=+0.1277 gn=0.02 1.03s/step | para=1.00
+    9850 loss=0.03286 nat=0.03200 xling=0.00072 en=0.00556 a=+0.1278 gn=0.03 1.03s/step | para=1.00
+    9875 loss=0.04688 nat=0.04609 xling=0.00059 en=0.00538 a=+0.1278 gn=0.08 1.03s/step | para=1.00
+    9900 loss=0.03596 nat=0.03490 xling=0.00060 en=0.00795 a=+0.1280 gn=0.04 1.03s/step | para=1.00 degen=0.00
+    9925 loss=0.03469 nat=0.03338 xling=0.00123 en=0.00790 a=+0.1279 gn=0.03 1.03s/step | para=1.00
+    9950 loss=0.07008 nat=0.06899 xling=0.00113 en=0.00615 a=+0.1279 gn=0.06 1.03s/step | para=1.00
+    9975 loss=0.03193 nat=0.03121 xling=0.00076 en=0.00397 a=+0.1277 gn=0.02 1.03s/step | para=1.00
+   10000 loss=0.03414 nat=0.03298 xling=0.00167 en=0.00445 a=+0.1277 gn=0.01 1.03s/step | para=1.00
+  [val] step 10000: hi: native=0.03489 rel=+2.71% tiv=1.14e-03
+  !! HF push failed: (Request ID: Root=1-6a9cacb9-03dcf0d55af20d5f769e415e;25790ac8-e59e-4dae-8363-aaa9e3383cfe)
+
+403 Forbidden: Private repository storage limit reached, please upg
+   10025 loss=0.03170 nat=0.03077 xling=0.00119 en=0.00423 a=+0.1280 gn=0.05 1.03s/step | para=1.00
+   10050 loss=0.03105 nat=0.03006 xling=0.00074 en=0.00674 a=+0.1280 gn=0.02 1.03s/step | para=1.00
+   10075 loss=0.03269 nat=0.03184 xling=0.00082 en=0.00497 a=+0.1286 gn=0.02 1.03s/step | para=1.00 degen=0.00
+   10100 loss=0.03636 nat=0.03549 xling=0.00073 en=0.00565 a=+0.1288 gn=0.06 1.03s/step | para=1.00
+   10125 loss=0.07542 nat=0.07424 xling=0.00075 en=0.00872 a=+0.1287 gn=0.06 1.03s/step | para=1.00 degen=0.00
+   10150 loss=0.02905 nat=0.02816 xling=0.00112 en=0.00413 a=+0.1290 gn=0.01 1.03s/step | para=1.00
+   10175 loss=0.04142 nat=0.04039 xling=0.00090 en=0.00653 a=+0.1293 gn=0.03 1.03s/step | para=1.00 degen=0.00
+   10200 loss=0.03604 nat=0.03508 xling=0.00104 en=0.00524 a=+0.1293 gn=0.03 1.03s/step | para=1.00
+   10225 loss=0.04175 nat=0.04002 xling=0.00145 en=0.01112 a=+0.1293 gn=0.03 1.03s/step | para=1.00
+   10250 loss=0.02743 nat=0.02693 xling=0.00034 en=0.00359 a=+0.1292 gn=0.01 1.03s/step | para=1.00
+   10275 loss=0.03030 nat=0.02963 xling=0.00064 en=0.00406 a=+0.1295 gn=0.02 1.03s/step | para=1.00
+   10300 loss=0.03672 nat=0.03580 xling=0.00067 en=0.00642 a=+0.1297 gn=0.04 1.03s/step | para=1.00
+   10325 loss=0.04032 nat=0.03937 xling=0.00091 en=0.00566 a=+0.1295 gn=0.05 1.03s/step | para=1.00
+   10350 loss=0.03709 nat=0.03569 xling=0.00124 en=0.00889 a=+0.1293 gn=0.04 1.03s/step | para=1.00
+   10375 loss=0.04238 nat=0.04166 xling=0.00053 en=0.00499 a=+0.1295 gn=0.03 1.03s/step | para=1.00
+   10400 loss=0.02306 nat=0.02248 xling=0.00055 en=0.00344 a=+0.1296 gn=0.01 1.03s/step | para=1.00 degen=0.00
+   10425 loss=0.04411 nat=0.04308 xling=0.00112 en=0.00560 a=+0.1297 gn=0.03 1.03s/step | para=1.00
+   10450 loss=0.03342 nat=0.03266 xling=0.00092 en=0.00380 a=+0.1297 gn=0.02 1.03s/step | para=1.00
+   10475 loss=0.06036 nat=0.05952 xling=0.00047 en=0.00639 a=+0.1294 gn=0.02 1.03s/step | para=1.00
+   10500 loss=0.02568 nat=0.02499 xling=0.00043 en=0.00508 a=+0.1296 gn=0.03 1.03s/step | para=1.00 degen=0.00
+  [val] step 10500: hi: native=0.03445 rel=+4.51% tiv=1.54e-03
+   10525 loss=0.02854 nat=0.02786 xling=0.00061 en=0.00425 a=+0.1297 gn=0.01 1.03s/step | para=1.00
+   10550 loss=0.04080 nat=0.03954 xling=0.00071 en=0.00969 a=+0.1296 gn=0.04 1.03s/step | para=1.00
+   10575 loss=0.03174 nat=0.03097 xling=0.00077 en=0.00446 a=+0.1296 gn=0.02 1.03s/step | para=1.00 degen=0.00
+   10600 loss=0.02194 nat=0.02153 xling=0.00029 en=0.00296 a=+0.1299 gn=0.01 1.03s/step | para=1.00
+   10625 loss=0.03291 nat=0.03227 xling=0.00053 en=0.00417 a=+0.1299 gn=0.03 1.03s/step | para=1.00
+   10650 loss=0.05075 nat=0.04972 xling=0.00069 en=0.00733 a=+0.1300 gn=0.08 1.03s/step | para=1.00
+   10675 loss=0.03553 nat=0.03478 xling=0.00066 en=0.00475 a=+0.1299 gn=0.02 1.03s/step | para=0.99 degen=0.01
+   10700 loss=0.02974 nat=0.02915 xling=0.00043 en=0.00413 a=+0.1300 gn=0.02 1.03s/step | para=1.00
+   10725 loss=0.03125 nat=0.03055 xling=0.00086 en=0.00348 a=+0.1300 gn=0.01 1.03s/step | para=1.00
+   10750 loss=0.02950 nat=0.02888 xling=0.00058 en=0.00388 a=+0.1304 gn=0.02 1.03s/step | para=1.00
+   10775 loss=0.02645 nat=0.02575 xling=0.00051 en=0.00480 a=+0.1300 gn=0.03 1.03s/step | para=1.00 degen=0.00
+   10800 loss=0.03083 nat=0.03008 xling=0.00071 en=0.00455 a=+0.1300 gn=0.01 1.03s/step | para=1.00
+   10825 loss=0.04151 nat=0.04046 xling=0.00119 en=0.00555 a=+0.1300 gn=0.04 1.03s/step | para=1.00
+   10850 loss=0.03721 nat=0.03642 xling=0.00107 en=0.00350 a=+0.1299 gn=0.04 1.03s/step | para=1.00
+   10875 loss=0.05267 nat=0.05184 xling=0.00083 en=0.00492 a=+0.1301 gn=0.02 1.03s/step | para=1.00
+   10900 loss=0.03457 nat=0.03400 xling=0.00046 en=0.00378 a=+0.1300 gn=0.03 1.03s/step | para=1.00
+   10925 loss=0.03447 nat=0.03319 xling=0.00056 en=0.01052 a=+0.1299 gn=0.05 1.03s/step | para=1.00
+   10950 loss=0.03464 nat=0.03320 xling=0.00152 en=0.00811 a=+0.1299 gn=0.03 1.03s/step | para=1.00
+   10975 loss=0.02627 nat=0.02562 xling=0.00080 en=0.00318 a=+0.1300 gn=0.03 1.03s/step | para=1.00
+   11000 loss=0.02986 nat=0.02883 xling=0.00128 en=0.00497 a=+0.1304 gn=0.02 1.03s/step | para=1.00
+  [val] step 11000: hi: native=0.03428 rel=+4.13% tiv=1.89e-03
+   11025 loss=0.02720 nat=0.02675 xling=0.00034 en=0.00308 a=+0.1302 gn=0.01 1.03s/step | para=1.00
+   11050 loss=0.04310 nat=0.04187 xling=0.00180 en=0.00501 a=+0.1305 gn=0.06 1.03s/step | para=1.00
+   11075 loss=0.03226 nat=0.03162 xling=0.00073 en=0.00336 a=+0.1307 gn=0.06 1.03s/step | para=1.00
+   11100 loss=0.02624 nat=0.02414 xling=0.00130 en=0.01568 a=+0.1305 gn=0.02 1.03s/step | para=1.00 degen=0.00
+   11125 loss=0.03055 nat=0.02954 xling=0.00108 en=0.00562 a=+0.1308 gn=0.04 1.03s/step | para=1.00
+   11150 loss=0.06732 nat=0.06587 xling=0.00129 en=0.00923 a=+0.1306 gn=0.09 1.03s/step | para=1.00
+   11175 loss=0.04884 nat=0.04774 xling=0.00143 en=0.00508 a=+0.1309 gn=0.05 1.03s/step | para=1.00 degen=0.00
+   11200 loss=0.03591 nat=0.03528 xling=0.00066 en=0.00355 a=+0.1308 gn=0.04 1.03s/step | para=1.00
+   11225 loss=0.04865 nat=0.04786 xling=0.00077 en=0.00482 a=+0.1309 gn=0.04 1.03s/step | para=1.00
+   11250 loss=0.04199 nat=0.04098 xling=0.00140 en=0.00442 a=+0.1308 gn=0.03 1.03s/step | para=1.00
+   11275 loss=0.04086 nat=0.03999 xling=0.00087 en=0.00513 a=+0.1309 gn=0.02 1.03s/step | para=1.00 degen=0.00
+   11300 loss=0.03798 nat=0.03707 xling=0.00102 en=0.00500 a=+0.1311 gn=0.02 1.03s/step | para=1.00
+   11325 loss=0.04324 nat=0.04213 xling=0.00131 en=0.00581 a=+0.1311 gn=0.04 1.03s/step | para=1.00 degen=0.00
+   11350 loss=0.03581 nat=0.03516 xling=0.00074 en=0.00349 a=+0.1311 gn=0.03 1.03s/step | para=1.00
+   11375 loss=0.04799 nat=0.04349 xling=0.00938 en=0.00709 a=+0.1311 gn=0.04 1.03s/step | para=1.00
+   11400 loss=0.04499 nat=0.04361 xling=0.00079 en=0.01068 a=+0.1314 gn=0.04 1.03s/step | para=1.00
+   11425 loss=0.05032 nat=0.04924 xling=0.00091 en=0.00705 a=+0.1316 gn=0.03 1.03s/step | para=1.00
+   11450 loss=0.05059 nat=0.04940 xling=0.00138 en=0.00635 a=+0.1316 gn=0.07 1.03s/step | para=1.00
+   11475 loss=0.04575 nat=0.04456 xling=0.00105 en=0.00766 a=+0.1319 gn=0.03 1.03s/step | para=1.00
+   11500 loss=0.03304 nat=0.03240 xling=0.00049 en=0.00444 a=+0.1318 gn=0.02 1.03s/step | para=1.00
+  [val] step 11500: hi: native=0.03382 rel=+4.88% tiv=1.24e-03
+   11525 loss=0.03284 nat=0.03215 xling=0.00053 en=0.00477 a=+0.1320 gn=0.03 1.03s/step | para=1.00
+   11550 loss=0.03008 nat=0.02868 xling=0.00179 en=0.00681 a=+0.1323 gn=0.05 1.03s/step | para=1.00
+   11575 loss=0.02836 nat=0.02760 xling=0.00039 en=0.00602 a=+0.1325 gn=0.01 1.03s/step | para=1.00
+   11600 loss=0.02422 nat=0.02298 xling=0.00207 en=0.00405 a=+0.1327 gn=0.02 1.03s/step | para=1.00
+   11625 loss=0.02542 nat=0.02467 xling=0.00079 en=0.00436 a=+0.1325 gn=0.01 1.03s/step | para=1.00
+   11650 loss=0.03979 nat=0.03875 xling=0.00109 en=0.00607 a=+0.1327 gn=0.04 1.03s/step | para=1.00
+   11675 loss=0.04552 nat=0.04460 xling=0.00133 en=0.00390 a=+0.1327 gn=0.06 1.03s/step | para=1.00
+   11700 loss=0.02686 nat=0.02633 xling=0.00037 en=0.00383 a=+0.1326 gn=0.01 1.03s/step | para=1.00 degen=0.00
+   11725 loss=0.04464 nat=0.04367 xling=0.00128 en=0.00457 a=+0.1327 gn=0.02 1.03s/step | para=1.00
+   11750 loss=0.03761 nat=0.03694 xling=0.00060 en=0.00431 a=+0.1327 gn=0.04 1.03s/step | para=1.00
+   11775 loss=0.03392 nat=0.03261 xling=0.00113 en=0.00860 a=+0.1329 gn=0.04 1.03s/step | para=1.00
+   11800 loss=0.03157 nat=0.03055 xling=0.00150 en=0.00418 a=+0.1324 gn=0.02 1.03s/step | para=1.00
+   11825 loss=0.03007 nat=0.02939 xling=0.00068 en=0.00412 a=+0.1329 gn=0.02 1.03s/step | para=1.00 degen=0.00
+   11850 loss=0.03101 nat=0.03019 xling=0.00038 en=0.00675 a=+0.1327 gn=0.01 1.03s/step | para=1.00 degen=0.00
+   11875 loss=0.03916 nat=0.03832 xling=0.00059 en=0.00605 a=+0.1325 gn=0.04 1.03s/step | para=1.00 degen=0.00
+   11900 loss=0.02969 nat=0.02891 xling=0.00095 en=0.00399 a=+0.1328 gn=0.03 1.03s/step | para=1.00 degen=0.00
+   11925 loss=0.04245 nat=0.04152 xling=0.00071 en=0.00646 a=+0.1328 gn=0.03 1.03s/step | para=1.00 degen=0.00
+   11950 loss=0.03651 nat=0.03551 xling=0.00093 en=0.00639 a=+0.1329 gn=0.05 1.03s/step | para=1.00
+   11975 loss=0.06049 nat=0.05846 xling=0.00279 en=0.00927 a=+0.1329 gn=0.10 1.03s/step | para=1.00
+   12000 loss=0.04090 nat=0.04010 xling=0.00082 en=0.00479 a=+0.1329 gn=0.04 1.03s/step | para=1.00
+  [val] step 12000: hi: native=0.03440 rel=+3.58% tiv=1.36e-03
+  !! HF push failed: (Request ID: Root=1-6a9cb4d0-689a7f6c12872d4c06989b0d;4510e731-9dae-4910-bf2d-4d8e2c4c8890)
+
+403 Forbidden: Private repository storage limit reached, please upg
+   12025 loss=0.03576 nat=0.03479 xling=0.00055 en=0.00758 a=+0.1332 gn=0.03 1.03s/step | para=1.00 degen=0.00
+   12050 loss=0.04987 nat=0.04860 xling=0.00160 en=0.00640 a=+0.1334 gn=0.04 1.03s/step | para=1.00
+   12075 loss=0.03622 nat=0.03529 xling=0.00056 en=0.00705 a=+0.1330 gn=0.06 1.03s/step | para=1.00
+   12100 loss=0.03211 nat=0.03137 xling=0.00088 en=0.00394 a=+0.1334 gn=0.02 1.03s/step | para=1.00 degen=0.00
+   12125 loss=0.03668 nat=0.03229 xling=0.00898 en=0.00863 a=+0.1334 gn=0.02 1.03s/step | para=1.00
+   12150 loss=0.03280 nat=0.03216 xling=0.00049 en=0.00442 a=+0.1336 gn=0.02 1.03s/step | para=1.00
+   12175 loss=0.03660 nat=0.03540 xling=0.00067 en=0.00938 a=+0.1340 gn=0.02 1.03s/step | para=1.00
+   12200 loss=0.03419 nat=0.03343 xling=0.00070 en=0.00484 a=+0.1338 gn=0.03 1.03s/step | para=1.00
+   12225 loss=0.04325 nat=0.04213 xling=0.00116 en=0.00663 a=+0.1340 gn=0.03 1.03s/step | para=1.00
+   12250 loss=0.02660 nat=0.02622 xling=0.00035 en=0.00247 a=+0.1339 gn=0.01 1.03s/step | para=1.00
+   12275 loss=0.02501 nat=0.02434 xling=0.00075 en=0.00377 a=+0.1340 gn=0.03 1.03s/step | para=1.00
+   12300 loss=0.04823 nat=0.04742 xling=0.00079 en=0.00504 a=+0.1341 gn=0.04 1.03s/step | para=1.00
+   12325 loss=0.04238 nat=0.04148 xling=0.00076 en=0.00602 a=+0.1343 gn=0.05 1.03s/step | para=1.00 degen=0.00
+   12350 loss=0.02487 nat=0.02407 xling=0.00088 en=0.00454 a=+0.1343 gn=0.02 1.03s/step | para=1.00
+   12375 loss=0.03033 nat=0.02917 xling=0.00059 en=0.00938 a=+0.1345 gn=0.02 1.03s/step | para=1.00
+   12400 loss=0.02519 nat=0.02454 xling=0.00048 en=0.00459 a=+0.1346 gn=0.01 1.03s/step | para=1.00
+   12425 loss=0.05086 nat=0.04967 xling=0.00131 en=0.00685 a=+0.1343 gn=0.08 1.03s/step | para=1.00 degen=0.00
+   12450 loss=0.02642 nat=0.02590 xling=0.00048 en=0.00334 a=+0.1345 gn=0.01 1.03s/step | para=1.00
+   12475 loss=0.04508 nat=0.04411 xling=0.00139 en=0.00432 a=+0.1341 gn=0.04 1.03s/step | para=1.00
+   12500 loss=0.03062 nat=0.02984 xling=0.00098 en=0.00403 a=+0.1339 gn=0.01 1.03s/step | para=1.00 degen=0.00
+  [val] step 12500: hi: native=0.03456 rel=+3.74% tiv=2.12e-03
+   12525 loss=0.03293 nat=0.03231 xling=0.00050 en=0.00425 a=+0.1336 gn=0.02 1.03s/step | para=1.00 degen=0.00
+   12550 loss=0.03085 nat=0.03002 xling=0.00086 en=0.00504 a=+0.1340 gn=0.02 1.03s/step | para=1.00
+   12575 loss=0.02823 nat=0.02729 xling=0.00088 en=0.00597 a=+0.1340 gn=0.01 1.03s/step | para=1.00
+   12600 loss=0.02547 nat=0.02495 xling=0.00033 en=0.00397 a=+0.1343 gn=0.02 1.03s/step | para=1.00
+   12625 loss=0.02541 nat=0.02456 xling=0.00082 en=0.00528 a=+0.1344 gn=0.01 1.03s/step | para=1.00
+   12650 loss=0.04079 nat=0.03947 xling=0.00168 en=0.00670 a=+0.1346 gn=0.05 1.03s/step | para=1.00
+   12675 loss=0.02641 nat=0.02566 xling=0.00048 en=0.00565 a=+0.1344 gn=0.03 1.03s/step | para=1.00 degen=0.00
+   12700 loss=0.04460 nat=0.04337 xling=0.00108 en=0.00815 a=+0.1347 gn=0.04 1.03s/step | para=1.00
+   12725 loss=0.06916 nat=0.06803 xling=0.00097 en=0.00758 a=+0.1349 gn=0.13 1.03s/step | para=1.00
+   12750 loss=0.02770 nat=0.02690 xling=0.00086 en=0.00471 a=+0.1348 gn=0.02 1.03s/step | para=1.00
+   12775 loss=0.02342 nat=0.02273 xling=0.00075 en=0.00396 a=+0.1348 gn=0.01 1.03s/step | para=1.00
+   12800 loss=0.02999 nat=0.02938 xling=0.00061 en=0.00376 a=+0.1348 gn=0.02 1.03s/step | para=1.00
+   12825 loss=0.03967 nat=0.03859 xling=0.00112 en=0.00650 a=+0.1349 gn=0.04 1.03s/step | para=1.00
+   12850 loss=0.02866 nat=0.02821 xling=0.00034 en=0.00313 a=+0.1350 gn=0.01 1.03s/step | para=1.00
+   12875 loss=0.03814 nat=0.03665 xling=0.00102 en=0.01098 a=+0.1349 gn=0.06 1.03s/step | para=1.00
+   12900 loss=0.03523 nat=0.03435 xling=0.00084 en=0.00554 a=+0.1347 gn=0.02 1.03s/step | para=1.00
+   12925 loss=0.04589 nat=0.04505 xling=0.00078 en=0.00549 a=+0.1349 gn=0.04 1.03s/step | para=1.00
+   12950 loss=0.03541 nat=0.03415 xling=0.00102 en=0.00872 a=+0.1349 gn=0.02 1.03s/step | para=1.00 degen=0.00
+   12975 loss=0.03611 nat=0.03535 xling=0.00078 en=0.00466 a=+0.1352 gn=0.03 1.03s/step | para=1.00
+   13000 loss=0.03598 nat=0.03527 xling=0.00079 en=0.00413 a=+0.1352 gn=0.01 1.03s/step | para=1.00 degen=0.00
+  [val] step 13000: hi: native=0.03423 rel=+4.81% tiv=1.91e-03
+   13025 loss=0.03007 nat=0.02943 xling=0.00068 en=0.00384 a=+0.1350 gn=0.02 1.03s/step | para=1.00
+   13050 loss=0.03429 nat=0.03365 xling=0.00073 en=0.00366 a=+0.1353 gn=0.02 1.03s/step | para=1.00
+   13075 loss=0.03131 nat=0.03072 xling=0.00050 en=0.00395 a=+0.1352 gn=0.01 1.03s/step | para=1.00
+   13100 loss=0.02878 nat=0.02819 xling=0.00075 en=0.00307 a=+0.1352 gn=0.03 1.03s/step | para=1.00
+   13125 loss=0.02645 nat=0.02581 xling=0.00068 en=0.00379 a=+0.1353 gn=0.01 1.03s/step | para=1.00
+   13150 loss=0.04396 nat=0.04319 xling=0.00069 en=0.00503 a=+0.1353 gn=0.02 1.03s/step | para=1.00
+   13175 loss=0.04703 nat=0.04624 xling=0.00077 en=0.00500 a=+0.1355 gn=0.05 1.03s/step | para=1.00 degen=0.00
+   13200 loss=0.02553 nat=0.02504 xling=0.00043 en=0.00333 a=+0.1355 gn=0.01 1.03s/step | para=1.00
+   13225 loss=0.05079 nat=0.05005 xling=0.00080 en=0.00447 a=+0.1354 gn=0.04 1.03s/step | para=1.00
+   13250 loss=0.02625 nat=0.02574 xling=0.00044 en=0.00350 a=+0.1354 gn=0.01 1.03s/step | para=1.00
+   13275 loss=0.03804 nat=0.03700 xling=0.00124 en=0.00576 a=+0.1356 gn=0.04 1.03s/step | para=1.00
+   13300 loss=0.04676 nat=0.04610 xling=0.00057 en=0.00450 a=+0.1356 gn=0.03 1.03s/step | para=1.00
+   13325 loss=0.04374 nat=0.04311 xling=0.00056 en=0.00430 a=+0.1356 gn=0.06 1.03s/step | para=1.00
+   13350 loss=0.02798 nat=0.02678 xling=0.00210 en=0.00416 a=+0.1357 gn=0.04 1.03s/step | para=1.00
+   13375 loss=0.03861 nat=0.03681 xling=0.00127 en=0.01329 a=+0.1357 gn=0.04 1.03s/step | para=1.00
+   13400 loss=0.03053 nat=0.02911 xling=0.00070 en=0.01165 a=+0.1356 gn=0.02 1.03s/step | para=1.00
+   13425 loss=0.06441 nat=0.06251 xling=0.00108 en=0.01494 a=+0.1357 gn=0.06 1.03s/step | para=1.00
+   13450 loss=0.04027 nat=0.03863 xling=0.00280 en=0.00597 a=+0.1356 gn=0.02 1.03s/step | para=1.00
+   13475 loss=0.02765 nat=0.02700 xling=0.00069 en=0.00396 a=+0.1358 gn=0.01 1.03s/step | para=1.00
+   13500 loss=0.03794 nat=0.03621 xling=0.00199 en=0.00990 a=+0.1359 gn=0.07 1.03s/step | para=1.00
+  [val] step 13500: hi: native=0.03399 rel=+4.28% tiv=2.21e-03
+   13525 loss=0.02809 nat=0.02752 xling=0.00049 en=0.00390 a=+0.1361 gn=0.02 1.03s/step | para=1.00
+   13550 loss=0.03050 nat=0.02987 xling=0.00052 en=0.00430 a=+0.1360 gn=0.02 1.03s/step | para=1.00
+   13575 loss=0.03570 nat=0.03486 xling=0.00057 en=0.00630 a=+0.1361 gn=0.02 1.03s/step | para=1.00
+   13600 loss=0.02414 nat=0.02364 xling=0.00054 en=0.00302 a=+0.1363 gn=0.02 1.03s/step | para=1.00 degen=0.00
+   13625 loss=0.02874 nat=0.02820 xling=0.00056 en=0.00325 a=+0.1362 gn=0.02 1.03s/step | para=1.00
+   13650 loss=0.04570 nat=0.04457 xling=0.00162 en=0.00531 a=+0.1361 gn=0.03 1.03s/step | para=1.00
+   13675 loss=0.03291 nat=0.03140 xling=0.00043 en=0.01353 a=+0.1359 gn=0.03 1.03s/step | para=1.00 degen=0.00
+   13700 loss=0.04708 nat=0.04601 xling=0.00142 en=0.00550 a=+0.1361 gn=0.06 1.03s/step | para=1.00
+   13725 loss=0.03345 nat=0.03220 xling=0.00093 en=0.00906 a=+0.1363 gn=0.04 1.03s/step | para=1.00 degen=0.00
+   13750 loss=0.03262 nat=0.03203 xling=0.00067 en=0.00349 a=+0.1364 gn=0.01 1.03s/step | para=1.00
+   13775 loss=0.05025 nat=0.04955 xling=0.00072 en=0.00433 a=+0.1363 gn=0.06 1.03s/step | para=1.00
+   13800 loss=0.02954 nat=0.02884 xling=0.00080 en=0.00412 a=+0.1362 gn=0.02 1.03s/step | para=1.00
+   13825 loss=0.03533 nat=0.03420 xling=0.00143 en=0.00608 a=+0.1363 gn=0.04 1.03s/step | para=1.00
+   13850 loss=0.02003 nat=0.01951 xling=0.00064 en=0.00289 a=+0.1364 gn=0.02 1.03s/step | para=1.00
+   13875 loss=0.03435 nat=0.03286 xling=0.00216 en=0.00694 a=+0.1367 gn=0.05 1.03s/step | para=1.00
+   13900 loss=0.03475 nat=0.03355 xling=0.00175 en=0.00553 a=+0.1367 gn=0.03 1.03s/step | para=1.00
+   13925 loss=0.03118 nat=0.03016 xling=0.00165 en=0.00422 a=+0.1368 gn=0.05 1.03s/step | para=1.00
+   13950 loss=0.09030 nat=0.08829 xling=0.00284 en=0.00977 a=+0.1368 gn=0.14 1.03s/step | para=1.00
+   13975 loss=0.03307 nat=0.03216 xling=0.00051 en=0.00726 a=+0.1369 gn=0.04 1.03s/step | para=1.00 degen=0.00
+   14000 loss=0.03529 nat=0.03456 xling=0.00071 en=0.00477 a=+0.1368 gn=0.02 1.03s/step | para=1.00
+  [val] step 14000: hi: native=0.03400 rel=+4.31% tiv=1.71e-03
+  !! HF push failed: (Request ID: Root=1-6a9cbceb-4cf27bcb1f3ce0230dbba414;d49e8d45-7390-4129-9d83-9d572b62c863)
+
+403 Forbidden: Private repository storage limit reached, please upg
+   14025 loss=0.03166 nat=0.03097 xling=0.00066 en=0.00457 a=+0.1369 gn=0.06 1.03s/step | para=1.00
+   14050 loss=0.04304 nat=0.04202 xling=0.00097 en=0.00673 a=+0.1367 gn=0.05 1.03s/step | para=1.00
+   14075 loss=0.03243 nat=0.03090 xling=0.00181 en=0.00869 a=+0.1369 gn=0.02 1.03s/step | para=1.00 degen=0.00
+   14100 loss=0.03178 nat=0.03096 xling=0.00095 en=0.00477 a=+0.1368 gn=0.06 1.03s/step | para=1.00
+   14125 loss=0.03336 nat=0.03275 xling=0.00051 en=0.00425 a=+0.1370 gn=0.02 1.03s/step | para=1.00
+   14150 loss=0.02758 nat=0.02697 xling=0.00048 en=0.00429 a=+0.1370 gn=0.01 1.03s/step | para=1.00
+   14175 loss=0.03265 nat=0.03173 xling=0.00099 en=0.00560 a=+0.1372 gn=0.02 1.03s/step | para=1.00
+   14200 loss=0.04178 nat=0.04049 xling=0.00082 en=0.00995 a=+0.1374 gn=0.01 1.03s/step | para=1.00
+   14225 loss=0.04051 nat=0.03980 xling=0.00091 en=0.00375 a=+0.1378 gn=0.03 1.03s/step | para=1.00 degen=0.00
+   14250 loss=0.02928 nat=0.02862 xling=0.00062 en=0.00440 a=+0.1376 gn=0.01 1.03s/step | para=1.00
+   14275 loss=0.02461 nat=0.02412 xling=0.00054 en=0.00294 a=+0.1374 gn=0.01 1.03s/step | para=1.00
+   14300 loss=0.04486 nat=0.04373 xling=0.00101 en=0.00760 a=+0.1375 gn=0.02 1.03s/step | para=1.00
+   14325 loss=0.03074 nat=0.02999 xling=0.00067 en=0.00503 a=+0.1376 gn=0.02 1.03s/step | para=1.00 degen=0.00
+   14350 loss=0.03482 nat=0.03352 xling=0.00196 en=0.00595 a=+0.1377 gn=0.07 1.03s/step | para=1.00 degen=0.00
+   14375 loss=0.03788 nat=0.03726 xling=0.00066 en=0.00385 a=+0.1378 gn=0.05 1.03s/step | para=1.00
+   14400 loss=0.02494 nat=0.02439 xling=0.00066 en=0.00315 a=+0.1383 gn=0.02 1.03s/step | para=1.00
+   14425 loss=0.05099 nat=0.04993 xling=0.00097 en=0.00719 a=+0.1383 gn=0.04 1.03s/step | para=1.00
+   14450 loss=0.03192 nat=0.03130 xling=0.00058 en=0.00413 a=+0.1385 gn=0.04 1.03s/step | para=1.00
+   14475 loss=0.02990 nat=0.02922 xling=0.00087 en=0.00367 a=+0.1386 gn=0.01 1.03s/step | para=1.00
+   14500 loss=0.06834 nat=0.06679 xling=0.00225 en=0.00745 a=+0.1385 gn=0.15 1.03s/step | para=1.00 degen=0.00
+  [val] step 14500: hi: native=0.03354 rel=+5.87% tiv=2.11e-03
+   14525 loss=0.03495 nat=0.03430 xling=0.00062 en=0.00434 a=+0.1387 gn=0.02 1.03s/step | para=1.00
+   14550 loss=0.03032 nat=0.02948 xling=0.00072 en=0.00586 a=+0.1388 gn=0.02 1.03s/step | para=1.00
+   14575 loss=0.03025 nat=0.02931 xling=0.00108 en=0.00553 a=+0.1387 gn=0.01 1.03s/step | para=1.00 degen=0.00
+   14600 loss=0.02250 nat=0.02214 xling=0.00027 en=0.00270 a=+0.1388 gn=0.01 1.03s/step | para=1.00
+   14625 loss=0.03529 nat=0.03475 xling=0.00053 en=0.00352 a=+0.1389 gn=0.02 1.03s/step | para=1.00
+   14650 loss=0.05119 nat=0.04970 xling=0.00165 en=0.00903 a=+0.1387 gn=0.07 1.03s/step | para=1.00
+   14675 loss=0.02662 nat=0.02604 xling=0.00066 en=0.00347 a=+0.1388 gn=0.02 1.03s/step | para=1.00
+   14700 loss=0.05098 nat=0.05025 xling=0.00075 en=0.00466 a=+0.1389 gn=0.03 1.03s/step | para=1.00
+   14725 loss=0.03476 nat=0.03343 xling=0.00208 en=0.00593 a=+0.1390 gn=0.02 1.03s/step | para=1.00
+   14750 loss=0.03082 nat=0.02928 xling=0.00275 en=0.00561 a=+0.1388 gn=0.03 1.03s/step | para=1.00 degen=0.00
+   14775 loss=0.03900 nat=0.03782 xling=0.00160 en=0.00615 a=+0.1390 gn=0.06 1.03s/step | para=0.99 degen=0.01
+   14800 loss=0.03353 nat=0.03263 xling=0.00086 en=0.00596 a=+0.1392 gn=0.01 1.03s/step | para=1.00
+   14825 loss=0.03554 nat=0.03443 xling=0.00140 en=0.00619 a=+0.1391 gn=0.05 1.03s/step | para=1.00
+   14850 loss=0.02406 nat=0.02353 xling=0.00071 en=0.00283 a=+0.1393 gn=0.02 1.03s/step | para=1.00
+   14875 loss=0.04464 nat=0.04379 xling=0.00111 en=0.00464 a=+0.1393 gn=0.02 1.03s/step | para=1.00
+   14900 loss=0.04733 nat=0.04616 xling=0.00143 en=0.00669 a=+0.1393 gn=0.03 1.03s/step | para=1.00
+   14925 loss=0.04107 nat=0.03996 xling=0.00133 en=0.00646 a=+0.1394 gn=0.02 1.03s/step | para=1.00
+   14950 loss=0.04884 nat=0.04767 xling=0.00145 en=0.00665 a=+0.1394 gn=0.03 1.03s/step | para=1.00
+   14975 loss=0.03595 nat=0.03514 xling=0.00049 en=0.00639 a=+0.1394 gn=0.02 1.03s/step | para=1.00
+   15000 loss=0.02822 nat=0.02765 xling=0.00058 en=0.00367 a=+0.1393 gn=0.02 1.03s/step | para=1.00
+  [val] step 15000: hi: native=0.03383 rel=+5.08% tiv=1.90e-03
+   15025 loss=0.03734 nat=0.03664 xling=0.00068 en=0.00472 a=+0.1392 gn=0.03 1.03s/step | para=1.00
+   15050 loss=0.03298 nat=0.03220 xling=0.00058 en=0.00580 a=+0.1392 gn=0.03 1.03s/step | para=1.00
+   15075 loss=0.03231 nat=0.03152 xling=0.00097 en=0.00455 a=+0.1393 gn=0.01 1.03s/step | para=1.00 degen=0.00
+   15100 loss=0.02274 nat=0.02230 xling=0.00037 en=0.00307 a=+0.1395 gn=0.01 1.03s/step | para=1.00 degen=0.00
+   15125 loss=0.03268 nat=0.03181 xling=0.00065 en=0.00640 a=+0.1392 gn=0.03 1.03s/step | para=1.00
+   15150 loss=0.05476 nat=0.05369 xling=0.00138 en=0.00592 a=+0.1390 gn=0.04 1.03s/step | para=1.00
+   15175 loss=0.03582 nat=0.03511 xling=0.00084 en=0.00420 a=+0.1391 gn=0.02 1.03s/step | para=1.00
+   15200 loss=0.04253 nat=0.04155 xling=0.00110 en=0.00603 a=+0.1392 gn=0.05 1.03s/step | para=1.00
+   15225 loss=0.03475 nat=0.03339 xling=0.00086 en=0.01063 a=+0.1391 gn=0.10 1.03s/step | para=1.00 degen=0.00
+   15250 loss=0.03178 nat=0.03097 xling=0.00104 en=0.00447 a=+0.1393 gn=0.01 1.03s/step | para=1.00
+   15275 loss=0.03813 nat=0.03650 xling=0.00318 en=0.00530 a=+0.1393 gn=0.05 1.03s/step | para=1.00
+   15300 loss=0.03591 nat=0.03526 xling=0.00068 en=0.00412 a=+0.1393 gn=0.02 1.03s/step | para=1.00
+   15325 loss=0.03615 nat=0.03522 xling=0.00112 en=0.00542 a=+0.1397 gn=0.07 1.03s/step | para=1.00
+   15350 loss=0.02887 nat=0.02788 xling=0.00049 en=0.00821 a=+0.1398 gn=0.02 1.03s/step | para=1.00
+   15375 loss=0.04539 nat=0.04277 xling=0.00533 en=0.00787 a=+0.1398 gn=0.05 1.03s/step | para=1.00
+   15400 loss=0.05501 nat=0.05329 xling=0.00196 en=0.01048 a=+0.1398 gn=0.15 1.03s/step | para=1.00
+   15425 loss=0.02982 nat=0.02913 xling=0.00089 en=0.00380 a=+0.1398 gn=0.01 1.03s/step | para=1.00
+   15450 loss=0.03964 nat=0.03842 xling=0.00111 en=0.00836 a=+0.1399 gn=0.02 1.03s/step | para=1.00 degen=0.00
+   15475 loss=0.02985 nat=0.02933 xling=0.00056 en=0.00326 a=+0.1399 gn=0.03 1.03s/step | para=1.00
+   15500 loss=0.03576 nat=0.03496 xling=0.00102 en=0.00452 a=+0.1398 gn=0.02 1.03s/step | para=1.00
+  [val] step 15500: hi: native=0.03372 rel=+6.32% tiv=2.41e-03
+   15525 loss=0.02493 nat=0.02439 xling=0.00051 en=0.00363 a=+0.1398 gn=0.01 1.03s/step | para=1.00
+   15550 loss=0.03454 nat=0.03385 xling=0.00091 en=0.00379 a=+0.1398 gn=0.01 1.03s/step | para=1.00 degen=0.00
+   15575 loss=0.03143 nat=0.03070 xling=0.00081 en=0.00453 a=+0.1399 gn=0.02 1.03s/step | para=1.00
+   15600 loss=0.02690 nat=0.02643 xling=0.00054 en=0.00285 a=+0.1402 gn=0.02 1.03s/step | para=1.00
+   15625 loss=0.03620 nat=0.03524 xling=0.00107 en=0.00598 a=+0.1399 gn=0.02 1.03s/step | para=1.00
+   15650 loss=0.03890 nat=0.03772 xling=0.00142 en=0.00699 a=+0.1399 gn=0.05 1.03s/step | para=1.00
+   15675 loss=0.02930 nat=0.02853 xling=0.00105 en=0.00417 a=+0.1399 gn=0.03 1.03s/step | para=1.00
+   15700 loss=0.02832 nat=0.02732 xling=0.00150 en=0.00489 a=+0.1399 gn=0.01 1.03s/step | para=1.00
+   15725 loss=0.06830 nat=0.06702 xling=0.00152 en=0.00765 a=+0.1400 gn=0.13 1.03s/step | para=1.00
+   15750 loss=0.02680 nat=0.02578 xling=0.00079 en=0.00749 a=+0.1402 gn=0.04 1.03s/step | para=1.00 degen=0.00
+   15775 loss=0.03269 nat=0.03185 xling=0.00128 en=0.00406 a=+0.1402 gn=0.03 1.03s/step | para=1.00
+   15800 loss=0.02887 nat=0.02815 xling=0.00055 en=0.00531 a=+0.1401 gn=0.01 1.03s/step | para=1.00
+   15825 loss=0.05665 nat=0.05578 xling=0.00140 en=0.00396 a=+0.1403 gn=0.03 1.03s/step | para=0.99 degen=0.01
+   15850 loss=0.01886 nat=0.01848 xling=0.00039 en=0.00249 a=+0.1405 gn=0.01 1.03s/step | para=1.00
+   15875 loss=0.04788 nat=0.04694 xling=0.00120 en=0.00541 a=+0.1404 gn=0.05 1.03s/step | para=1.00
+   15900 loss=0.03048 nat=0.02944 xling=0.00140 en=0.00566 a=+0.1402 gn=0.04 1.03s/step | para=1.00 degen=0.00
+   15925 loss=0.02632 nat=0.02574 xling=0.00038 en=0.00452 a=+0.1403 gn=0.02 1.03s/step | para=1.00
+   15950 loss=0.06150 nat=0.06029 xling=0.00171 en=0.00637 a=+0.1401 gn=0.05 1.03s/step | para=1.00
+   15975 loss=0.03615 nat=0.03536 xling=0.00116 en=0.00400 a=+0.1403 gn=0.02 1.03s/step | para=1.00
+   16000 loss=0.02658 nat=0.02608 xling=0.00050 en=0.00337 a=+0.1404 gn=0.02 1.03s/step | para=1.00
+  [val] step 16000: hi: native=0.03390 rel=+5.69% tiv=2.40e-03
+  !! HF push failed: (Request ID: Root=1-6a9cc4fe-37e392177339022719ac8f69;0ce18f6d-a611-4df0-8f1c-7d462eccd609)
+
+403 Forbidden: Private repository storage limit reached, please upg
+   16025 loss=0.03333 nat=0.03278 xling=0.00052 en=0.00377 a=+0.1405 gn=0.05 1.03s/step | para=1.00
+   16050 loss=0.03918 nat=0.03802 xling=0.00194 en=0.00514 a=+0.1408 gn=0.04 1.03s/step | para=1.00
+   16075 loss=0.03013 nat=0.02920 xling=0.00096 en=0.00609 a=+0.1409 gn=0.03 1.03s/step | para=1.00 degen=0.00
+   16100 loss=0.04016 nat=0.03955 xling=0.00069 en=0.00384 a=+0.1410 gn=0.01 1.03s/step | para=1.00
+   16125 loss=0.03392 nat=0.03292 xling=0.00109 en=0.00637 a=+0.1410 gn=0.03 1.03s/step | para=1.00
+   16150 loss=0.03523 nat=0.03470 xling=0.00049 en=0.00365 a=+0.1409 gn=0.02 1.03s/step | para=1.00
+   16175 loss=0.02798 nat=0.02727 xling=0.00073 en=0.00467 a=+0.1409 gn=0.02 1.03s/step | para=1.00
+   16200 loss=0.03461 nat=0.03377 xling=0.00119 en=0.00443 a=+0.1411 gn=0.03 1.03s/step | para=1.00
+   16225 loss=0.03875 nat=0.03777 xling=0.00103 en=0.00639 a=+0.1412 gn=0.04 1.03s/step | para=1.00
+   16250 loss=0.02642 nat=0.02586 xling=0.00047 en=0.00408 a=+0.1412 gn=0.01 1.03s/step | para=1.00 degen=0.00
+   16275 loss=0.02270 nat=0.02216 xling=0.00046 en=0.00389 a=+0.1413 gn=0.01 1.03s/step | para=1.00
+   16300 loss=0.04635 nat=0.04539 xling=0.00101 en=0.00626 a=+0.1414 gn=0.05 1.03s/step | para=1.00 degen=0.00
+   16325 loss=0.03461 nat=0.03391 xling=0.00081 en=0.00439 a=+0.1416 gn=0.01 1.03s/step | para=1.00 degen=0.00
+   16350 loss=0.03451 nat=0.03387 xling=0.00051 en=0.00474 a=+0.1414 gn=0.03 1.03s/step | para=1.00
+   16375 loss=0.02923 nat=0.02828 xling=0.00081 en=0.00685 a=+0.1414 gn=0.05 1.04s/step | para=1.00
+   16400 loss=0.02472 nat=0.02417 xling=0.00056 en=0.00365 a=+0.1414 gn=0.02 1.04s/step | para=1.00
+   16425 loss=0.04410 nat=0.04255 xling=0.00132 en=0.01118 a=+0.1414 gn=0.06 1.04s/step | para=1.00
+   16450 loss=0.03214 nat=0.03158 xling=0.00063 en=0.00355 a=+0.1413 gn=0.02 1.04s/step | para=1.00
+   16475 loss=0.03156 nat=0.03075 xling=0.00128 en=0.00391 a=+0.1414 gn=0.02 1.04s/step | para=1.00
+   16500 loss=0.06112 nat=0.06031 xling=0.00117 en=0.00430 a=+0.1416 gn=0.03 1.04s/step | para=1.00
+  [val] step 16500: hi: native=0.03341 rel=+6.29% tiv=2.96e-03
+   16525 loss=0.02618 nat=0.02566 xling=0.00048 en=0.00368 a=+0.1415 gn=0.03 1.04s/step | para=1.00
+   16550 loss=0.03342 nat=0.03265 xling=0.00066 en=0.00549 a=+0.1414 gn=0.01 1.04s/step | para=1.00
+   16575 loss=0.03458 nat=0.03397 xling=0.00050 en=0.00440 a=+0.1414 gn=0.02 1.04s/step | para=1.00 degen=0.00
+   16600 loss=0.02835 nat=0.02791 xling=0.00034 en=0.00331 a=+0.1413 gn=0.01 1.04s/step | para=1.00
+   16625 loss=0.02497 nat=0.02442 xling=0.00043 en=0.00411 a=+0.1414 gn=0.02 1.04s/step | para=1.00
+   16650 loss=0.04199 nat=0.04095 xling=0.00123 en=0.00643 a=+0.1414 gn=0.05 1.04s/step | para=1.00 degen=0.00
+   16675 loss=0.02360 nat=0.02287 xling=0.00083 en=0.00466 a=+0.1415 gn=0.01 1.03s/step | para=1.00
+   16700 loss=0.03501 nat=0.03427 xling=0.00059 en=0.00553 a=+0.1415 gn=0.04 1.03s/step | para=1.00
+   16725 loss=0.03389 nat=0.03313 xling=0.00057 en=0.00575 a=+0.1416 gn=0.04 1.03s/step | para=1.00
+   16750 loss=0.04773 nat=0.04697 xling=0.00082 en=0.00503 a=+0.1416 gn=0.03 1.03s/step | para=1.00
+   16775 loss=0.02325 nat=0.02283 xling=0.00041 en=0.00288 a=+0.1416 gn=0.01 1.03s/step | para=1.00
+   16800 loss=0.03013 nat=0.02901 xling=0.00170 en=0.00571 a=+0.1416 gn=0.05 1.03s/step | para=1.00 degen=0.00
+   16825 loss=0.03641 nat=0.03540 xling=0.00102 en=0.00680 a=+0.1416 gn=0.05 1.03s/step | para=1.00
+   16850 loss=0.03715 nat=0.03639 xling=0.00055 en=0.00586 a=+0.1418 gn=0.03 1.03s/step | para=1.00
+   16875 loss=0.03472 nat=0.03354 xling=0.00108 en=0.00837 a=+0.1418 gn=0.07 1.03s/step | para=1.00
+   16900 loss=0.03527 nat=0.03439 xling=0.00094 en=0.00570 a=+0.1420 gn=0.04 1.03s/step | para=1.00
+   16925 loss=0.04824 nat=0.04729 xling=0.00091 en=0.00658 a=+0.1421 gn=0.03 1.03s/step | para=1.00
+   16950 loss=0.04824 nat=0.04619 xling=0.00317 en=0.01029 a=+0.1421 gn=0.05 1.03s/step | para=1.00 degen=0.00
+   16975 loss=0.04121 nat=0.04023 xling=0.00074 en=0.00741 a=+0.1422 gn=0.07 1.03s/step | para=1.00
+   17000 loss=0.03655 nat=0.03568 xling=0.00134 en=0.00444 a=+0.1422 gn=0.02 1.03s/step | para=1.00
+  [val] step 17000: hi: native=0.03346 rel=+6.48% tiv=2.55e-03
+   17025 loss=0.03116 nat=0.03064 xling=0.00058 en=0.00344 a=+0.1424 gn=0.01 1.03s/step | para=1.00
+   17050 loss=0.04724 nat=0.04587 xling=0.00165 en=0.00842 a=+0.1424 gn=0.03 1.03s/step | para=1.00
+   17075 loss=0.05180 nat=0.05108 xling=0.00072 en=0.00491 a=+0.1423 gn=0.02 1.03s/step | para=1.00
+   17100 loss=0.02432 nat=0.02390 xling=0.00041 en=0.00288 a=+0.1425 gn=0.02 1.03s/step | para=1.00 degen=0.00
+   17125 loss=0.03060 nat=0.02998 xling=0.00064 en=0.00421 a=+0.1425 gn=0.01 1.03s/step | para=1.00
+   17150 loss=0.06215 nat=0.06057 xling=0.00214 en=0.00898 a=+0.1426 gn=0.04 1.03s/step | para=1.00
+   17175 loss=0.02570 nat=0.02513 xling=0.00060 en=0.00370 a=+0.1426 gn=0.01 1.03s/step | para=1.00
+   17200 loss=0.02637 nat=0.02571 xling=0.00063 en=0.00463 a=+0.1426 gn=0.01 1.03s/step | para=1.00
+   17225 loss=0.02931 nat=0.02859 xling=0.00081 en=0.00465 a=+0.1426 gn=0.02 1.03s/step | para=1.00
+   17250 loss=0.02902 nat=0.02835 xling=0.00069 en=0.00455 a=+0.1427 gn=0.01 1.03s/step | para=1.00
+   17275 loss=0.03243 nat=0.03184 xling=0.00080 en=0.00342 a=+0.1427 gn=0.02 1.03s/step | para=1.00
+   17300 loss=0.04175 nat=0.04028 xling=0.00171 en=0.00930 a=+0.1426 gn=0.04 1.03s/step | para=1.00
+   17325 loss=0.04076 nat=0.03936 xling=0.00179 en=0.00833 a=+0.1426 gn=0.05 1.03s/step | para=1.00
+   17350 loss=0.02504 nat=0.02451 xling=0.00055 en=0.00354 a=+0.1427 gn=0.02 1.03s/step | para=1.00
+   17375 loss=0.03779 nat=0.03693 xling=0.00082 en=0.00607 a=+0.1429 gn=0.03 1.03s/step | para=1.00
+   17400 loss=0.06182 nat=0.06090 xling=0.00107 en=0.00587 a=+0.1429 gn=0.20 1.03s/step | para=1.00
+   17425 loss=0.04118 nat=0.03996 xling=0.00142 en=0.00774 a=+0.1428 gn=0.03 1.03s/step | para=1.00
+   17450 loss=0.06576 nat=0.06250 xling=0.00571 en=0.01473 a=+0.1429 gn=0.07 1.03s/step | para=1.00
+   17475 loss=0.02740 nat=0.02663 xling=0.00071 en=0.00548 a=+0.1429 gn=0.02 1.03s/step | para=1.00
+   17500 loss=0.03383 nat=0.03301 xling=0.00096 en=0.00518 a=+0.1428 gn=0.03 1.03s/step | para=1.00
+  [val] step 17500: hi: native=0.03344 rel=+6.53% tiv=2.48e-03
+   17525 loss=0.03274 nat=0.03215 xling=0.00052 en=0.00426 a=+0.1428 gn=0.05 1.03s/step | para=1.00
+   17550 loss=0.04466 nat=0.04328 xling=0.00103 en=0.01054 a=+0.1428 gn=0.06 1.03s/step | para=1.00
+   17575 loss=0.03875 nat=0.03815 xling=0.00079 en=0.00348 a=+0.1430 gn=0.02 1.03s/step | para=1.00
+   17600 loss=0.03220 nat=0.03158 xling=0.00045 en=0.00474 a=+0.1432 gn=0.04 1.03s/step | para=1.00
+   17625 loss=0.03054 nat=0.02990 xling=0.00074 en=0.00414 a=+0.1432 gn=0.02 1.03s/step | para=1.00
+   17650 loss=0.04333 nat=0.04236 xling=0.00080 en=0.00722 a=+0.1431 gn=0.03 1.03s/step | para=1.00
+   17675 loss=0.04301 nat=0.04242 xling=0.00071 en=0.00376 a=+0.1431 gn=0.06 1.03s/step | para=1.00
+   17700 loss=0.03075 nat=0.02999 xling=0.00130 en=0.00360 a=+0.1432 gn=0.02 1.03s/step | para=1.00
+   17725 loss=0.04575 nat=0.04472 xling=0.00167 en=0.00518 a=+0.1432 gn=0.07 1.03s/step | para=1.00
+   17750 loss=0.02776 nat=0.02690 xling=0.00107 en=0.00533 a=+0.1432 gn=0.02 1.03s/step | para=1.00
+   17775 loss=0.03961 nat=0.03813 xling=0.00217 en=0.00815 a=+0.1433 gn=0.07 1.03s/step | para=1.00
+   17800 loss=0.04629 nat=0.04521 xling=0.00081 en=0.00829 a=+0.1432 gn=0.03 1.03s/step | para=1.00
+   17825 loss=0.07987 nat=0.07870 xling=0.00172 en=0.00643 a=+0.1433 gn=0.11 1.03s/step | para=1.00
+   17850 loss=0.04019 nat=0.03953 xling=0.00057 en=0.00486 a=+0.1433 gn=0.03 1.03s/step | para=1.00
+   17875 loss=0.03455 nat=0.03336 xling=0.00177 en=0.00651 a=+0.1433 gn=0.04 1.03s/step | para=1.00
+   17900 loss=0.03151 nat=0.03081 xling=0.00090 en=0.00422 a=+0.1433 gn=0.02 1.03s/step | para=1.00
+   17925 loss=0.04543 nat=0.04468 xling=0.00070 en=0.00539 a=+0.1434 gn=0.05 1.03s/step | para=1.00
+   17950 loss=0.02992 nat=0.02903 xling=0.00077 en=0.00657 a=+0.1435 gn=0.02 1.03s/step | para=1.00
+   17975 loss=0.03313 nat=0.03247 xling=0.00069 en=0.00445 a=+0.1435 gn=0.04 1.03s/step | para=1.00
+   18000 loss=0.03636 nat=0.03542 xling=0.00084 en=0.00680 a=+0.1435 gn=0.03 1.03s/step | para=1.00 degen=0.00
+  [val] step 18000: hi: native=0.03331 rel=+6.90% tiv=2.66e-03
+  !! HF push failed: (Request ID: Root=1-6a9ccd1a-0586e1281994d04f6b2c0634;89556e36-bc3e-49a0-984b-6f60369fad52)
+
+403 Forbidden: Private repository storage limit reached, please upg
+   18025 loss=0.03177 nat=0.03118 xling=0.00059 en=0.00410 a=+0.1436 gn=0.06 1.03s/step | para=1.00
+   18050 loss=0.03964 nat=0.03865 xling=0.00109 en=0.00658 a=+0.1438 gn=0.04 1.03s/step | para=1.00
+   18075 loss=0.03728 nat=0.03650 xling=0.00107 en=0.00451 a=+0.1439 gn=0.03 1.03s/step | para=1.00 degen=0.00
+   18100 loss=0.04308 nat=0.04173 xling=0.00122 en=0.00974 a=+0.1439 gn=0.03 1.03s/step | para=1.00 degen=0.00
+   18125 loss=0.05389 nat=0.05293 xling=0.00181 en=0.00410 a=+0.1438 gn=0.07 1.03s/step | para=1.00
+   18150 loss=0.02920 nat=0.02859 xling=0.00081 en=0.00363 a=+0.1440 gn=0.02 1.03s/step | para=1.00
+   18175 loss=0.05120 nat=0.04975 xling=0.00282 en=0.00593 a=+0.1441 gn=0.09 1.03s/step | para=1.00
+   18200 loss=0.03613 nat=0.03552 xling=0.00065 en=0.00422 a=+0.1441 gn=0.02 1.03s/step | para=1.00
+   18225 loss=0.03566 nat=0.03324 xling=0.00327 en=0.01440 a=+0.1441 gn=0.04 1.03s/step | para=1.00
+   18250 loss=0.02823 nat=0.02767 xling=0.00043 en=0.00429 a=+0.1442 gn=0.02 1.03s/step | para=1.00 degen=0.00
+   18275 loss=0.02489 nat=0.02439 xling=0.00040 en=0.00377 a=+0.1440 gn=0.01 1.03s/step | para=1.00
+   18300 loss=0.04533 nat=0.04321 xling=0.00420 en=0.00856 a=+0.1441 gn=0.09 1.03s/step | para=1.00
+   18325 loss=0.03654 nat=0.03581 xling=0.00094 en=0.00446 a=+0.1442 gn=0.02 1.03s/step | para=1.00
+   18350 loss=0.03010 nat=0.02915 xling=0.00090 en=0.00671 a=+0.1444 gn=0.02 1.03s/step | para=1.00
+   18375 loss=0.02646 nat=0.02558 xling=0.00101 en=0.00572 a=+0.1443 gn=0.02 1.03s/step | para=1.00
+   18400 loss=0.03777 nat=0.03694 xling=0.00096 en=0.00540 a=+0.1444 gn=0.02 1.03s/step | para=1.00
+   18425 loss=0.02909 nat=0.02834 xling=0.00093 en=0.00477 a=+0.1444 gn=0.04 1.03s/step | para=1.00 degen=0.00
+   18450 loss=0.02903 nat=0.02823 xling=0.00092 en=0.00528 a=+0.1443 gn=0.02 1.03s/step | para=1.00 degen=0.00
+   18475 loss=0.03180 nat=0.03107 xling=0.00085 en=0.00469 a=+0.1443 gn=0.05 1.03s/step | para=1.00
+   18500 loss=0.04609 nat=0.04510 xling=0.00170 en=0.00480 a=+0.1443 gn=0.05 1.03s/step | para=1.00 degen=0.00
+  [val] step 18500: hi: native=0.03335 rel=+7.30% tiv=2.56e-03
+   18525 loss=0.02625 nat=0.02532 xling=0.00166 en=0.00439 a=+0.1442 gn=0.01 1.03s/step | para=1.00
+   18550 loss=0.03551 nat=0.03455 xling=0.00116 en=0.00609 a=+0.1443 gn=0.02 1.03s/step | para=1.00
+   18575 loss=0.05082 nat=0.04948 xling=0.00243 en=0.00624 a=+0.1445 gn=0.04 1.03s/step | para=1.00
+   18600 loss=0.02596 nat=0.02540 xling=0.00059 en=0.00383 a=+0.1445 gn=0.03 1.03s/step | para=1.00
+   18625 loss=0.02798 nat=0.02738 xling=0.00071 en=0.00383 a=+0.1445 gn=0.01 1.03s/step | para=1.00 degen=0.00
+   18650 loss=0.04607 nat=0.04522 xling=0.00105 en=0.00535 a=+0.1445 gn=0.06 1.03s/step | para=1.00
+   18675 loss=0.02777 nat=0.02721 xling=0.00061 en=0.00381 a=+0.1445 gn=0.02 1.03s/step | para=1.00
+   18700 loss=0.03019 nat=0.02948 xling=0.00109 en=0.00395 a=+0.1445 gn=0.02 1.03s/step | para=1.00
+   18725 loss=0.04859 nat=0.04742 xling=0.00158 en=0.00712 a=+0.1446 gn=0.06 1.03s/step | para=1.00 degen=0.00
+   18750 loss=0.04432 nat=0.04379 xling=0.00056 en=0.00370 a=+0.1446 gn=0.05 1.03s/step | para=1.00
+   18775 loss=0.03065 nat=0.02874 xling=0.00341 en=0.00909 a=+0.1447 gn=0.03 1.03s/step | para=1.00
+   18800 loss=0.03499 nat=0.03394 xling=0.00128 en=0.00679 a=+0.1447 gn=0.04 1.03s/step | para=1.00
+   18825 loss=0.03637 nat=0.03551 xling=0.00139 en=0.00452 a=+0.1448 gn=0.04 1.03s/step | para=1.00
+   18850 loss=0.04670 nat=0.04591 xling=0.00114 en=0.00457 a=+0.1448 gn=0.07 1.03s/step | para=1.00
+   18875 loss=0.04728 nat=0.04614 xling=0.00117 en=0.00793 a=+0.1449 gn=0.02 1.03s/step | para=1.00
+   18900 loss=0.03958 nat=0.03877 xling=0.00091 en=0.00544 a=+0.1449 gn=0.05 1.03s/step | para=1.00
+   18925 loss=0.04763 nat=0.04653 xling=0.00116 en=0.00770 a=+0.1449 gn=0.03 1.03s/step | para=1.00
+   18950 loss=0.04928 nat=0.04795 xling=0.00205 en=0.00736 a=+0.1449 gn=0.04 1.03s/step | para=1.00
+   18975 loss=0.03512 nat=0.03431 xling=0.00087 en=0.00554 a=+0.1450 gn=0.03 1.03s/step | para=1.00
+   19000 loss=0.03336 nat=0.03251 xling=0.00146 en=0.00424 a=+0.1450 gn=0.03 1.03s/step | para=1.00
+  [val] step 19000: hi: native=0.03354 rel=+6.90% tiv=2.81e-03
+   19025 loss=0.02649 nat=0.02585 xling=0.00073 en=0.00432 a=+0.1450 gn=0.01 1.03s/step | para=1.00
+   19050 loss=0.02675 nat=0.02558 xling=0.00094 en=0.00898 a=+0.1450 gn=0.02 1.03s/step | para=0.99 degen=0.01
+   19075 loss=0.06761 nat=0.06659 xling=0.00137 en=0.00621 a=+0.1451 gn=0.04 1.03s/step | para=1.00
+   19100 loss=0.02132 nat=0.02084 xling=0.00071 en=0.00275 a=+0.1451 gn=0.01 1.03s/step | para=1.00
+   19125 loss=0.03111 nat=0.03022 xling=0.00158 en=0.00437 a=+0.1452 gn=0.01 1.03s/step | para=1.00
+   19150 loss=0.04543 nat=0.04419 xling=0.00124 en=0.00887 a=+0.1453 gn=0.03 1.03s/step | para=1.00
+   19175 loss=0.03629 nat=0.03560 xling=0.00047 en=0.00550 a=+0.1453 gn=0.03 1.03s/step | para=1.00
+   19200 loss=0.03045 nat=0.02970 xling=0.00103 en=0.00456 a=+0.1453 gn=0.02 1.03s/step | para=1.00 degen=0.00
+   19225 loss=0.04394 nat=0.04269 xling=0.00238 en=0.00563 a=+0.1453 gn=0.07 1.03s/step | para=1.00
+   19250 loss=0.03233 nat=0.03172 xling=0.00073 en=0.00399 a=+0.1454 gn=0.03 1.03s/step | para=1.00
+   19275 loss=0.03197 nat=0.03113 xling=0.00108 en=0.00527 a=+0.1454 gn=0.03 1.03s/step | para=1.00
+   19300 loss=0.03255 nat=0.03161 xling=0.00104 en=0.00640 a=+0.1454 gn=0.02 1.03s/step | para=1.00
+   19325 loss=0.03439 nat=0.03339 xling=0.00137 en=0.00616 a=+0.1454 gn=0.05 1.03s/step | para=1.00
+   19350 loss=0.02781 nat=0.02684 xling=0.00112 en=0.00644 a=+0.1454 gn=0.03 1.03s/step | para=1.00
+   19375 loss=0.03330 nat=0.03168 xling=0.00160 en=0.01164 a=+0.1454 gn=0.02 1.03s/step | para=1.00
+   19400 loss=0.03347 nat=0.03283 xling=0.00080 en=0.00408 a=+0.1453 gn=0.02 1.03s/step | para=1.00
+   19425 loss=0.03371 nat=0.03317 xling=0.00076 en=0.00320 a=+0.1454 gn=0.01 1.03s/step | para=1.00
+   19450 loss=0.03609 nat=0.03424 xling=0.00373 en=0.00790 a=+0.1455 gn=0.03 1.03s/step | para=1.00
+   19475 loss=0.03022 nat=0.02956 xling=0.00052 en=0.00511 a=+0.1454 gn=0.01 1.03s/step | para=1.00
+   19500 loss=0.03032 nat=0.02970 xling=0.00065 en=0.00438 a=+0.1455 gn=0.03 1.03s/step | para=1.00
+  [val] step 19500: hi: native=0.03331 rel=+7.40% tiv=2.90e-03
+   19525 loss=0.02815 nat=0.02760 xling=0.00068 en=0.00349 a=+0.1455 gn=0.01 1.03s/step | para=1.00
+   19550 loss=0.03998 nat=0.03921 xling=0.00091 en=0.00516 a=+0.1455 gn=0.04 1.03s/step | para=1.00
+   19575 loss=0.03349 nat=0.03274 xling=0.00112 en=0.00444 a=+0.1455 gn=0.02 1.03s/step | para=1.00
+   19600 loss=0.02777 nat=0.02708 xling=0.00083 en=0.00448 a=+0.1456 gn=0.02 1.03s/step | para=1.00 degen=0.00
+   19625 loss=0.02622 nat=0.02530 xling=0.00175 en=0.00435 a=+0.1457 gn=0.02 1.03s/step | para=1.00
+   19650 loss=0.04547 nat=0.04458 xling=0.00086 en=0.00656 a=+0.1457 gn=0.02 1.03s/step | para=1.00
+   19675 loss=0.03094 nat=0.03035 xling=0.00088 en=0.00335 a=+0.1457 gn=0.02 1.03s/step | para=1.00
+   19700 loss=0.02980 nat=0.02922 xling=0.00044 en=0.00460 a=+0.1456 gn=0.01 1.03s/step | para=1.00
+   19725 loss=0.04025 nat=0.03934 xling=0.00082 en=0.00681 a=+0.1457 gn=0.05 1.03s/step | para=1.00
+   19750 loss=0.02656 nat=0.02547 xling=0.00184 en=0.00569 a=+0.1458 gn=0.03 1.03s/step | para=1.00
+   19775 loss=0.03078 nat=0.02977 xling=0.00173 en=0.00532 a=+0.1458 gn=0.03 1.03s/step | para=1.00 degen=0.00
+   19800 loss=0.02998 nat=0.02944 xling=0.00054 en=0.00397 a=+0.1457 gn=0.03 1.03s/step | para=1.00
+   19825 loss=0.04035 nat=0.03934 xling=0.00102 en=0.00724 a=+0.1458 gn=0.08 1.03s/step | para=1.00
+   19850 loss=0.03433 nat=0.03346 xling=0.00058 en=0.00711 a=+0.1458 gn=0.07 1.03s/step | para=1.00
+   19875 loss=0.03039 nat=0.02853 xling=0.00169 en=0.01396 a=+0.1458 gn=0.04 1.03s/step | para=1.00
+   19900 loss=0.03381 nat=0.03307 xling=0.00055 en=0.00585 a=+0.1458 gn=0.02 1.03s/step | para=1.00
+   19925 loss=0.04074 nat=0.03973 xling=0.00151 en=0.00591 a=+0.1459 gn=0.02 1.03s/step | para=1.00
+   19950 loss=0.03696 nat=0.03600 xling=0.00162 en=0.00518 a=+0.1459 gn=0.01 1.03s/step | para=1.00
+   19975 loss=0.02856 nat=0.02787 xling=0.00076 en=0.00478 a=+0.1459 gn=0.01 1.03s/step | para=1.00
+   20000 loss=0.03285 nat=0.03201 xling=0.00110 en=0.00537 a=+0.1460 gn=0.02 1.03s/step | para=1.00
+  [val] step 20000: hi: native=0.03315 rel=+7.91% tiv=3.22e-03
+  !! HF push failed: (Request ID: Root=1-6a9cd524-370159c012fadfdc5411b131;e642ba2c-3f3d-4f66-a642-fdba7b0ef789)
+
+403 Forbidden: Private repository storage limit reached, please upg
+   20025 loss=0.03218 nat=0.03142 xling=0.00118 en=0.00436 a=+0.1461 gn=0.03 1.03s/step | para=1.00
+   20050 loss=0.03800 nat=0.03690 xling=0.00216 en=0.00509 a=+0.1461 gn=0.05 1.03s/step | para=1.00
+   20075 loss=0.03102 nat=0.03039 xling=0.00059 en=0.00465 a=+0.1461 gn=0.01 1.03s/step | para=1.00
+   20100 loss=0.04081 nat=0.03977 xling=0.00166 en=0.00583 a=+0.1461 gn=0.03 1.03s/step | para=1.00
+   20125 loss=0.03090 nat=0.03025 xling=0.00067 en=0.00469 a=+0.1461 gn=0.01 1.03s/step | para=1.00
+   20150 loss=0.03137 nat=0.03061 xling=0.00091 en=0.00513 a=+0.1461 gn=0.03 1.03s/step | para=1.00
+   20175 loss=0.02815 nat=0.02764 xling=0.00051 en=0.00376 a=+0.1461 gn=0.01 1.03s/step | para=1.00
+   20200 loss=0.04144 nat=0.04055 xling=0.00146 en=0.00495 a=+0.1461 gn=0.05 1.03s/step | para=1.00
+   20225 loss=0.02894 nat=0.02827 xling=0.00072 en=0.00476 a=+0.1461 gn=0.01 1.03s/step | para=1.00 degen=0.00
+   20250 loss=0.02499 nat=0.02449 xling=0.00057 en=0.00354 a=+0.1461 gn=0.01 1.03s/step | para=1.00 degen=0.00
+   20275 loss=0.03035 nat=0.02990 xling=0.00040 en=0.00340 a=+0.1460 gn=0.03 1.03s/step | para=1.00
+   20300 loss=0.05924 nat=0.05820 xling=0.00138 en=0.00667 a=+0.1461 gn=0.07 1.03s/step | para=1.00
+   20325 loss=0.03166 nat=0.03098 xling=0.00053 en=0.00536 a=+0.1461 gn=0.01 1.03s/step | para=1.00
+   20350 loss=0.03265 nat=0.03193 xling=0.00101 en=0.00441 a=+0.1461 gn=0.04 1.03s/step | para=1.00
+   20375 loss=0.02868 nat=0.02810 xling=0.00073 en=0.00390 a=+0.1462 gn=0.02 1.03s/step | para=1.00
+   20400 loss=0.02167 nat=0.02112 xling=0.00083 en=0.00321 a=+0.1462 gn=0.01 1.03s/step | para=1.00 degen=0.00
+   20425 loss=0.04621 nat=0.04512 xling=0.00165 en=0.00643 a=+0.1462 gn=0.04 1.03s/step | para=1.00
+   20450 loss=0.02577 nat=0.02523 xling=0.00068 en=0.00357 a=+0.1462 gn=0.03 1.03s/step | para=1.00
+   20475 loss=0.03020 nat=0.02953 xling=0.00099 en=0.00406 a=+0.1462 gn=0.02 1.03s/step | para=1.00 degen=0.00
+   20500 loss=0.03049 nat=0.02947 xling=0.00160 en=0.00588 a=+0.1463 gn=0.03 1.03s/step | para=1.00
+  [val] step 20500: hi: native=0.03324 rel=+7.45% tiv=2.95e-03
+   20525 loss=0.03273 nat=0.03209 xling=0.00075 en=0.00446 a=+0.1462 gn=0.01 1.03s/step | para=1.00
+   20550 loss=0.03427 nat=0.03316 xling=0.00071 en=0.00926 a=+0.1462 gn=0.05 1.03s/step | para=1.00
+   20575 loss=0.04101 nat=0.03997 xling=0.00177 en=0.00561 a=+0.1463 gn=0.03 1.03s/step | para=1.00 degen=0.00
+   20600 loss=0.01969 nat=0.01936 xling=0.00036 en=0.00233 a=+0.1463 gn=0.01 1.03s/step | para=1.00
+   20625 loss=0.03179 nat=0.03101 xling=0.00066 en=0.00604 a=+0.1463 gn=0.02 1.03s/step | para=1.00
+   20650 loss=0.06047 nat=0.05915 xling=0.00198 en=0.00794 a=+0.1463 gn=0.07 1.03s/step | para=1.00
+   20675 loss=0.02878 nat=0.02822 xling=0.00074 en=0.00369 a=+0.1463 gn=0.01 1.03s/step | para=1.00
+   20700 loss=0.02783 nat=0.02718 xling=0.00088 en=0.00423 a=+0.1464 gn=0.02 1.03s/step | para=1.00
+   20725 loss=0.03553 nat=0.03380 xling=0.00369 en=0.00759 a=+0.1464 gn=0.04 1.03s/step | para=1.00
+   20750 loss=0.03096 nat=0.03038 xling=0.00062 en=0.00411 a=+0.1464 gn=0.02 1.03s/step | para=1.00
+   20775 loss=0.02610 nat=0.02552 xling=0.00076 en=0.00385 a=+0.1464 gn=0.03 1.03s/step | para=1.00
+   20800 loss=0.03730 nat=0.03654 xling=0.00122 en=0.00435 a=+0.1464 gn=0.05 1.03s/step | para=1.00 degen=0.00
+   20825 loss=0.04450 nat=0.04327 xling=0.00172 en=0.00778 a=+0.1464 gn=0.04 1.03s/step | para=1.00
+   20850 loss=0.02698 nat=0.02660 xling=0.00032 en=0.00306 a=+0.1464 gn=0.01 1.03s/step | para=1.00
+   20875 loss=0.03213 nat=0.03129 xling=0.00109 en=0.00560 a=+0.1464 gn=0.02 1.03s/step | para=1.00 degen=0.00
+   20900 loss=0.03610 nat=0.03540 xling=0.00067 en=0.00523 a=+0.1465 gn=0.03 1.03s/step | para=1.00
+   20925 loss=0.04536 nat=0.04431 xling=0.00135 en=0.00700 a=+0.1465 gn=0.04 1.03s/step | para=1.00
+   20950 loss=0.04414 nat=0.04296 xling=0.00124 en=0.00863 a=+0.1465 gn=0.05 1.03s/step | para=1.00 degen=0.00
+   20975 loss=0.02832 nat=0.02770 xling=0.00083 en=0.00397 a=+0.1466 gn=0.02 1.03s/step | para=1.00
+   21000 loss=0.03951 nat=0.03850 xling=0.00139 en=0.00653 a=+0.1466 gn=0.03 1.03s/step | para=1.00
+  [val] step 21000: hi: native=0.03305 rel=+7.66% tiv=3.10e-03
+   21025 loss=0.02522 nat=0.02469 xling=0.00078 en=0.00326 a=+0.1466 gn=0.01 1.03s/step | para=1.00
+   21050 loss=0.02935 nat=0.02883 xling=0.00051 en=0.00388 a=+0.1466 gn=0.02 1.03s/step | para=1.00
+   21075 loss=0.03323 nat=0.03238 xling=0.00072 en=0.00668 a=+0.1467 gn=0.02 1.03s/step | para=1.00
+   21100 loss=0.02547 nat=0.02508 xling=0.00040 en=0.00281 a=+0.1467 gn=0.02 1.03s/step | para=1.00
+   21125 loss=0.03302 nat=0.03239 xling=0.00090 en=0.00395 a=+0.1467 gn=0.02 1.03s/step | para=1.00
+   21150 loss=0.05249 nat=0.05160 xling=0.00097 en=0.00631 a=+0.1467 gn=0.05 1.03s/step | para=1.00
+   21175 loss=0.05803 nat=0.05731 xling=0.00090 en=0.00490 a=+0.1467 gn=0.04 1.03s/step | para=1.00
+   21200 loss=0.02774 nat=0.02724 xling=0.00041 en=0.00392 a=+0.1467 gn=0.01 1.03s/step | para=1.00
+   21225 loss=0.04511 nat=0.04347 xling=0.00241 en=0.01027 a=+0.1467 gn=0.09 1.03s/step | para=1.00 degen=0.00
+   21250 loss=0.03418 nat=0.03358 xling=0.00066 en=0.00430 a=+0.1468 gn=0.04 1.03s/step | para=1.00
+   21275 loss=0.03490 nat=0.03305 xling=0.00204 en=0.01328 a=+0.1468 gn=0.02 1.03s/step | para=1.00
+   21300 loss=0.04689 nat=0.04620 xling=0.00061 en=0.00537 a=+0.1468 gn=0.04 1.03s/step | para=1.00
+   21325 loss=0.03742 nat=0.03632 xling=0.00126 en=0.00782 a=+0.1468 gn=0.07 1.03s/step | para=1.00
+   21350 loss=0.03802 nat=0.03602 xling=0.00494 en=0.00749 a=+0.1468 gn=0.05 1.03s/step | para=1.00
+   21375 loss=0.03207 nat=0.03100 xling=0.00205 en=0.00550 a=+0.1468 gn=0.03 1.03s/step | para=1.00
+   21400 loss=0.03978 nat=0.03900 xling=0.00077 en=0.00587 a=+0.1468 gn=0.03 1.03s/step | para=1.00 degen=0.00
+   21425 loss=0.04414 nat=0.04303 xling=0.00119 en=0.00817 a=+0.1468 gn=0.02 1.03s/step | para=1.00
+   21450 loss=0.05760 nat=0.05647 xling=0.00144 en=0.00767 a=+0.1468 gn=0.06 1.03s/step | para=1.00
+   21475 loss=0.03837 nat=0.03751 xling=0.00164 en=0.00444 a=+0.1468 gn=0.02 1.03s/step | para=1.00
+   21500 loss=0.03638 nat=0.03559 xling=0.00096 en=0.00547 a=+0.1468 gn=0.03 1.03s/step | para=1.00
+  [val] step 21500: hi: native=0.03308 rel=+7.52% tiv=2.89e-03
+   21525 loss=0.05464 nat=0.05415 xling=0.00047 en=0.00364 a=+0.1468 gn=0.01 1.03s/step | para=0.99 degen=0.01
+   21550 loss=0.02734 nat=0.02651 xling=0.00097 en=0.00588 a=+0.1468 gn=0.01 1.03s/step | para=1.00
+   21575 loss=0.03109 nat=0.03054 xling=0.00056 en=0.00405 a=+0.1468 gn=0.02 1.03s/step | para=1.00
+   21600 loss=0.02191 nat=0.02147 xling=0.00050 en=0.00308 a=+0.1468 gn=0.01 1.03s/step | para=1.00
+   21625 loss=0.02495 nat=0.02422 xling=0.00113 en=0.00443 a=+0.1468 gn=0.01 1.03s/step | para=1.00
+   21650 loss=0.03943 nat=0.03850 xling=0.00085 en=0.00714 a=+0.1468 gn=0.03 1.03s/step | para=1.00
+   21675 loss=0.03369 nat=0.03262 xling=0.00131 en=0.00742 a=+0.1469 gn=0.03 1.03s/step | para=1.00
+   21700 loss=0.02557 nat=0.02510 xling=0.00052 en=0.00344 a=+0.1469 gn=0.01 1.03s/step | para=1.00
+   21725 loss=0.03683 nat=0.03592 xling=0.00152 en=0.00527 a=+0.1469 gn=0.02 1.03s/step | para=1.00
+   21750 loss=0.03061 nat=0.02993 xling=0.00058 en=0.00539 a=+0.1470 gn=0.03 1.03s/step | para=1.00
+   21775 loss=0.02839 nat=0.02785 xling=0.00049 en=0.00418 a=+0.1470 gn=0.01 1.03s/step | para=1.00 degen=0.00
+   21800 loss=0.03241 nat=0.03183 xling=0.00060 en=0.00425 a=+0.1470 gn=0.02 1.03s/step | para=1.00
+   21825 loss=0.03518 nat=0.03422 xling=0.00149 en=0.00588 a=+0.1470 gn=0.09 1.03s/step | para=1.00 degen=0.00
+   21850 loss=0.04925 nat=0.04826 xling=0.00141 en=0.00637 a=+0.1470 gn=0.08 1.03s/step | para=1.00
+   21875 loss=0.03910 nat=0.03802 xling=0.00157 en=0.00697 a=+0.1470 gn=0.07 1.03s/step | para=1.00 degen=0.00
+   21900 loss=0.04669 nat=0.04579 xling=0.00082 en=0.00701 a=+0.1470 gn=0.07 1.03s/step | para=1.00
+   21925 loss=0.05692 nat=0.05597 xling=0.00098 en=0.00716 a=+0.1470 gn=0.05 1.03s/step | para=1.00
+   21950 loss=0.05950 nat=0.05823 xling=0.00178 en=0.00837 a=+0.1471 gn=0.06 1.03s/step | para=1.00
+   21975 loss=0.02605 nat=0.02548 xling=0.00058 en=0.00432 a=+0.1471 gn=0.01 1.03s/step | para=1.00 degen=0.00
+   22000 loss=0.02848 nat=0.02775 xling=0.00133 en=0.00404 a=+0.1471 gn=0.02 1.03s/step | para=1.00
+  [val] step 22000: hi: native=0.03311 rel=+7.61% tiv=3.17e-03
+  !! HF push failed: (Request ID: Root=1-6a9cdd25-311ebd3a3e6d7b61667747f6;e2d73930-84b6-4212-b103-9740c35bb097)
+
+403 Forbidden: Private repository storage limit reached, please upg
+   22025 loss=0.02341 nat=0.02233 xling=0.00111 en=0.00813 a=+0.1471 gn=0.05 1.03s/step | para=1.00 degen=0.00
+   22050 loss=0.04293 nat=0.04211 xling=0.00131 en=0.00500 a=+0.1471 gn=0.02 1.03s/step | para=1.00
+   22075 loss=0.03361 nat=0.03270 xling=0.00138 en=0.00577 a=+0.1471 gn=0.04 1.03s/step | para=1.00
+   22100 loss=0.02868 nat=0.02817 xling=0.00063 en=0.00356 a=+0.1471 gn=0.01 1.03s/step | para=1.00
+   22125 loss=0.02451 nat=0.02385 xling=0.00067 en=0.00489 a=+0.1471 gn=0.01 1.03s/step | para=1.00
+   22150 loss=0.03425 nat=0.03342 xling=0.00128 en=0.00516 a=+0.1471 gn=0.02 1.03s/step | para=1.00 degen=0.00
+   22175 loss=0.04957 nat=0.04810 xling=0.00197 en=0.00991 a=+0.1471 gn=0.04 1.03s/step | para=1.00
+   22200 loss=0.03109 nat=0.03023 xling=0.00136 en=0.00533 a=+0.1471 gn=0.02 1.03s/step | para=1.00
+   22225 loss=0.03706 nat=0.03611 xling=0.00057 en=0.00805 a=+0.1472 gn=0.02 1.03s/step | para=1.00
+   22250 loss=0.02992 nat=0.02933 xling=0.00096 en=0.00361 a=+0.1472 gn=0.01 1.03s/step | para=1.00
+   22275 loss=0.03159 nat=0.03092 xling=0.00063 en=0.00521 a=+0.1472 gn=0.01 1.03s/step | para=1.00 degen=0.00
+   22300 loss=0.04277 nat=0.04139 xling=0.00174 en=0.00954 a=+0.1472 gn=0.04 1.03s/step | para=1.00 degen=0.00
+   22325 loss=0.02983 nat=0.02913 xling=0.00068 en=0.00543 a=+0.1472 gn=0.01 1.03s/step | para=1.00
+   22350 loss=0.03564 nat=0.03512 xling=0.00060 en=0.00370 a=+0.1472 gn=0.03 1.03s/step | para=1.00
+   22375 loss=0.02694 nat=0.02631 xling=0.00076 en=0.00448 a=+0.1472 gn=0.03 1.03s/step | para=1.00 degen=0.00
+   22400 loss=0.02461 nat=0.02417 xling=0.00049 en=0.00328 a=+0.1472 gn=0.01 1.03s/step | para=1.00
+   22425 loss=0.03944 nat=0.03838 xling=0.00206 en=0.00564 a=+0.1472 gn=0.06 1.03s/step | para=1.00
+   22450 loss=0.02926 nat=0.02880 xling=0.00058 en=0.00318 a=+0.1472 gn=0.06 1.03s/step | para=1.00 degen=0.00
+   22475 loss=0.02912 nat=0.02836 xling=0.00107 en=0.00506 a=+0.1472 gn=0.03 1.03s/step | para=1.00
+   22500 loss=0.04670 nat=0.04559 xling=0.00133 en=0.00793 a=+0.1472 gn=0.06 1.03s/step | para=1.00
+  [val] step 22500: hi: native=0.03311 rel=+7.56% tiv=3.10e-03
+   22525 loss=0.03532 nat=0.03483 xling=0.00066 en=0.00331 a=+0.1472 gn=0.02 1.03s/step | para=1.00 degen=0.00
+   22550 loss=0.03845 nat=0.03784 xling=0.00072 en=0.00443 a=+0.1472 gn=0.03 1.03s/step | para=1.00
+   22575 loss=0.03557 nat=0.03476 xling=0.00096 en=0.00586 a=+0.1473 gn=0.02 1.03s/step | para=1.00
+   22600 loss=0.03294 nat=0.03231 xling=0.00097 en=0.00402 a=+0.1473 gn=0.04 1.03s/step | para=1.00 degen=0.00
+   22625 loss=0.03794 nat=0.03661 xling=0.00060 en=0.01185 a=+0.1473 gn=0.05 1.03s/step | para=1.00
+   22650 loss=0.07878 nat=0.07759 xling=0.00208 en=0.00700 a=+0.1473 gn=0.07 1.03s/step | para=1.00
+   22675 loss=0.02793 nat=0.02726 xling=0.00087 en=0.00467 a=+0.1473 gn=0.02 1.03s/step | para=1.00
+   22700 loss=0.02966 nat=0.02901 xling=0.00094 en=0.00433 a=+0.1473 gn=0.02 1.03s/step | para=1.00
+   22725 loss=0.04440 nat=0.04297 xling=0.00127 en=0.01138 a=+0.1473 gn=0.04 1.03s/step | para=1.00
+   22750 loss=0.05293 nat=0.05222 xling=0.00092 en=0.00492 a=+0.1473 gn=0.03 1.03s/step | para=1.00
+   22775 loss=0.03486 nat=0.03408 xling=0.00080 en=0.00591 a=+0.1473 gn=0.04 1.03s/step | para=1.00 degen=0.00
+   22800 loss=0.03137 nat=0.03056 xling=0.00078 en=0.00627 a=+0.1473 gn=0.04 1.03s/step | para=1.00
+   22825 loss=0.03691 nat=0.03623 xling=0.00071 en=0.00511 a=+0.1473 gn=0.05 1.03s/step | para=1.00
+   22850 loss=0.04343 nat=0.04293 xling=0.00087 en=0.00298 a=+0.1474 gn=0.01 1.03s/step | para=1.00
+   22875 loss=0.04479 nat=0.04381 xling=0.00145 en=0.00646 a=+0.1474 gn=0.03 1.03s/step | para=1.00
+   22900 loss=0.03592 nat=0.03517 xling=0.00145 en=0.00421 a=+0.1474 gn=0.04 1.03s/step | para=1.00
+   22925 loss=0.05070 nat=0.05001 xling=0.00091 en=0.00478 a=+0.1474 gn=0.04 1.03s/step | para=1.00
+   22950 loss=0.05821 nat=0.05700 xling=0.00164 en=0.00831 a=+0.1474 gn=0.06 1.03s/step | para=1.00
+   22975 loss=0.03464 nat=0.03405 xling=0.00056 en=0.00465 a=+0.1474 gn=0.04 1.03s/step | para=1.00
+   23000 loss=0.04110 nat=0.04015 xling=0.00108 en=0.00709 a=+0.1474 gn=0.02 1.03s/step | para=1.00
+  [val] step 23000: hi: native=0.03311 rel=+7.68% tiv=3.27e-03
+   23025 loss=0.02776 nat=0.02715 xling=0.00091 en=0.00396 a=+0.1474 gn=0.02 1.03s/step | para=1.00
+   23050 loss=0.03394 nat=0.03299 xling=0.00111 en=0.00702 a=+0.1474 gn=0.04 1.03s/step | para=1.00
+   23075 loss=0.05076 nat=0.05008 xling=0.00121 en=0.00403 a=+0.1475 gn=0.03 1.03s/step | para=1.00
+   23100 loss=0.02739 nat=0.02691 xling=0.00064 en=0.00336 a=+0.1475 gn=0.01 1.03s/step | para=1.00
+   23125 loss=0.02552 nat=0.02505 xling=0.00046 en=0.00361 a=+0.1475 gn=0.01 1.03s/step | para=1.00
+   23150 loss=0.06800 nat=0.06701 xling=0.00113 en=0.00731 a=+0.1475 gn=0.02 1.03s/step | para=1.00
+   23175 loss=0.03087 nat=0.03019 xling=0.00062 en=0.00541 a=+0.1475 gn=0.02 1.03s/step | para=1.00
+   23200 loss=0.04248 nat=0.04186 xling=0.00087 en=0.00418 a=+0.1475 gn=0.03 1.03s/step | para=1.00
+   23225 loss=0.03454 nat=0.03368 xling=0.00135 en=0.00555 a=+0.1475 gn=0.06 1.03s/step | para=1.00
+   23250 loss=0.03223 nat=0.03145 xling=0.00109 en=0.00532 a=+0.1475 gn=0.01 1.03s/step | para=1.00
+   23275 loss=0.05406 nat=0.05255 xling=0.00365 en=0.00685 a=+0.1475 gn=0.07 1.03s/step | para=1.00
+   23300 loss=0.04107 nat=0.04027 xling=0.00103 en=0.00563 a=+0.1475 gn=0.04 1.03s/step | para=1.00
+   23325 loss=0.03120 nat=0.03053 xling=0.00114 en=0.00407 a=+0.1475 gn=0.04 1.03s/step | para=1.00
+   23350 loss=0.02617 nat=0.02528 xling=0.00223 en=0.00397 a=+0.1475 gn=0.04 1.03s/step | para=1.00
+   23375 loss=0.03541 nat=0.03477 xling=0.00102 en=0.00412 a=+0.1475 gn=0.02 1.03s/step | para=1.00
+   23400 loss=0.04643 nat=0.04481 xling=0.00378 en=0.00774 a=+0.1475 gn=0.05 1.03s/step | para=1.00
+   23425 loss=0.03236 nat=0.03159 xling=0.00123 en=0.00493 a=+0.1475 gn=0.02 1.03s/step | para=1.00
+   23450 loss=0.05433 nat=0.05307 xling=0.00210 en=0.00790 a=+0.1475 gn=0.08 1.03s/step | para=1.00
+   23475 loss=0.03527 nat=0.03461 xling=0.00083 en=0.00480 a=+0.1475 gn=0.09 1.03s/step | para=1.00
+   23500 loss=0.03055 nat=0.02984 xling=0.00073 en=0.00544 a=+0.1475 gn=0.03 1.03s/step | para=1.00
+  [val] step 23500: hi: native=0.03313 rel=+7.71% tiv=3.30e-03
+   23525 loss=0.02816 nat=0.02760 xling=0.00089 en=0.00367 a=+0.1475 gn=0.02 1.03s/step | para=1.00
+   23550 loss=0.04139 nat=0.04087 xling=0.00059 en=0.00392 a=+0.1475 gn=0.02 1.03s/step | para=1.00 degen=0.00
+   23575 loss=0.03479 nat=0.03412 xling=0.00069 en=0.00524 a=+0.1475 gn=0.03 1.03s/step | para=1.00
+   23600 loss=0.04375 nat=0.04248 xling=0.00094 en=0.01062 a=+0.1475 gn=0.09 1.03s/step | para=1.00
+   23625 loss=0.03057 nat=0.02992 xling=0.00070 en=0.00501 a=+0.1475 gn=0.02 1.03s/step | para=1.00
+   23650 loss=0.04278 nat=0.04143 xling=0.00306 en=0.00683 a=+0.1475 gn=0.04 1.03s/step | para=1.00 degen=0.00
+   23675 loss=0.02317 nat=0.02265 xling=0.00050 en=0.00409 a=+0.1475 gn=0.01 1.03s/step | para=1.00
+   23700 loss=0.05170 nat=0.05113 xling=0.00064 en=0.00426 a=+0.1475 gn=0.05 1.03s/step | para=1.00
+   23725 loss=0.04066 nat=0.03995 xling=0.00085 en=0.00526 a=+0.1475 gn=0.04 1.03s/step | para=1.00
+   23750 loss=0.03510 nat=0.03439 xling=0.00088 en=0.00524 a=+0.1475 gn=0.03 1.03s/step | para=1.00
+   23775 loss=0.03439 nat=0.03351 xling=0.00118 en=0.00618 a=+0.1475 gn=0.03 1.03s/step | para=1.00
+   23800 loss=0.04758 nat=0.04701 xling=0.00088 en=0.00386 a=+0.1475 gn=0.03 1.03s/step | para=1.00
+   23825 loss=0.05237 nat=0.05082 xling=0.00273 en=0.00948 a=+0.1475 gn=0.04 1.03s/step | para=1.00
+   23850 loss=0.02800 nat=0.02747 xling=0.00052 en=0.00416 a=+0.1475 gn=0.01 1.03s/step | para=1.00
+   23875 loss=0.03027 nat=0.02858 xling=0.00295 en=0.01056 a=+0.1475 gn=0.04 1.03s/step | para=1.00
+   23900 loss=0.03112 nat=0.03047 xling=0.00095 en=0.00443 a=+0.1475 gn=0.03 1.03s/step | para=1.00
+   23925 loss=0.03872 nat=0.03789 xling=0.00099 en=0.00615 a=+0.1475 gn=0.03 1.03s/step | para=1.00
+   23950 loss=0.06221 nat=0.06129 xling=0.00107 en=0.00694 a=+0.1475 gn=0.10 1.03s/step | para=1.00
+   23975 loss=0.03433 nat=0.03351 xling=0.00096 en=0.00614 a=+0.1475 gn=0.03 1.03s/step | para=1.00
+   24000 loss=0.03703 nat=0.03614 xling=0.00151 en=0.00572 a=+0.1475 gn=0.04 1.03s/step | para=1.00
+  [val] step 24000: hi: native=0.03319 rel=+7.37% tiv=3.10e-03
+  !! HF push failed: (Request ID: Root=1-6a9ce534-79ad68c8224410b356abf3a0;070aa5ce-6b8b-45ce-a31b-ea68163a01f2)
+
+403 Forbidden: Private repository storage limit reached, please upg
+   24025 loss=0.02782 nat=0.02719 xling=0.00092 en=0.00434 a=+0.1475 gn=0.03 1.03s/step | para=1.00
+   24050 loss=0.04564 nat=0.04474 xling=0.00126 en=0.00638 a=+0.1475 gn=0.04 1.03s/step | para=1.00
+   24075 loss=0.03976 nat=0.03896 xling=0.00116 en=0.00555 a=+0.1475 gn=0.04 1.03s/step | para=1.00 degen=0.00
+   24100 loss=0.02894 nat=0.02724 xling=0.00096 en=0.01492 a=+0.1475 gn=0.02 1.03s/step | para=1.00
+   24125 loss=0.03093 nat=0.03028 xling=0.00073 en=0.00499 a=+0.1475 gn=0.05 1.03s/step | para=1.00
+   24150 loss=0.02732 nat=0.02684 xling=0.00064 en=0.00342 a=+0.1475 gn=0.01 1.03s/step | para=1.00 degen=0.00
+   24175 loss=0.03186 nat=0.03104 xling=0.00085 en=0.00644 a=+0.1475 gn=0.07 1.03s/step | para=1.00 degen=0.00
+   24200 loss=0.03413 nat=0.03338 xling=0.00141 en=0.00456 a=+0.1476 gn=0.03 1.03s/step | para=1.00
+   24225 loss=0.03051 nat=0.02986 xling=0.00084 en=0.00473 a=+0.1476 gn=0.03 1.03s/step | para=1.00
+   24250 loss=0.03064 nat=0.03012 xling=0.00072 en=0.00369 a=+0.1476 gn=0.01 1.03s/step | para=1.00
+   24275 loss=0.02509 nat=0.02426 xling=0.00161 en=0.00492 a=+0.1476 gn=0.01 1.03s/step | para=1.00
+   24300 loss=0.04016 nat=0.03932 xling=0.00102 en=0.00628 a=+0.1476 gn=0.05 1.03s/step | para=1.00
+   24325 loss=0.03354 nat=0.03291 xling=0.00064 en=0.00497 a=+0.1476 gn=0.05 1.03s/step | para=1.00
+   24350 loss=0.03843 nat=0.03747 xling=0.00141 en=0.00663 a=+0.1476 gn=0.06 1.03s/step | para=1.00
+   24375 loss=0.02881 nat=0.02803 xling=0.00105 en=0.00559 a=+0.1476 gn=0.01 1.03s/step | para=0.99 degen=0.01
+   24400 loss=0.02109 nat=0.02062 xling=0.00035 en=0.00396 a=+0.1476 gn=0.01 1.03s/step | para=1.00
+   24425 loss=0.05626 nat=0.05509 xling=0.00105 en=0.00950 a=+0.1476 gn=0.05 1.03s/step | para=1.00
+   24450 loss=0.02395 nat=0.02338 xling=0.00106 en=0.00344 a=+0.1476 gn=0.02 1.03s/step | para=1.00
+   24475 loss=0.02619 nat=0.02574 xling=0.00050 en=0.00344 a=+0.1476 gn=0.01 1.03s/step | para=1.00
+   24500 loss=0.02915 nat=0.02864 xling=0.00064 en=0.00374 a=+0.1476 gn=0.02 1.03s/step | para=1.00
+  [val] step 24500: hi: native=0.03317 rel=+7.39% tiv=3.04e-03
+   24525 loss=0.03489 nat=0.03438 xling=0.00084 en=0.00337 a=+0.1476 gn=0.03 1.03s/step | para=1.00
+   24550 loss=0.03360 nat=0.03289 xling=0.00060 en=0.00585 a=+0.1476 gn=0.01 1.03s/step | para=1.00
+   24575 loss=0.03639 nat=0.03586 xling=0.00078 en=0.00368 a=+0.1476 gn=0.02 1.03s/step | para=1.00
+   24600 loss=0.03548 nat=0.03497 xling=0.00041 en=0.00423 a=+0.1476 gn=0.02 1.03s/step | para=1.00
+   24625 loss=0.02871 nat=0.02824 xling=0.00061 en=0.00339 a=+0.1476 gn=0.01 1.03s/step | para=1.00
+   24650 loss=0.04052 nat=0.03983 xling=0.00081 en=0.00528 a=+0.1476 gn=0.01 1.03s/step | para=1.00
+   24675 loss=0.04127 nat=0.04068 xling=0.00058 en=0.00474 a=+0.1476 gn=0.03 1.03s/step | para=1.00 degen=0.00
+   24700 loss=0.03556 nat=0.03432 xling=0.00159 en=0.00913 a=+0.1476 gn=0.03 1.03s/step | para=1.00
+   24725 loss=0.03523 nat=0.03436 xling=0.00171 en=0.00522 a=+0.1476 gn=0.03 1.03s/step | para=1.00
+   24750 loss=0.03409 nat=0.03332 xling=0.00086 en=0.00598 a=+0.1476 gn=0.02 1.03s/step | para=1.00
+   24775 loss=0.03165 nat=0.03105 xling=0.00077 en=0.00448 a=+0.1476 gn=0.03 1.03s/step | para=1.00
+   24800 loss=0.04093 nat=0.04029 xling=0.00065 en=0.00508 a=+0.1476 gn=0.03 1.03s/step | para=1.00
+   24825 loss=0.03359 nat=0.03268 xling=0.00187 en=0.00531 a=+0.1476 gn=0.03 1.03s/step | para=1.00
+   24850 loss=0.03193 nat=0.03117 xling=0.00187 en=0.00380 a=+0.1476 gn=0.11 1.03s/step | para=1.00
+   24875 loss=0.03754 nat=0.03662 xling=0.00147 en=0.00633 a=+0.1476 gn=0.03 1.03s/step | para=1.00
+   24900 loss=0.04389 nat=0.04098 xling=0.00915 en=0.01067 a=+0.1476 gn=0.05 1.03s/step | para=1.00
+   24925 loss=0.03585 nat=0.03491 xling=0.00182 en=0.00577 a=+0.1476 gn=0.04 1.03s/step | para=1.00
+   24950 loss=0.05135 nat=0.04861 xling=0.00283 en=0.02167 a=+0.1476 gn=0.09 1.03s/step | para=1.00
+   24975 loss=0.03511 nat=0.03456 xling=0.00072 en=0.00402 a=+0.1476 gn=0.03 1.03s/step | para=1.00
+   25000 loss=0.03747 nat=0.03615 xling=0.00226 en=0.00874 a=+0.1476 gn=0.03 1.03s/step | para=1.00
+  [val] step 25000: hi: native=0.03317 rel=+7.42% tiv=3.08e-03
+  !! HF push failed: (Request ID: Root=1-6a9ce935-0873ad8007dcb6b13f7b78ee;60fe50e8-ca22-49ab-9ca0-345c137f8d02)
+
+403 Forbidden: Private repository storage limit reached, please upg
+
+done in 430.4 min -> /workspace/runs/maila-mp-hi-v4C-corpus-len0.1-20260905-210619
+wandb: updating run metadata
+wandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml
+wandb: 
+wandb: Run history:
+wandb:                  alpha ▁▁▁▂▂▂▂▃▃▃▄▄▄▄▄▅▅▆▆▆▆▇▇▇▇▇▇▇▇███████████
+wandb:                     en ▃▃▄█▂▄▂▃▄▄▄▃▂▂▁▂▂▄▂▂▃▃▂▃▅▃▂▃▃▂▂▅▂▂▅▃▄▃▂▃
+wandb: frac_cross_nonparallel ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:    frac_cross_parallel ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:        frac_degenerate ▁▁▁▁▅▁▁▁▁▁▁▁▁█▁▁▁▁▁▁▁▅▁▁▅▁▅▁▁▁▁▁▁▁▅▁▁▅▁▁
+wandb:              frac_para ████▁█████████▁▁████▁█████████▁█▁██▁████
+wandb:            gnorm/alpha ▁▁▁▂▃▅▃▂▁█▃▂▁▁▃▁▂▂▂▂▃▃▁▁▂█▁▃▁▂▅▂▂▁▁▂▂▁▂▁
+wandb:         gnorm/fc1.bias ▂▂▁▁▃▄▅▃▃▁▂▂▁▁▂▂▂▅▃▂▅▂▄▇▂▇▅▁▂▄▃▄▅▄▂▄▄█▃▂
+wandb:       gnorm/fc1.weight ▁▁▂▂▃▂▂▁▂▂▃▂▁▂▄▃▃▂▄▃▆▂▁▅▅▂▅▅▄▄▄▅▃█▂▂▃▂▂▃
+wandb:         gnorm/fc2.bias ▃█▁▂▅▂▂▄▂▂▃▄▁▃▁▇▅▁▁▆▂▃▁▂▂▁▃▂▃▃▂▃▄▇▃▂▃▃▂▃
+wandb:                    +31 ...
+wandb: 
+wandb: Run summary:
+wandb:                  alpha 0.14763
+wandb:                     en 0.00874
+wandb: frac_cross_nonparallel 0
+wandb:    frac_cross_parallel 0
+wandb:        frac_degenerate 0
+wandb:              frac_para 1
+wandb:            gnorm/alpha 0.00408
+wandb:         gnorm/fc1.bias 0.00086
+wandb:       gnorm/fc1.weight 0.02212
+wandb:         gnorm/fc2.bias 0.00083
+wandb:                    +31 ...
+wandb: 
+wandb: 🚀 View run maila-mp-hi-v4C-corpus-len0.1-20260905-210619 at: https://wandb.ai/aayush21003-indraprastha-institute-of-information-techno/maila-run2-motionpivot/runs/lm14mxca
+wandb: ⭐️ View project at: https://wandb.ai/aayush21003-indraprastha-institute-of-information-techno/maila-run2-motionpivot
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20260905_210630-lm14mxca/logs

@@ -1,0 +1,394 @@
+{
+  "protocol": "selection + CFG sweep on VAL; TEST scored once",
+  "foot_ids": [
+    6,
+    12
+  ],
+  "foot_bodies": [
+    "left_ankle_roll_link",
+    "right_ankle_roll_link"
+  ],
+  "runs": {
+    "maila-mp-en-v4E-corpus-len0.1-20260906-044238": {
+      "val_by_checkpoint": {
+        "adapter_step018000.pt": {
+          "L_correct": 0.03331682991120033,
+          "L_wrong_roll": 0.03703026953735389,
+          "L_wrong_draw": 0.037622575589921325,
+          "rel": 0.11145837212156814,
+          "rel_draw": 0.12923635562558447,
+          "tiv": 0.012204845261294395,
+          "n": 1024,
+          "n_batch_seeds": 32
+        }
+      },
+      "selected": "adapter_step018000.pt",
+      "test_conditioning": {
+        "L_correct": 0.03475589456502348,
+        "L_wrong_roll": 0.03942880703834817,
+        "L_wrong_draw": 0.038347461639204994,
+        "rel": 0.13444949502255832,
+        "rel_draw": 0.10333691936664688,
+        "tiv": 0.012497439718572423,
+        "n": 1024,
+        "n_batch_seeds": 32
+      },
+      "val_cfg_sweep": {
+        "cfg_2.0": {
+          "joint_limit_rate": 0.17701822916666665,
+          "joint_hard_limit_rate": 0.0416015625,
+          "joint_jump_rate": 0.0,
+          "ground_penetration_depth": 0.003209692428950639,
+          "ground_penetration_rate": 0.04186197916666667,
+          "foot_sliding": 0.15093850052926427,
+          "foot_slide_rate": 0.1945220395020417,
+          "foot_contact_count": 69.63671875,
+          "body_jerk": 11.347612815909088,
+          "fall_rate": 0.0078125,
+          "mpjpe_mm": 114.10475689172745,
+          "g_mpjpe_mm": 272.4405947327614,
+          "e_vel": 10.072713735804427,
+          "e_acc": 1.5231762907933444
+        },
+        "cfg_2.5": {
+          "joint_limit_rate": 0.2345703125,
+          "joint_hard_limit_rate": 0.07083333333333333,
+          "joint_jump_rate": 0.0,
+          "ground_penetration_depth": 0.004687433747818659,
+          "ground_penetration_rate": 0.0568359375,
+          "foot_sliding": 0.18025768135521503,
+          "foot_slide_rate": 0.22995251120193033,
+          "foot_contact_count": 66.20703125,
+          "body_jerk": 12.532606851309538,
+          "fall_rate": 0.01171875,
+          "mpjpe_mm": 119.82747641205788,
+          "g_mpjpe_mm": 295.0776172876358,
+          "e_vel": 11.077634112356463,
+          "e_acc": 1.6610573804355226
+        },
+        "cfg_3.0": {
+          "joint_limit_rate": 0.3052734375,
+          "joint_hard_limit_rate": 0.115625,
+          "joint_jump_rate": 0.0,
+          "ground_penetration_depth": 0.006375100856594429,
+          "ground_penetration_rate": 0.07447916666666667,
+          "foot_sliding": 0.1973319862936478,
+          "foot_slide_rate": 0.25241932442115655,
+          "foot_contact_count": 62.6875,
+          "body_jerk": 14.09730071760714,
+          "fall_rate": 0.015625,
+          "mpjpe_mm": 126.05287253856659,
+          "g_mpjpe_mm": 319.27690720558167,
+          "e_vel": 12.14363794500241,
+          "e_acc": 1.817717072321102
+        }
+      },
+      "selected_cfg": 2.0,
+      "test_per_seed": {
+        "seed_0": {
+          "joint_limit_rate": 0.22044270833333335,
+          "joint_hard_limit_rate": 0.060807291666666666,
+          "joint_jump_rate": 0.0,
+          "ground_penetration_depth": 0.0023154520135584278,
+          "ground_penetration_rate": 0.052473958333333334,
+          "foot_sliding": 0.15146079182068206,
+          "foot_slide_rate": 0.19310354010447983,
+          "foot_contact_count": 69.6875,
+          "body_jerk": 12.57097487943247,
+          "fall_rate": 0.0234375,
+          "mpjpe_mm": 113.6109302341938,
+          "g_mpjpe_mm": 269.0559501349926,
+          "e_vel": 10.349105114437407,
+          "e_acc": 1.678702655772213
+        },
+        "seed_1": {
+          "joint_limit_rate": 0.22050781249999998,
+          "joint_hard_limit_rate": 0.06419270833333335,
+          "joint_jump_rate": 0.0,
+          "ground_penetration_depth": 0.002542698899866025,
+          "ground_penetration_rate": 0.03502604166666666,
+          "foot_sliding": 0.1319122211107242,
+          "foot_slide_rate": 0.1680986964653346,
+          "foot_contact_count": 69.09375,
+          "body_jerk": 11.40850757388398,
+          "fall_rate": 0.015625,
+          "mpjpe_mm": 112.43240883946419,
+          "g_mpjpe_mm": 255.22525343298912,
+          "e_vel": 9.248805336217629,
+          "e_acc": 1.5140402235556394
+        },
+        "seed_2": {
+          "joint_limit_rate": 0.23157552083333333,
+          "joint_hard_limit_rate": 0.0556640625,
+          "joint_jump_rate": 0.00013241525423728814,
+          "ground_penetration_depth": 0.0024221864222742084,
+          "ground_penetration_rate": 0.050130208333333336,
+          "foot_sliding": 0.117983655959506,
+          "foot_slide_rate": 0.15981058197331333,
+          "foot_contact_count": 70.0859375,
+          "body_jerk": 11.216232349630445,
+          "fall_rate": 0.0234375,
+          "mpjpe_mm": 114.10337534546852,
+          "g_mpjpe_mm": 250.12845322489738,
+          "e_vel": 9.355971204611706,
+          "e_acc": 1.5632264301239047
+        }
+      },
+      "test_mean_std": {
+        "body_jerk": {
+          "mean": 11.731904934315631,
+          "std": 0.5984820911072816
+        },
+        "e_acc": {
+          "mean": 1.5853231031505857,
+          "std": 0.06901510155999895
+        },
+        "e_vel": {
+          "mean": 9.651293885088913,
+          "std": 0.49536283987316176
+        },
+        "fall_rate": {
+          "mean": 0.020833333333333332,
+          "std": 0.003682847818679935
+        },
+        "foot_contact_count": {
+          "mean": 69.62239583333333,
+          "std": 0.407666467574563
+        },
+        "foot_slide_rate": {
+          "mean": 0.17367093951437593,
+          "std": 0.014151388264739105
+        },
+        "foot_sliding": {
+          "mean": 0.13378555629697075,
+          "std": 0.013731028000042634
+        },
+        "g_mpjpe_mm": {
+          "mean": 258.136552264293,
+          "std": 7.996635979555387
+        },
+        "ground_penetration_depth": {
+          "mean": 0.002426779111899554,
+          "std": 9.282997516111759e-05
+        },
+        "ground_penetration_rate": {
+          "mean": 0.045876736111111115,
+          "std": 0.0077320315769595005
+        },
+        "joint_hard_limit_rate": {
+          "mean": 0.060221354166666664,
+          "std": 0.0035063696328290176
+        },
+        "joint_jump_rate": {
+          "mean": 4.4138418079096045e-05,
+          "std": 6.242114946915144e-05
+        },
+        "joint_limit_rate": {
+          "mean": 0.2241753472222222,
+          "std": 0.005232780442815479
+        },
+        "mpjpe_mm": {
+          "mean": 113.38223813970883,
+          "std": 0.7010740909999088
+        }
+      }
+    },
+    "maila-mp-en-v4F-corpus-len0.5-20260906-044238": {
+      "val_by_checkpoint": {
+        "adapter_step018000.pt": {
+          "L_correct": 0.0329761311004404,
+          "L_wrong_roll": 0.03717216051882133,
+          "L_wrong_draw": 0.037352042651036754,
+          "rel": 0.12724444252118142,
+          "rel_draw": 0.13269936176769737,
+          "tiv": 0.009975247376132756,
+          "n": 1024,
+          "n_batch_seeds": 32
+        }
+      },
+      "selected": "adapter_step018000.pt",
+      "test_conditioning": {
+        "L_correct": 0.03435098924092017,
+        "L_wrong_roll": 0.03939545259345323,
+        "L_wrong_draw": 0.03805788600584492,
+        "rel": 0.14685059918227641,
+        "rel_draw": 0.10791237303026362,
+        "tiv": 0.010203787067439407,
+        "n": 1024,
+        "n_batch_seeds": 32
+      },
+      "val_cfg_sweep": {
+        "cfg_2.0": {
+          "joint_limit_rate": 0.166796875,
+          "joint_hard_limit_rate": 0.0404296875,
+          "joint_jump_rate": 0.0,
+          "ground_penetration_depth": 0.0027535200605672827,
+          "ground_penetration_rate": 0.03671875,
+          "foot_sliding": 0.13399863060112693,
+          "foot_slide_rate": 0.1733414421157361,
+          "foot_contact_count": 69.7109375,
+          "body_jerk": 13.053733993321657,
+          "fall_rate": 0.01171875,
+          "mpjpe_mm": 111.86447535455227,
+          "g_mpjpe_mm": 265.7265146076679,
+          "e_vel": 10.06176408319152,
+          "e_acc": 1.6357488267531153
+        },
+        "cfg_2.5": {
+          "joint_limit_rate": 0.2130859375,
+          "joint_hard_limit_rate": 0.06673177083333334,
+          "joint_jump_rate": 6.620762711864407e-05,
+          "ground_penetration_depth": 0.004201324419375485,
+          "ground_penetration_rate": 0.04869791666666667,
+          "foot_sliding": 0.1616167053434765,
+          "foot_slide_rate": 0.21388972773979809,
+          "foot_contact_count": 67.03515625,
+          "body_jerk": 13.22136352583766,
+          "fall_rate": 0.015625,
+          "mpjpe_mm": 117.19955843687057,
+          "g_mpjpe_mm": 286.26921275258064,
+          "e_vel": 11.027490268810652,
+          "e_acc": 1.7403592458867934
+        },
+        "cfg_3.0": {
+          "joint_limit_rate": 0.26705729166666664,
+          "joint_hard_limit_rate": 0.10065104166666666,
+          "joint_jump_rate": 0.00013241525423728814,
+          "ground_penetration_depth": 0.005752352940897154,
+          "ground_penetration_rate": 0.06425781250000001,
+          "foot_sliding": 0.19574998867756221,
+          "foot_slide_rate": 0.23827718646961915,
+          "foot_contact_count": 63.9296875,
+          "body_jerk": 14.977275756187737,
+          "fall_rate": 0.015625,
+          "mpjpe_mm": 122.98214434087276,
+          "g_mpjpe_mm": 308.45974138379097,
+          "e_vel": 12.040377461235039,
+          "e_acc": 1.9087730285245925
+        }
+      },
+      "selected_cfg": 2.0,
+      "test_per_seed": {
+        "seed_0": {
+          "joint_limit_rate": 0.226171875,
+          "joint_hard_limit_rate": 0.05989583333333333,
+          "joint_jump_rate": 0.0,
+          "ground_penetration_depth": 0.002055771617872182,
+          "ground_penetration_rate": 0.0423828125,
+          "foot_sliding": 0.15275044616100786,
+          "foot_slide_rate": 0.1979621130792613,
+          "foot_contact_count": 70.21484375,
+          "body_jerk": 12.61031564604491,
+          "fall_rate": 0.01953125,
+          "mpjpe_mm": 111.47511647641659,
+          "g_mpjpe_mm": 265.8567918241024,
+          "e_vel": 10.227907715190668,
+          "e_acc": 1.706917925766902
+        },
+        "seed_1": {
+          "joint_limit_rate": 0.2553385416666667,
+          "joint_hard_limit_rate": 0.06399739583333333,
+          "joint_jump_rate": 0.0,
+          "ground_penetration_depth": 0.0019328365402557779,
+          "ground_penetration_rate": 0.0283203125,
+          "foot_sliding": 0.13038864225745783,
+          "foot_slide_rate": 0.17494764008169356,
+          "foot_contact_count": 70.46484375,
+          "body_jerk": 11.85987388389185,
+          "fall_rate": 0.015625,
+          "mpjpe_mm": 110.5955140888691,
+          "g_mpjpe_mm": 253.03574988245964,
+          "e_vel": 9.17892294752528,
+          "e_acc": 1.552335363056045
+        },
+        "seed_2": {
+          "joint_limit_rate": 0.23990885416666669,
+          "joint_hard_limit_rate": 0.06881510416666667,
+          "joint_jump_rate": 0.0,
+          "ground_penetration_depth": 0.0019152588148756422,
+          "ground_penetration_rate": 0.04622395833333333,
+          "foot_sliding": 0.1151230313380438,
+          "foot_slide_rate": 0.1601021038861667,
+          "foot_contact_count": 71.19921875,
+          "body_jerk": 11.41525472421199,
+          "fall_rate": 0.01953125,
+          "mpjpe_mm": 112.70765979588032,
+          "g_mpjpe_mm": 247.67154341936111,
+          "e_vel": 9.205278465058655,
+          "e_acc": 1.5691756035375874
+        }
+      },
+      "test_mean_std": {
+        "body_jerk": {
+          "mean": 11.961814751382917,
+          "std": 0.493177863163423
+        },
+        "e_acc": {
+          "mean": 1.6094762974535115,
+          "std": 0.06924378008718068
+        },
+        "e_vel": {
+          "mean": 9.5373697092582,
+          "std": 0.48840263891861735
+        },
+        "fall_rate": {
+          "mean": 0.018229166666666668,
+          "std": 0.0018414239093399675
+        },
+        "foot_contact_count": {
+          "mean": 70.62630208333333,
+          "std": 0.4177719714615724
+        },
+        "foot_slide_rate": {
+          "mean": 0.17767061901570722,
+          "std": 0.015575751126491745
+        },
+        "foot_sliding": {
+          "mean": 0.1327540399188365,
+          "std": 0.015452117786616296
+        },
+        "g_mpjpe_mm": {
+          "mean": 255.52136170864105,
+          "std": 7.629308159913149
+        },
+        "ground_penetration_depth": {
+          "mean": 0.001967955657667867,
+          "std": 6.250853945576388e-05
+        },
+        "ground_penetration_rate": {
+          "mean": 0.038975694444444445,
+          "std": 0.007695950173726784
+        },
+        "joint_hard_limit_rate": {
+          "mean": 0.0642361111111111,
+          "std": 0.003645187401444183
+        },
+        "joint_jump_rate": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "joint_limit_rate": {
+          "mean": 0.24047309027777777,
+          "std": 0.011913924147901423
+        },
+        "mpjpe_mm": {
+          "mean": 111.592763453722,
+          "std": 0.8662834333570469
+        }
+      }
+    }
+  },
+  "errors": [],
+  "baselines": {
+    "RANDOM_corpus_init": {
+      "L_correct": 0.035132310440531,
+      "L_wrong_roll": 0.03459032787941396,
+      "L_wrong_draw": 0.03513885347638279,
+      "rel": -0.015426897756538395,
+      "rel_draw": 0.0001862398393315748,
+      "tiv": 0.0070779007219243795,
+      "n": 1024,
+      "n_batch_seeds": 32
+    }
+  }
+}

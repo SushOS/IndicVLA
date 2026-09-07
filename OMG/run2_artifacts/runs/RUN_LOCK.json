@@ -1,0 +1,1158 @@
+{
+  "schema": "maila.run_lock.v1",
+  "run_name": "maila-mp-hi-20260905-174910",
+  "created_utc": "2026-09-05T17:53:42.729276+00:00",
+  "hostname": "e20c6679087d",
+  "git": {
+    "commit": "",
+    "branch": "",
+    "describe": "",
+    "dirty": false,
+    "dirty_files": [],
+    "remote": ""
+  },
+  "code_sha256": {
+    "build_amass_g1_splits.py": {
+      "sha256": "de5914a38571764026a9b2d4bc7b2bfcff38455f52df0b249b1b9db6627b12fa",
+      "bytes": 10640,
+      "hashed_bytes": 10640,
+      "partial": false
+    },
+    "build_bones_seed_splits.py": {
+      "sha256": "28287bcb74d02ffb6d2e608b62de81026039848ae528e624efe64707afd18eb8",
+      "bytes": 12085,
+      "hashed_bytes": 12085,
+      "partial": false
+    },
+    "contract_probe.py": {
+      "sha256": "901409bc780dc4c5079faf062bf443569ff34e5fff3d6be507fea3ccd8f74846",
+      "bytes": 6686,
+      "hashed_bytes": 6686,
+      "partial": false
+    },
+    "convert_bones_to_omg125.py": {
+      "sha256": "2e6e6b4fe450226de59c2840ff317a8200653e91f75e90a489cb7dadf6d4f4b1",
+      "bytes": 17131,
+      "hashed_bytes": 17131,
+      "partial": false
+    },
+    "convert_g1_npz_to_omg125.py": {
+      "sha256": "151173ccbfd06d84cf5f70c6ecca5c5724f0155fbfe353da6c67961aa64cd0f3",
+      "bytes": 24681,
+      "hashed_bytes": 24681,
+      "partial": false
+    },
+    "direction_minimal_pairs.py": {
+      "sha256": "66cbe568362dbc970ba313ce37c71351a347deeb7220cf59d7130f53e9c078dd",
+      "bytes": 8697,
+      "hashed_bytes": 8697,
+      "partial": false
+    },
+    "finalize_run.py": {
+      "sha256": "9b21721db33b8a0dd565a124f8ada22468f959ce3bdc548737e43885b84c6cbf",
+      "bytes": 11096,
+      "hashed_bytes": 11096,
+      "partial": false
+    },
+    "maila_encoder.py": {
+      "sha256": "a4910ca2303fcacd06f7b9c6f3f6a80a6ca6465fed61d8d899baff43c31ead87",
+      "bytes": 7656,
+      "hashed_bytes": 7656,
+      "partial": false
+    },
+    "maila_train.py": {
+      "sha256": "f77c3e798286eeb54baae02025d695a52d689921c1239b8c10314c3ee7e5c164",
+      "bytes": 16366,
+      "hashed_bytes": 16366,
+      "partial": false
+    },
+    "maila_train_motionpivot.py": {
+      "sha256": "80f9d61244407dd3f0f8004c3f9843f0198d4667e35028b27b8b0975b7c45747",
+      "bytes": 29342,
+      "hashed_bytes": 29342,
+      "partial": false
+    },
+    "render_side_by_side.py": {
+      "sha256": "403185669e4cb0e906ac16f593a6ee91f4afa245b266435bdfd248882f0e15d1",
+      "bytes": 8147,
+      "hashed_bytes": 8147,
+      "partial": false
+    },
+    "run2_lock.py": {
+      "sha256": "5b66757053bcada1c6b12b569bb38559d9d37cd068171fe5aef7465c69b2088a",
+      "bytes": 11524,
+      "hashed_bytes": 11524,
+      "partial": false
+    },
+    "smoke_phase1.py": {
+      "sha256": "151329cf76b9c0b41c7549ec717a99d002f3627f24827c53846e19433b7b704d",
+      "bytes": 7711,
+      "hashed_bytes": 7711,
+      "partial": false
+    },
+    "text_sensitivity.py": {
+      "sha256": "d6a6c670458a996765cb347f59841d16f462a7a37a7d47012cd0e353e31dc94c",
+      "bytes": 5665,
+      "hashed_bytes": 5665,
+      "partial": false
+    },
+    "three_arm_benchmark.py": {
+      "sha256": "a44c744d36b7bded11a4cab29fd9249b0e764a11a1590d5956d933fc505d55b4",
+      "bytes": 17928,
+      "hashed_bytes": 17928,
+      "partial": false
+    }
+  },
+  "docs_sha256": {
+    "MAILA_SSOT_2026-09-05.md": {
+      "sha256": "a2b9896b63c56c1a68e7da5f240d27a94a73268c937f1b04c9c702be10e7fb4f",
+      "bytes": 52349,
+      "hashed_bytes": 52349,
+      "partial": false
+    },
+    "MAILA_RESEARCH_LOG_2026-08-22.md": {
+      "sha256": "4969ad28e30c0ca099afcb8775231fe0e3c2bfad73fa1f7b80b62000e4bbca6a",
+      "bytes": 78437,
+      "hashed_bytes": 78437,
+      "partial": false
+    }
+  },
+  "splits_sha256": {
+    "reserve.csv": {
+      "sha256": "e63a3b2b96279a722ca32f33728c2def12c1f8a852222a22fdf1ab4ec3ad4ed3",
+      "bytes": 2635767,
+      "hashed_bytes": 2635767,
+      "partial": false
+    },
+    "test.csv": {
+      "sha256": "14e0d28088f9b24bacc9b7a69f32621cd36af9e0ed8878466c958629998889d3",
+      "bytes": 2610630,
+      "hashed_bytes": 2610630,
+      "partial": false
+    },
+    "train.csv": {
+      "sha256": "9f9465cec25189595c1203f4686e8eaffb8c2d60b423647ecc27c9f0067daaa9",
+      "bytes": 29688676,
+      "hashed_bytes": 29688676,
+      "partial": false
+    },
+    "val.csv": {
+      "sha256": "280550fa8a9083ee1bb2f78c4cb84bef0741cb0bfd57d25b5d0314bb1fbb3b5c",
+      "bytes": 2595313,
+      "hashed_bytes": 2595313,
+      "partial": false
+    },
+    "split_report.json": {
+      "sha256": "47334f89008544ee80c15675ac39a4b8e91368573b7a118f5377bbbee8d97a50",
+      "bytes": 2033,
+      "hashed_bytes": 2033,
+      "partial": false
+    }
+  },
+  "weights": {
+    "omg_ckpt": {
+      "path": "/workspace/models/omg/checkpoints/updated/100m/sstep=170000.ckpt",
+      "sha256": "7ec1afc66786ef2775eca2f23d9566cb36554ddec93e7ec579176bd978cf28af",
+      "bytes": 1933268110,
+      "hashed_bytes": 1933268110,
+      "partial": false
+    },
+    "evaluator": {
+      "path": "/workspace/models/omg/evaluator/step_004000.pt",
+      "sha256": "e346790c5ce33c42840aa19f7fcc2891a4cab27e0d92e23bfaff7d48cb339c40",
+      "bytes": 251412122,
+      "hashed_bytes": 251412122,
+      "partial": false
+    },
+    "muril": {
+      "path": "/workspace/models/muril-base-cased",
+      "files": {
+        "pytorch_model.bin": {
+          "sha256": "e65e3b7aaa3ce16d23fc4218783efd0417880655f8f398e6cb1a111a0de0c95f",
+          "bytes": 953477430,
+          "hashed_bytes": 953477430,
+          "partial": false
+        },
+        "config.json": {
+          "sha256": "be7bd5c3ffdc23ce6151d589b6844a9fe488beab2324ac854060ae6ba61fd1af",
+          "bytes": 411,
+          "hashed_bytes": 411,
+          "partial": false
+        },
+        "special_tokens_map.json": {
+          "sha256": "88bbdf754dd64c44fff9e61b2c7d4380ded1bdf5c6d386be827ee28d79596cb9",
+          "bytes": 113,
+          "hashed_bytes": 113,
+          "partial": false
+        },
+        "tokenizer_config.json": {
+          "sha256": "0f2c28bab3018be1dff3f9989db82107a21c802250864f4c63e8defaad39025f",
+          "bytes": 206,
+          "hashed_bytes": 206,
+          "partial": false
+        },
+        "vocab.txt": {
+          "sha256": "b96cc938b4009d063a605930cb82aef2c91ee52a94e94e6fcb78510d4ee5310b",
+          "bytes": 3162999,
+          "hashed_bytes": 3162999,
+          "partial": false
+        }
+      }
+    },
+    "t5_base": {
+      "path": "/workspace/models/t5-base-local",
+      "files": {
+        "model.safetensors": {
+          "sha256": "a90903540cc02cbeb7ff9f823f1a80eb778c7e22426a0e620b01c77a5ec8f5b4",
+          "bytes": 891646390,
+          "hashed_bytes": 891646390,
+          "partial": false
+        },
+        "config.json": {
+          "sha256": "46dd7cb62d29c81fb551e0ef1ea274c24a46ba441eeb948897706252933df033",
+          "bytes": 1208,
+          "hashed_bytes": 1208,
+          "partial": false
+        },
+        "generation_config.json": {
+          "sha256": "f5a1c7e2be8092018d8835128987edf0111637dd98e90599cc80310fef75d95a",
+          "bytes": 147,
+          "hashed_bytes": 147,
+          "partial": false
+        },
+        "tokenizer.json": {
+          "sha256": "d2acde0d8d71dd30a711834b07781b9c89feaac33fd332f60507699282740066",
+          "bytes": 1389353,
+          "hashed_bytes": 1389353,
+          "partial": false
+        },
+        "spiece.model": {
+          "sha256": "d60acb128cf7b7f2536e8f38a5b18a05535c9e14c7a355904270e15b0945ea86",
+          "bytes": 791656,
+          "hashed_bytes": 791656,
+          "partial": false
+        }
+      }
+    },
+    "g1_125d_stats": {
+      "path": "/workspace/IndicVLA/OMG/assets/stats/g1_125d_stats.json",
+      "sha256": "982b23eb2b3cf409b8765f4b9637e76a49ea27afd81c1b4d9c470a3e98e0049d",
+      "bytes": 6358,
+      "hashed_bytes": 6358,
+      "partial": false
+    }
+  },
+  "packages": {
+    "python": "3.10.21",
+    "platform": "Linux-5.15.0-191-generic-x86_64-with-glibc2.39",
+    "torch": "2.6.0+cu124",
+    "transformers": "4.57.6",
+    "numpy": "1.26.4",
+    "pandas": "2.3.3",
+    "huggingface_hub": "0.36.2",
+    "hydra": "1.3.6",
+    "pytorch_lightning": "2.6.5",
+    "wandb": "0.29.0",
+    "scipy": "1.15.3",
+    "pyarrow": "25.0.1",
+    "omegaconf": "2.3.1"
+  },
+  "gpu": {
+    "cuda_available": true,
+    "torch_cuda": "12.4",
+    "device_name": "NVIDIA GeForce RTX 4090",
+    "device_count": 1,
+    "capability": [
+      8,
+      9
+    ],
+    "total_memory_gb": 25.22,
+    "nvidia_smi": "NVIDIA GeForce RTX 4090, 580.173.02, 24564 MiB"
+  },
+  "data": {
+    "train": {
+      "meta": {
+        "dim": 125,
+        "fps": 30.0,
+        "L": 10,
+        "H": 60,
+        "windows": 17904,
+        "clips": {
+          "ok": 9312,
+          "clamped": 4181,
+          "start_past_end": 865,
+          "short": 262
+        },
+        "subset_fps": {
+          "ACCAD": 30.0,
+          "BMLhandball": 30.0,
+          "BMLmovi": 30.0,
+          "BioMotionLab_NTroje": 15.0,
+          "CMU": 15.0,
+          "DFaust_67": 15.0,
+          "EKUT": 25.0,
+          "Eyes_Japan_Dataset": 15.0,
+          "HumanEva": 15.0,
+          "KIT": 25.0,
+          "MPI_HDM05": 15.0,
+          "MPI_mosh": 15.0,
+          "SFU": 15.0,
+          "SSM_synced": 15.0,
+          "TotalCapture": 15.0,
+          "Transitions_mocap": 15.0
+        },
+        "truncation": {
+          "clips_clamped": 4181,
+          "worst": [
+            {
+              "clip_id": 4753,
+              "subset": "MPI_HDM05",
+              "asked": 1988,
+              "have": 225,
+              "short": 1763,
+              "frac_lost": 16.3241
+            },
+            {
+              "clip_id": 719,
+              "subset": "CMU",
+              "asked": 2427,
+              "have": 225,
+              "short": 2202,
+              "frac_lost": 14.68
+            },
+            {
+              "clip_id": 12373,
+              "subset": "KIT",
+              "asked": 3802,
+              "have": 225,
+              "short": 3577,
+              "frac_lost": 14.308
+            },
+            {
+              "clip_id": 13482,
+              "subset": "KIT",
+              "asked": 3571,
+              "have": 225,
+              "short": 3346,
+              "frac_lost": 13.384
+            },
+            {
+              "clip_id": 228,
+              "subset": "CMU",
+              "asked": 2186,
+              "have": 225,
+              "short": 1961,
+              "frac_lost": 13.0733
+            },
+            {
+              "clip_id": 11827,
+              "subset": "SFU",
+              "asked": 2118,
+              "have": 225,
+              "short": 1893,
+              "frac_lost": 12.62
+            },
+            {
+              "clip_id": 6352,
+              "subset": "KIT",
+              "asked": 2775,
+              "have": 225,
+              "short": 2550,
+              "frac_lost": 11.8605
+            },
+            {
+              "clip_id": 14349,
+              "subset": "MPI_HDM05",
+              "asked": 1949,
+              "have": 225,
+              "short": 1724,
+              "frac_lost": 11.4933
+            },
+            {
+              "clip_id": 12797,
+              "subset": "KIT",
+              "asked": 2814,
+              "have": 225,
+              "short": 2589,
+              "frac_lost": 10.356
+            },
+            {
+              "clip_id": 5332,
+              "subset": "KIT",
+              "asked": 2769,
+              "have": 225,
+              "short": 2544,
+              "frac_lost": 10.176
+            },
+            {
+              "clip_id": 5642,
+              "subset": "KIT",
+              "asked": 2719,
+              "have": 225,
+              "short": 2494,
+              "frac_lost": 9.976
+            },
+            {
+              "clip_id": 9844,
+              "subset": "MPI_HDM05",
+              "asked": 1635,
+              "have": 225,
+              "short": 1410,
+              "frac_lost": 9.4
+            },
+            {
+              "clip_id": 12561,
+              "subset": "MPI_HDM05",
+              "asked": 1395,
+              "have": 225,
+              "short": 1170,
+              "frac_lost": 9.2126
+            },
+            {
+              "clip_id": 8749,
+              "subset": "KIT",
+              "asked": 2504,
+              "have": 225,
+              "short": 2279,
+              "frac_lost": 9.116
+            },
+            {
+              "clip_id": 7323,
+              "subset": "MPI_HDM05",
+              "asked": 1535,
+              "have": 225,
+              "short": 1310,
+              "frac_lost": 8.7333
+            },
+            {
+              "clip_id": 2408,
+              "subset": "CMU",
+              "asked": 1190,
+              "have": 225,
+              "short": 965,
+              "frac_lost": 8.6161
+            },
+            {
+              "clip_id": 584,
+              "subset": "CMU",
+              "asked": 1473,
+              "have": 225,
+              "short": 1248,
+              "frac_lost": 8.32
+            },
+            {
+              "clip_id": 3553,
+              "subset": "KIT",
+              "asked": 2304,
+              "have": 225,
+              "short": 2079,
+              "frac_lost": 8.316
+            },
+            {
+              "clip_id": 8078,
+              "subset": "CMU",
+              "asked": 1465,
+              "have": 225,
+              "short": 1240,
+              "frac_lost": 8.2667
+            },
+            {
+              "clip_id": 10085,
+              "subset": "MPI_HDM05",
+              "asked": 1422,
+              "have": 225,
+              "short": 1197,
+              "frac_lost": 7.98
+            },
+            {
+              "clip_id": 5843,
+              "subset": "KIT",
+              "asked": 2192,
+              "have": 225,
+              "short": 1967,
+              "frac_lost": 7.868
+            },
+            {
+              "clip_id": 13611,
+              "subset": "KIT",
+              "asked": 1968,
+              "have": 225,
+              "short": 1743,
+              "frac_lost": 7.8514
+            },
+            {
+              "clip_id": 12215,
+              "subset": "MPI_HDM05",
+              "asked": 1016,
+              "have": 225,
+              "short": 791,
+              "frac_lost": 7.6058
+            },
+            {
+              "clip_id": 3065,
+              "subset": "BioMotionLab_NTroje",
+              "asked": 1362,
+              "have": 225,
+              "short": 1137,
+              "frac_lost": 7.58
+            },
+            {
+              "clip_id": 4018,
+              "subset": "KIT",
+              "asked": 2120,
+              "have": 225,
+              "short": 1895,
+              "frac_lost": 7.58
+            }
+          ]
+        },
+        "roundtrip_err": {
+          "root_pos": 5.960464477539063e-08,
+          "root_quat": 5.960464477539063e-08,
+          "joints": 0.0
+        },
+        "exp": "100m",
+        "languages": [
+          "hi",
+          "bn",
+          "ta",
+          "te"
+        ],
+        "caption_slots": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "source_manifest": "splits_amass_g1_13k/train.csv",
+        "encoder": "OMG model.representation (codec+kinematics) -- parity by construction",
+        "note": "npz are per-SOURCE; clips sliced by [start_s,end_s] then windowed"
+      },
+      "meta_sha256": "dae3dffd0671be9ed6459483b7e3bc9f65476812d50cab06976d5c774e595389",
+      "shards": 5,
+      "shard_sha256": {
+        "shard_0000.npz": "2326eec6f6d77ccc6ccfc40a9b6f884706abadfce6df5efd521838a12c0c672e",
+        "shard_0001.npz": "314651898ac32002a924f59fe0e8a1906f495439bccf61f4adfd5e16380b5628",
+        "shard_0002.npz": "604e0ffdf8599087f6098ff371099d09be0f710ee89361eb300d54812a07fb70",
+        "shard_0003.npz": "fedab403736dde73acde81daa3cdd0086b7f9bf6e07c1abecbb03214ca3e082b",
+        "shard_0004.npz": "d682d396b06df321e9880514fc64cefc8cda43c39be767af3c2cfc89f8bba231"
+      },
+      "manifest_sha256": "6915e599fd4ae0a44e97bd2a9025463631ddb19ec0038f595f57707260b748da",
+      "windows": 17904,
+      "distinct_en_1": 8733,
+      "windows_per_caption_en": 2.0502,
+      "windows_with_2plus_en": 17892,
+      "distinct_hi_1": 8518,
+      "windows_per_caption_hi": 2.1019,
+      "windows_with_2plus_hi": 17892,
+      "distinct_bn_1": 8541,
+      "windows_per_caption_bn": 2.0962,
+      "windows_with_2plus_bn": 17892,
+      "distinct_ta_1": 8468,
+      "windows_per_caption_ta": 2.1143,
+      "windows_with_2plus_ta": 17892,
+      "distinct_te_1": 8534,
+      "windows_per_caption_te": 2.098,
+      "windows_with_2plus_te": 17892,
+      "distinct_sources": 8258,
+      "distinct_super_groups": 4066
+    },
+    "val": {
+      "meta": {
+        "dim": 125,
+        "fps": 30.0,
+        "L": 10,
+        "H": 60,
+        "windows": 1370,
+        "clips": {
+          "ok": 710,
+          "clamped": 398,
+          "short": 27,
+          "start_past_end": 84
+        },
+        "subset_fps": {
+          "ACCAD": 30.0,
+          "BMLhandball": 30.0,
+          "BMLmovi": 30.0,
+          "BioMotionLab_NTroje": 15.0,
+          "CMU": 15.0,
+          "DFaust_67": 15.0,
+          "EKUT": 25.0,
+          "Eyes_Japan_Dataset": 15.0,
+          "HumanEva": 15.0,
+          "KIT": 25.0,
+          "MPI_HDM05": 15.0,
+          "MPI_mosh": 15.0,
+          "SFU": 15.0,
+          "SSM_synced": 15.0,
+          "TotalCapture": 15.0,
+          "Transitions_mocap": 15.0
+        },
+        "truncation": {
+          "clips_clamped": 398,
+          "worst": [
+            {
+              "clip_id": 4980,
+              "subset": "KIT",
+              "asked": 5914,
+              "have": 225,
+              "short": 5689,
+              "frac_lost": 22.756
+            },
+            {
+              "clip_id": 7003,
+              "subset": "KIT",
+              "asked": 4271,
+              "have": 200,
+              "short": 4071,
+              "frac_lost": 16.284
+            },
+            {
+              "clip_id": 558,
+              "subset": "KIT",
+              "asked": 3750,
+              "have": 225,
+              "short": 3525,
+              "frac_lost": 14.1
+            },
+            {
+              "clip_id": 11207,
+              "subset": "KIT",
+              "asked": 3359,
+              "have": 225,
+              "short": 3134,
+              "frac_lost": 12.536
+            },
+            {
+              "clip_id": 4152,
+              "subset": "KIT",
+              "asked": 3154,
+              "have": 225,
+              "short": 2929,
+              "frac_lost": 11.716
+            },
+            {
+              "clip_id": 3086,
+              "subset": "KIT",
+              "asked": 3146,
+              "have": 225,
+              "short": 2921,
+              "frac_lost": 11.684
+            },
+            {
+              "clip_id": 2985,
+              "subset": "KIT",
+              "asked": 2604,
+              "have": 225,
+              "short": 2379,
+              "frac_lost": 9.516
+            },
+            {
+              "clip_id": 7859,
+              "subset": "KIT",
+              "asked": 2560,
+              "have": 225,
+              "short": 2335,
+              "frac_lost": 9.34
+            },
+            {
+              "clip_id": 66,
+              "subset": "MPI_HDM05",
+              "asked": 1426,
+              "have": 225,
+              "short": 1201,
+              "frac_lost": 8.0067
+            },
+            {
+              "clip_id": 4130,
+              "subset": "MPI_HDM05",
+              "asked": 1338,
+              "have": 225,
+              "short": 1113,
+              "frac_lost": 7.42
+            },
+            {
+              "clip_id": 6244,
+              "subset": "KIT",
+              "asked": 1862,
+              "have": 225,
+              "short": 1637,
+              "frac_lost": 6.548
+            },
+            {
+              "clip_id": 1455,
+              "subset": "KIT",
+              "asked": 1856,
+              "have": 225,
+              "short": 1631,
+              "frac_lost": 6.524
+            },
+            {
+              "clip_id": 2705,
+              "subset": "KIT",
+              "asked": 1771,
+              "have": 225,
+              "short": 1546,
+              "frac_lost": 6.184
+            },
+            {
+              "clip_id": 6054,
+              "subset": "KIT",
+              "asked": 1565,
+              "have": 225,
+              "short": 1340,
+              "frac_lost": 5.4694
+            },
+            {
+              "clip_id": 14138,
+              "subset": "KIT",
+              "asked": 1585,
+              "have": 225,
+              "short": 1360,
+              "frac_lost": 5.44
+            },
+            {
+              "clip_id": 9036,
+              "subset": "KIT",
+              "asked": 1488,
+              "have": 225,
+              "short": 1263,
+              "frac_lost": 5.052
+            },
+            {
+              "clip_id": 12794,
+              "subset": "MPI_HDM05",
+              "asked": 970,
+              "have": 225,
+              "short": 745,
+              "frac_lost": 4.9667
+            },
+            {
+              "clip_id": 2448,
+              "subset": "MPI_HDM05",
+              "asked": 960,
+              "have": 225,
+              "short": 735,
+              "frac_lost": 4.9
+            },
+            {
+              "clip_id": 2349,
+              "subset": "KIT",
+              "asked": 1426,
+              "have": 225,
+              "short": 1201,
+              "frac_lost": 4.804
+            },
+            {
+              "clip_id": 13513,
+              "subset": "MPI_HDM05",
+              "asked": 904,
+              "have": 225,
+              "short": 679,
+              "frac_lost": 4.5267
+            },
+            {
+              "clip_id": 9490,
+              "subset": "MPI_HDM05",
+              "asked": 901,
+              "have": 225,
+              "short": 676,
+              "frac_lost": 4.5067
+            },
+            {
+              "clip_id": 12318,
+              "subset": "CMU",
+              "asked": 896,
+              "have": 225,
+              "short": 671,
+              "frac_lost": 4.4733
+            },
+            {
+              "clip_id": 10713,
+              "subset": "KIT",
+              "asked": 1259,
+              "have": 225,
+              "short": 1034,
+              "frac_lost": 4.136
+            },
+            {
+              "clip_id": 2211,
+              "subset": "CMU",
+              "asked": 758,
+              "have": 225,
+              "short": 533,
+              "frac_lost": 4.0687
+            },
+            {
+              "clip_id": 8629,
+              "subset": "MPI_HDM05",
+              "asked": 809,
+              "have": 225,
+              "short": 584,
+              "frac_lost": 3.8933
+            }
+          ]
+        },
+        "roundtrip_err": {
+          "root_pos": 6.891787052154541e-08,
+          "root_quat": 1.1920928955078125e-07,
+          "joints": 0.0
+        },
+        "exp": "100m",
+        "languages": [
+          "hi",
+          "bn",
+          "ta",
+          "te"
+        ],
+        "caption_slots": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "source_manifest": "splits_amass_g1_13k/val.csv",
+        "encoder": "OMG model.representation (codec+kinematics) -- parity by construction",
+        "note": "npz are per-SOURCE; clips sliced by [start_s,end_s] then windowed"
+      },
+      "meta_sha256": "85c1208ac7470e19ab1a529605c9a861a438ae59c08df74c4a5f3b9b1821e0f5",
+      "shards": 1,
+      "shard_sha256": {
+        "shard_0000.npz": "d22cd02cc15d2cde4e120bcbab1fc58ac02114de047a6ea34b4e512ce4f40cd4"
+      },
+      "manifest_sha256": "98d1777020d466323d5053a15fa907dad56fd9467a3f1ef7b2e5a5237cc0a8fb",
+      "windows": 1370,
+      "distinct_en_1": 704,
+      "windows_per_caption_en": 1.946,
+      "windows_with_2plus_en": 1368,
+      "distinct_hi_1": 701,
+      "windows_per_caption_hi": 1.9544,
+      "windows_with_2plus_hi": 1368,
+      "distinct_bn_1": 701,
+      "windows_per_caption_bn": 1.9544,
+      "windows_with_2plus_bn": 1368,
+      "distinct_ta_1": 700,
+      "windows_per_caption_ta": 1.9571,
+      "windows_with_2plus_ta": 1368,
+      "distinct_te_1": 701,
+      "windows_per_caption_te": 1.9544,
+      "windows_with_2plus_te": 1368,
+      "distinct_sources": 617,
+      "distinct_super_groups": 447
+    },
+    "test": {
+      "meta": {
+        "dim": 125,
+        "fps": 30.0,
+        "L": 10,
+        "H": 60,
+        "windows": 1394,
+        "clips": {
+          "ok": 722,
+          "clamped": 375,
+          "start_past_end": 89,
+          "short": 30
+        },
+        "subset_fps": {
+          "ACCAD": 30.0,
+          "BMLhandball": 30.0,
+          "BMLmovi": 30.0,
+          "BioMotionLab_NTroje": 15.0,
+          "CMU": 15.0,
+          "DFaust_67": 15.0,
+          "EKUT": 25.0,
+          "Eyes_Japan_Dataset": 15.0,
+          "HumanEva": 15.0,
+          "KIT": 25.0,
+          "MPI_HDM05": 15.0,
+          "MPI_mosh": 15.0,
+          "SFU": 15.0,
+          "SSM_synced": 15.0,
+          "TotalCapture": 15.0,
+          "Transitions_mocap": 15.0
+        },
+        "truncation": {
+          "clips_clamped": 375,
+          "worst": [
+            {
+              "clip_id": 506,
+              "subset": "TotalCapture",
+              "asked": 1270,
+              "have": 225,
+              "short": 1045,
+              "frac_lost": 10.1456
+            },
+            {
+              "clip_id": 13882,
+              "subset": "KIT",
+              "asked": 2045,
+              "have": 225,
+              "short": 1820,
+              "frac_lost": 7.28
+            },
+            {
+              "clip_id": 11888,
+              "subset": "KIT",
+              "asked": 2034,
+              "have": 225,
+              "short": 1809,
+              "frac_lost": 7.236
+            },
+            {
+              "clip_id": 10403,
+              "subset": "KIT",
+              "asked": 2019,
+              "have": 225,
+              "short": 1794,
+              "frac_lost": 7.176
+            },
+            {
+              "clip_id": 13512,
+              "subset": "KIT",
+              "asked": 1877,
+              "have": 225,
+              "short": 1652,
+              "frac_lost": 6.608
+            },
+            {
+              "clip_id": 4679,
+              "subset": "KIT",
+              "asked": 1845,
+              "have": 225,
+              "short": 1620,
+              "frac_lost": 6.48
+            },
+            {
+              "clip_id": 12352,
+              "subset": "KIT",
+              "asked": 1642,
+              "have": 225,
+              "short": 1417,
+              "frac_lost": 5.668
+            },
+            {
+              "clip_id": 10493,
+              "subset": "KIT",
+              "asked": 1375,
+              "have": 225,
+              "short": 1150,
+              "frac_lost": 5.665
+            },
+            {
+              "clip_id": 14300,
+              "subset": "KIT",
+              "asked": 1556,
+              "have": 225,
+              "short": 1331,
+              "frac_lost": 5.324
+            },
+            {
+              "clip_id": 11953,
+              "subset": "KIT",
+              "asked": 1472,
+              "have": 225,
+              "short": 1247,
+              "frac_lost": 4.988
+            },
+            {
+              "clip_id": 1118,
+              "subset": "KIT",
+              "asked": 1256,
+              "have": 225,
+              "short": 1031,
+              "frac_lost": 4.124
+            },
+            {
+              "clip_id": 230,
+              "subset": "CMU",
+              "asked": 843,
+              "have": 225,
+              "short": 618,
+              "frac_lost": 4.12
+            },
+            {
+              "clip_id": 13679,
+              "subset": "KIT",
+              "asked": 1212,
+              "have": 225,
+              "short": 987,
+              "frac_lost": 3.948
+            },
+            {
+              "clip_id": 11870,
+              "subset": "KIT",
+              "asked": 1201,
+              "have": 225,
+              "short": 976,
+              "frac_lost": 3.904
+            },
+            {
+              "clip_id": 924,
+              "subset": "KIT",
+              "asked": 1169,
+              "have": 225,
+              "short": 944,
+              "frac_lost": 3.776
+            },
+            {
+              "clip_id": 7454,
+              "subset": "KIT",
+              "asked": 1102,
+              "have": 225,
+              "short": 877,
+              "frac_lost": 3.508
+            },
+            {
+              "clip_id": 4442,
+              "subset": "KIT",
+              "asked": 1091,
+              "have": 225,
+              "short": 866,
+              "frac_lost": 3.464
+            },
+            {
+              "clip_id": 4689,
+              "subset": "CMU",
+              "asked": 590,
+              "have": 225,
+              "short": 365,
+              "frac_lost": 3.4434
+            },
+            {
+              "clip_id": 13638,
+              "subset": "KIT",
+              "asked": 1004,
+              "have": 225,
+              "short": 779,
+              "frac_lost": 3.116
+            },
+            {
+              "clip_id": 8697,
+              "subset": "KIT",
+              "asked": 964,
+              "have": 225,
+              "short": 739,
+              "frac_lost": 2.956
+            },
+            {
+              "clip_id": 13628,
+              "subset": "MPI_HDM05",
+              "asked": 660,
+              "have": 225,
+              "short": 435,
+              "frac_lost": 2.9
+            },
+            {
+              "clip_id": 830,
+              "subset": "MPI_HDM05",
+              "asked": 648,
+              "have": 225,
+              "short": 423,
+              "frac_lost": 2.82
+            },
+            {
+              "clip_id": 12067,
+              "subset": "CMU",
+              "asked": 639,
+              "have": 225,
+              "short": 414,
+              "frac_lost": 2.76
+            },
+            {
+              "clip_id": 14458,
+              "subset": "KIT",
+              "asked": 884,
+              "have": 225,
+              "short": 659,
+              "frac_lost": 2.636
+            },
+            {
+              "clip_id": 6253,
+              "subset": "KIT",
+              "asked": 879,
+              "have": 225,
+              "short": 654,
+              "frac_lost": 2.616
+            }
+          ]
+        },
+        "roundtrip_err": {
+          "root_pos": 2.384185791015625e-07,
+          "root_quat": 2.980232238769531e-07,
+          "joints": 0.0
+        },
+        "exp": "100m",
+        "languages": [
+          "hi",
+          "bn",
+          "ta",
+          "te"
+        ],
+        "caption_slots": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "source_manifest": "splits_amass_g1_13k/test.csv",
+        "encoder": "OMG model.representation (codec+kinematics) -- parity by construction",
+        "note": "npz are per-SOURCE; clips sliced by [start_s,end_s] then windowed"
+      },
+      "meta_sha256": "3bcd2c0839a8dc06d1c76a4ad24b665660daa8a1f5fd765745d77d95b93e9ad6",
+      "shards": 1,
+      "shard_sha256": {
+        "shard_0000.npz": "3a33dcf442d41279c5c6cff381f904f0ca0a02f05ed8cb8a82113bd70e776206"
+      },
+      "manifest_sha256": "55f1a3e2fe7dafaf7a26f73556606713b3acc5bb512eaa394eb6dc15e97e62cb",
+      "windows": 1394,
+      "distinct_en_1": 715,
+      "windows_per_caption_en": 1.9497,
+      "windows_with_2plus_en": 1392,
+      "distinct_hi_1": 709,
+      "windows_per_caption_hi": 1.9661,
+      "windows_with_2plus_hi": 1392,
+      "distinct_bn_1": 704,
+      "windows_per_caption_bn": 1.9801,
+      "windows_with_2plus_bn": 1392,
+      "distinct_ta_1": 707,
+      "windows_per_caption_ta": 1.9717,
+      "windows_with_2plus_ta": 1392,
+      "distinct_te_1": 712,
+      "windows_per_caption_te": 1.9579,
+      "windows_with_2plus_te": 1392,
+      "distinct_sources": 633,
+      "distinct_super_groups": 455
+    }
+  },
+  "leakage_recheck": {
+    "test|train": {
+      "shared_captions": 0,
+      "shared_sources": 0
+    },
+    "test|val": {
+      "shared_captions": 0,
+      "shared_sources": 0
+    },
+    "train|val": {
+      "shared_captions": 0,
+      "shared_sources": 0
+    },
+    "PASS": true
+  },
+  "env": {
+    "PYTHONUNBUFFERED": "1",
+    "PYTHON_VERSION": "3.12",
+    "CUDA_VERSION": "12.8.1",
+    "HF_TOKEN": "<redacted>",
+    "HF_HOME": "/workspace/.hf_home",
+    "PYTHONPATH": "/workspace/IndicVLA/OMG/src",
+    "WANDB_API_KEY": "<redacted>",
+    "CUDA_HOME": "/usr/local/cuda",
+    "CUDA_MODULE_LOADING": "LAZY"
+  },
+  "contract": {
+    "self_attention_qk_norm": true,
+    "cross_attention_qk_norm": true,
+    "source": "EXP-F, research log s5.2: true/true wins by +16.1 GEN-R@1 on updated/100m; REFERENCE R@1=0.6680 gate passed in both arms"
+  }
+}

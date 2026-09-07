@@ -1,0 +1,11 @@
+[chain] CONVERT start
+[chain] converted val
+[chain] converted test
+[chain] converted train
+[chain] LOCK (fatal on leakage)
+[chain] lock OK
+[chain] L_NULL gate
+  [GATE] L_null (cached t5 empty-string context, 1024 val windows) = 0.03042
+[chain] TRAIN start maila-mp-hi-20260905-174910
+run_chain.sh: line 60:  4058 Killed                  $PY /workspace/maila_train_motionpivot.py --data $D --langs hi --pair-mode paraphrase --steps 25000 --batch-size 32 --accum 8 --lambda-x-hi 0.5 --lambda-en 0.1 --val-every 1000 --val-windows 1024 --ckpt-every 2000 --ckpt $MODELS/omg/checkpoints/updated/100m/sstep=170000.ckpt --t5 $MODELS/t5-base-local --muril $MODELS/muril-base-cased --out /workspace/runs/$RUN_NAME --run-name $RUN_NAME --hf-repo PragyaVLA/maila-run2-motionpivot --wandb-project maila-run2-motionpivot > /workspace/logs/05_train.log 2>&1
+[chain] TRAIN exit=137

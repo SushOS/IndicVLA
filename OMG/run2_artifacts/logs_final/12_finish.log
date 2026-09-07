@@ -1,0 +1,60 @@
+[chain] waiting for the English arms to finish...
+[chain] training complete at 11:51:23
+[chain] evaluating the English arms
+  val: 1,370 windows | langs=['en'] | L=10 H=60 | window-language pairs with >=2 captions: 1,368
+  test: 1,394 windows | langs=['en'] | L=10 H=60 | window-language pairs with >=2 captions: 1,392
+You are using the default legacy behaviour of the <class 'transformers.models.t5.tokenization_t5.T5Tokenizer'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thoroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565
+The tokenizer you are loading from '/workspace/models/muril-base-cased' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+  loaded 100m step=170000 self_qk=True cross_qk=True text_mask_prob=0.0
+  encoder keys not in ckpt (expected, new module): 212
+  trainable: 9 tensors, 4,725,505 params (adapter only)
+  maila-mp-en-v4E-corpus-len0.1-20260906-044238 adapter_step002000.pt val rel=+0.46%
+  maila-mp-en-v4E-corpus-len0.1-20260906-044238 adapter_step004000.pt val rel=-0.46%
+  maila-mp-en-v4E-corpus-len0.1-20260906-044238 adapter_step006000.pt val rel=+4.30%
+  maila-mp-en-v4E-corpus-len0.1-20260906-044238 adapter_step008000.pt val rel=+5.92%
+  maila-mp-en-v4E-corpus-len0.1-20260906-044238 adapter_step010000.pt val rel=+8.20%
+  maila-mp-en-v4E-corpus-len0.1-20260906-044238 adapter_step012000.pt val rel=+7.55%
+  maila-mp-en-v4E-corpus-len0.1-20260906-044238 adapter_step014000.pt val rel=+9.81%
+  maila-mp-en-v4E-corpus-len0.1-20260906-044238 adapter_step016000.pt val rel=+9.79%
+  maila-mp-en-v4E-corpus-len0.1-20260906-044238 adapter_step018000.pt val rel=+11.15%
+  maila-mp-en-v4E-corpus-len0.1-20260906-044238 adapter_step020000.pt val rel=+10.43%
+  maila-mp-en-v4E-corpus-len0.1-20260906-044238 adapter_step022000.pt val rel=+10.99%
+  maila-mp-en-v4E-corpus-len0.1-20260906-044238 adapter_step024000.pt val rel=+10.82%
+  maila-mp-en-v4E-corpus-len0.1-20260906-044238 adapter_step025000.pt val rel=+11.10%
+  -> maila-mp-en-v4E-corpus-len0.1-20260906-044238 selected adapter_step018000.pt (val rel +11.15%)
+  maila-mp-en-v4F-corpus-len0.5-20260906-044238 adapter_step002000.pt val rel=+0.43%
+  maila-mp-en-v4F-corpus-len0.5-20260906-044238 adapter_step004000.pt val rel=+0.64%
+  maila-mp-en-v4F-corpus-len0.5-20260906-044238 adapter_step006000.pt val rel=+2.46%
+  maila-mp-en-v4F-corpus-len0.5-20260906-044238 adapter_step008000.pt val rel=+5.99%
+  maila-mp-en-v4F-corpus-len0.5-20260906-044238 adapter_step010000.pt val rel=+8.37%
+  maila-mp-en-v4F-corpus-len0.5-20260906-044238 adapter_step012000.pt val rel=+9.24%
+  maila-mp-en-v4F-corpus-len0.5-20260906-044238 adapter_step014000.pt val rel=+10.88%
+  maila-mp-en-v4F-corpus-len0.5-20260906-044238 adapter_step016000.pt val rel=+10.76%
+  maila-mp-en-v4F-corpus-len0.5-20260906-044238 adapter_step018000.pt val rel=+12.72%
+  maila-mp-en-v4F-corpus-len0.5-20260906-044238 adapter_step020000.pt val rel=+12.15%
+  maila-mp-en-v4F-corpus-len0.5-20260906-044238 adapter_step022000.pt val rel=+12.55%
+  maila-mp-en-v4F-corpus-len0.5-20260906-044238 adapter_step024000.pt val rel=+12.34%
+  maila-mp-en-v4F-corpus-len0.5-20260906-044238 adapter_step025000.pt val rel=+12.69%
+  -> maila-mp-en-v4F-corpus-len0.5-20260906-044238 selected adapter_step018000.pt (val rel +12.72%)
+  maila-mp-en-v4E-corpus-len0.1-20260906-044238 cfg=2.0 mpjpe=34.9mm
+  maila-mp-en-v4E-corpus-len0.1-20260906-044238 cfg=2.5 mpjpe=38.0mm
+  maila-mp-en-v4E-corpus-len0.1-20260906-044238 cfg=3.0 mpjpe=41.3mm
+  maila-mp-en-v4F-corpus-len0.5-20260906-044238 cfg=2.0 mpjpe=34.8mm
+  maila-mp-en-v4F-corpus-len0.5-20260906-044238 cfg=2.5 mpjpe=37.8mm
+  maila-mp-en-v4F-corpus-len0.5-20260906-044238 cfg=3.0 mpjpe=40.9mm
+
+wrote /workspace/runs/eval_report_en.json  (0 stage errors)
+[chain] eval exit=0
+[chain] final sync to CodeSushh/maila-run2-motionpivot
+[sync] 11:55:40 tracked=107 pushed=11 failed=0 already=96
+[chain] verification gate over all four arms
+  107 artifacts required across 4 run(s)
+  verified on hub: 106/107
+
+  GATE FAIL -- 1 artifact(s) not safely on the Hub:
+    SHA-256 MISMATCH         logs/12_finish.log
+
+  DO NOT DESTROY THE INSTANCE.
+[chain] gate exit=2
+[chain] GATE FAILED -- instance deliberately NOT destroyed. Artifacts are not proven
+[chain] to be on the Hub, and destroy is irreversible. Fix, then re-run the gate.
